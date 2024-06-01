@@ -1,0 +1,131 @@
+.medicamento-cadastro-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.box-medicamento-1 {
+    width: 45%;
+}
+
+.box-medicamento-2 {
+    width: 45%;
+}
+
+.container-plano-saude {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.container-plano-saude span {
+}
+
+.container-plano-saude .container-input-plano {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.container-plano-saude .container-input-plano div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.padding-bt {
+    margin: 2rem 0;
+}
+
+.is-PCD-container {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.pcd-check-container {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+
+.pcd-check-container span {
+    margin-bottom: 5px;
+}
+
+.pcd-check-container div {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.tipo-pcd-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.tipo-pcd-container span {
+    margin-bottom: 5px;
+}
+
+.tipo-pcd-container select {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.tratament-check-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tratament-check-container div {
+    display: flex;
+    padding: 0.3rem 0;
+}
+
+.tratament-check-container div div {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.medicamento-horas-quantidade-container {
+    display: flex;
+}
+
+.medicamento-horas-quantidade-container input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 13px;
+    margin: 1rem 0;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.alergias-check-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2.4rem 0;
+    width: 100%;
+}
+
+.alergias-check-container div{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+    width: 30%;
+}
+
+.alergias-check-container div input{
+    
+}

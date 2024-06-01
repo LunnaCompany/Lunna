@@ -1,0 +1,162 @@
+.cadastro-crianca-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+}
+
+.cadastro-crianca-container label {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.48);
+}
+
+.info-geral-crianca {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #9747ff;
+    padding: 1rem;
+}
+
+.cadastro-crianca-box-1 {
+    width: 47%;
+}
+
+.add-input-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+.add-input-container p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ee87ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container-altura-peso-data {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.container-data-input div {
+    display: flex;
+
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.data-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.container-data-input div input {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container-altura-peso-input {
+    display: flex;
+    width: 70%;
+}
+
+.container-altura-peso-input div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-altura-peso-input div input {
+    width: 70%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    margin-top: 3px;
+}
+
+.container-add-responsavel div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-add-responsavel div .btn-add-responsavel {
+    background-color: #ee87ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.cadastro-crianca-box-2 {
+    width: 47%;
+}
+
+.cointainer-add-document {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cointainer-add-document span {
+    width: 45%;
+}
+
+.btn-add-document {
+    background-color: #54fb83;
+    width: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.btn-add-document span {
+    width: 70%;
+    font-size: 13px;
+    color: #fff;
+}
+
+.contato-emergia-crianca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contato-nome-parentesco .input-container {
+    margin-bottom: 1rem;
+}
+
+.contato-nome-parentesco .input-container .input-parentesco {
+    width: 50%;
+}
+
+.contato-nome-parentesco {
+    width: 45%;
+}
+
+.contato-numero-parentesco {
+    padding: 1rem;
+}

@@ -1,14 +1,12 @@
-
-import './App.css'
+import "./App.css";
+import Cadastro from "./pages/cadastro/Cadastro";
 
 function App() {
-
-
-  return (
-    <>
-      <div>Lunna</div>
-    </>
-  )
+    return (
+        <>
+            <Cadastro />
+        </>
+    );
 }
 
-export default App
+export default App;

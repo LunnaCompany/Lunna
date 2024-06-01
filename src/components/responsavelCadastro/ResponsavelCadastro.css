@@ -1,0 +1,241 @@
+.cadastro-responsavel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.cadastro-responsavel-esquerda {
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    margin-bottom: 2rem;
+}
+
+.input-container label {
+    margin-bottom: 0.3rem;
+}
+
+.input-container input {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 13px;
+    padding: 1rem;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-cep-uf {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.input-cep-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-cep-uf input {
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    padding: 1rem;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.box-cep {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-cep div {
+    width: 10px;
+    height: 1px;
+    background-color: black;
+}
+
+.box-cep .input-cep {
+    width: 50%;
+}
+
+.box-cep .input-cep-digito {
+    width: 30%;
+}
+
+.input-uf-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.input-uf-container input {
+    width: 100%;
+}
+
+.input-numero-telefone {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.container-input-ddd-telefone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.span-numero-tel {
+    margin-bottom: 1rem;
+}
+
+.input-ddd-container {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+}
+
+.input-ddd-container input {
+    width: 100%;
+    padding: 1.4rem;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-telefone {
+    width: 70%;
+    padding: 1.4rem;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-ddd {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-foto-perfil {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.ft-perfil-camera-container {
+    background-color: #feb018;
+    max-width: 130px;
+    max-height: 130px;
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.box-add-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 60%;
+}
+
+.upload-btn {
+    background-color: #54fb83;
+    width: 100%;
+    max-width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
+    margin: 0.8rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-btn label {
+    font-size: 13px;
+    padding: 1rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.upload-btn input {
+    display: none;
+    width: 100%;
+    max-width: 230px;
+}
+
+.add-document-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.add-document-container .span-add-document {
+    width: 50%;
+    font-size: 15px;
+}
+
+.upload-btn-document {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    background-color: #54fb83;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.upload-btn-document span {
+    color: #fff;
+    font-size: 13px;
+}
+
+.container-button-cadastro {
+    width: 40%;
+}
+
+.container-button-cadastro {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-button-cadastro div {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container-button-cadastro .voltar-btn {
+    background-color: #9747ff;
+}
+
+.container-button-cadastro .continuar-btn {
+    background-color: #f53491;
+}
