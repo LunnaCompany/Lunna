@@ -7,6 +7,7 @@ import CriancaCadastro from "../../components/criancaCadastro/CriancaCadastro";
 import MedicamentoCadastro from "../../components/medicamentoCadastro/MedicamentoCadastro";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { CardCadastroSucess } from "../../components/cardCadastroSucess/CardCadastroSucess";
 
 const Cadastro = () => {
     const [imgResp, setImgResp] = useState();
@@ -16,6 +17,7 @@ const Cadastro = () => {
     const [cpfResponsavel, setCpfResponsavel] = useState(null);
     const [cpfDiscente, setCpfDiscente] = useState(null);
     const [emailResponsavel, setEmailResponsavel] = useState(null);
+    const [sucess, setSucess] = useState(false);
 
     const {
         register,
@@ -37,6 +39,8 @@ const Cadastro = () => {
             setCpfDiscente(null);
         }
     };
+
+    console.log(sucess);
 
     const handleInputFile = (e) => {
         const file = e.target.files[0];
@@ -172,7 +176,7 @@ const Cadastro = () => {
             pesoDisc: data.peso,
             imgDisc: "base64ImagemPerfil",
             fichaMed: dataFicha,
-            contatoEmergencia: dataContato
+            contatoEmergencia: dataContato,
         };
 
         formData.append("body", JSON.stringify(dataCrianca));
@@ -280,7 +284,9 @@ const Cadastro = () => {
                 if (criancaSuccess) {
                     const contatoSuccess = await postNewFicha(data);
                     if (contatoSuccess) {
-                        await postNewConatoEmergencia(data)
+                        await postNewConatoEmergencia(data);
+                        setSucess(true);
+                        setStep(step + 1);
                     }
                 }
             }
@@ -311,7 +317,7 @@ const Cadastro = () => {
     };
 
     return (
-        <section className="page-cadastro-lunna">
+        <section className={`page-cadastro-lunna ${sucess && "page-cadastro-sucess"}`}>
             <img className="lunna-logo" src={lunnaLogo} alt="" />
             <StepControll step={step} />
             {step === 1 ? (
@@ -332,23 +338,27 @@ const Cadastro = () => {
                     register={register}
                     errors={errors}
                 />
-            ) : (
+            ) : step === 3 ? (
                 <MedicamentoCadastro register={register} errors={errors} />
+            ) : (
+                sucess && <CardCadastroSucess />
             )}
 
-            <div className="container-button-cadastro">
-                <div className="voltar-btn" onClick={handlePrevStep}>
-                    Voltar
+            {step !== 4 && (
+                <div className="container-button-cadastro">
+                    <div className="voltar-btn" onClick={handlePrevStep}>
+                        Voltar
+                    </div>
+                    <div
+                        className="continuar-btn"
+                        onClick={() => {
+                            handleNextStep, handleSubmit(onSubmit)();
+                        }}
+                    >
+                        Próximo
+                    </div>
                 </div>
-                <div
-                    className="continuar-btn"
-                    onClick={() => {
-                        handleNextStep, handleSubmit(onSubmit)();
-                    }}
-                >
-                    Próximo
-                </div>
-            </div>
+            )}
         </section>
     );
 };

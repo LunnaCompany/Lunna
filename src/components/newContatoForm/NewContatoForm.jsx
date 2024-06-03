@@ -1,10 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const NewContatoForm = ({ addNewForm, register, errors }) => {
     return (
         <div className="contato-emergia-crianca">
             <div className="contato-nome-parentesco">
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Nome de completo</label>
                     <input
                         type="text"
@@ -18,8 +24,13 @@ const NewContatoForm = ({ addNewForm, register, errors }) => {
                             O nome é obrigatorio
                         </p>
                     )}
-                </div>
-                <div className="input-container">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Qual o grau de parentesco?</label>
                     <input
                         type="text"
@@ -34,8 +45,13 @@ const NewContatoForm = ({ addNewForm, register, errors }) => {
                             O parentesco é obrigatorio
                         </p>
                     )}
-                </div>
-                <div className="container-add-responsavel">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="container-add-responsavel"
+                >
                     <div>
                         <div
                             onClick={addNewForm}
@@ -45,11 +61,16 @@ const NewContatoForm = ({ addNewForm, register, errors }) => {
                         </div>
                         <span>Adicionar uma nova contato</span>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="contato-numero-parentesco">
-                <div className="input-numero-telefone">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-numero-telefone"
+                >
                     <span className="span-numero-tel">Numero de telefone</span>
                     <div className="container-input-ddd-telefone">
                         <div className="input-ddd-container">
@@ -104,8 +125,13 @@ const NewContatoForm = ({ addNewForm, register, errors }) => {
                             Quantidade de caracteres invalido
                         </p>
                     )}
-                </div>
-                <div className="input-numero-telefone">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-numero-telefone"
+                >
                     <span className="span-numero-tel">Numero de celular</span>
                     <div className="container-input-ddd-telefone">
                         <div className="input-ddd-container">
@@ -160,7 +186,7 @@ const NewContatoForm = ({ addNewForm, register, errors }) => {
                             Quantidade de caracteres invalido
                         </p>
                     )}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

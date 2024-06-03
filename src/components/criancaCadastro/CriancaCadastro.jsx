@@ -8,9 +8,9 @@ import NewContatoForm from "../newContatoForm/NewContatoForm";
 const CriancaCadastro = ({ register, errors, cpfDiscente}) => {
     const [criancaForms, setCriancaForms] = useState([{ id: 0 }]);
     const [nextIdCrianca, setNextIdCrianca] = useState(1);
-
-    const [contatoForms, setContatoForms] = useState([{ id: 0 }]);
     const [nextIdContato, setNextIdContato] = useState(1);
+    const [contatoForms, setContatoForms] = useState([{ id: 0 }]);
+
 
     const adicionarCriancaForm = () => {
         setCriancaForms([...criancaForms, { id: nextIdCrianca }]);
@@ -22,9 +22,6 @@ const CriancaCadastro = ({ register, errors, cpfDiscente}) => {
         setNextIdContato(nextIdContato + 1);
     };
 
-    console.log(contatoForms);
-
-
 
     return (
         <div className="cadastro-crianca-container">
@@ -33,6 +30,7 @@ const CriancaCadastro = ({ register, errors, cpfDiscente}) => {
                     key={form.id}
                     id={form.id}
                     cpfDiscente={cpfDiscente}
+                    nextIdContato={nextIdContato}
                     addNewForm={adicionarCriancaForm}
                     register={register}
                     errors={errors}

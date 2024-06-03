@@ -3,6 +3,7 @@ import "./ResponsavelCadastro.css";
 import camera from "../../assets/Camera.png";
 import uploadImg from "../../assets/upload-images.png";
 import ModalAddRG from "../modalAddRG/ModalAddRG";
+import { motion } from "framer-motion";
 
 const ResponavelCadastro = ({
     imgRgResp,
@@ -20,7 +21,12 @@ const ResponavelCadastro = ({
     return (
         <div className="cadastro-responsavel">
             <div className="cadastro-responsavel-esquerda">
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Nome completo do responsavel</label>
                     <input
                         type="text"
@@ -35,10 +41,15 @@ const ResponavelCadastro = ({
                             O nome é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
                 <div className="input-cep-uf">
-                    <div className="input-cep-container">
+                    <motion.div
+                        initial={{ opacity: 0, y: -8 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="input-cep-container"
+                    >
                         <label htmlFor="">CEP</label>
                         <div className="box-cep">
                             <input
@@ -55,7 +66,7 @@ const ResponavelCadastro = ({
                                     },
                                 })}
                             />
-
+                            <div></div>
                             <input
                                 type="text"
                                 maxLength={3}
@@ -89,9 +100,14 @@ const ResponavelCadastro = ({
                                 Quantidade de caracteres invalida
                             </p>
                         )}
-                    </div>
+                    </motion.div>
 
-                    <div className="input-uf-container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="input-uf-container"
+                    >
                         <label htmlFor="">UF</label>
                         <input
                             className="input-uf"
@@ -118,10 +134,15 @@ const ResponavelCadastro = ({
                                 UF invalida
                             </p>
                         )}
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Rua</label>
                     <input
                         type="text"
@@ -135,9 +156,14 @@ const ResponavelCadastro = ({
                             A rua é obrigatoria
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Bairro</label>
                     <input
                         type="text"
@@ -151,9 +177,14 @@ const ResponavelCadastro = ({
                             O bairro é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-numero-telefone">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-numero-telefone"
+                >
                     <span className="span-numero-tel">Número de telefone</span>
                     <div className="container-input-ddd-telefone">
                         <div className="input-ddd-container">
@@ -210,9 +241,14 @@ const ResponavelCadastro = ({
                             Quantidade de caracteres invalida
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-numero-telefone">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-numero-telefone"
+                >
                     <span className="span-numero-tel">Celular</span>
                     <div className="container-input-ddd-telefone">
                         <div className="input-ddd-container">
@@ -268,12 +304,17 @@ const ResponavelCadastro = ({
                             Quantidade de caracteres invalida
                         </p>
                     )}
-                </div>
+                </motion.div>
             </div>
 
             <div className="cadastro-responsavel-esquerda">
                 <div className="container-foto-perfil">
-                    <div className="box-add-foto">
+                    <motion.div
+                        initial={{ opacity: 0, x: 8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="box-add-foto"
+                    >
                         <label htmlFor="">Subir foto de perfil:</label>
 
                         <div className="upload-btn">
@@ -292,14 +333,24 @@ const ResponavelCadastro = ({
                                 A imagem é obrigatoria
                             </p>
                         )}
-                    </div>
+                    </motion.div>
 
-                    <div className="ft-perfil-camera-container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="ft-perfil-camera-container"
+                    >
                         <img src={camera} alt="" />
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>RG</label>
                     <input
                         type="text"
@@ -313,9 +364,14 @@ const ResponavelCadastro = ({
                             O RG é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>CPF</label>
 
                     <input
@@ -334,9 +390,12 @@ const ResponavelCadastro = ({
                     {cpfResponsavel !== null && cpfResponsavel !== "" && (
                         <p className="error-message-input">CPF já cadastrado</p>
                     )}
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
                     className="add-document-container"
                     onClick={() => setOpenModal(!openModal)}
                 >
@@ -357,9 +416,14 @@ const ResponavelCadastro = ({
                             </p>
                         )}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>E-mail</label>
                     <input
                         type="email"
@@ -386,9 +450,14 @@ const ResponavelCadastro = ({
                             Email ja cadastrado
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>E-mail segundario para recuperação de conta</label>
                     <input
                         type="text"
@@ -410,9 +479,14 @@ const ResponavelCadastro = ({
                     {errors?.emailSecundario?.type === "pattern" && (
                         <p className="error-message-input">Email invalido</p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Senha</label>
                     <input
                         type="text"
@@ -431,9 +505,14 @@ const ResponavelCadastro = ({
                             A senha é obrigatoria
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Confirmar Senha</label>
                     <input
                         type="text"
@@ -456,7 +535,7 @@ const ResponavelCadastro = ({
                             As senhas nao sao iguais
                         </p>
                     )}
-                </div>
+                </motion.div>
             </div>
             {openModal && (
                 <ModalAddRG

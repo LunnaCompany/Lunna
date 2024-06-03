@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import uploadImg from "../../assets/upload-images.png";
 import "./MedicamentoCadastro.css";
 import ModalAddCarterinha from "../modalAddCarterinha/ModalAddCarterinha";
+import { motion } from "framer-motion";
 
 const MedicamentoCadastro = ({ register, errors }) => {
     const [plan, setPlan] = useState(false);
@@ -9,11 +10,17 @@ const MedicamentoCadastro = ({ register, errors }) => {
     const [tratamento, setTratamento] = useState(false);
     const [medicamento, setMedicamento] = useState(false);
     const [comidas, setComidas] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
     return (
         <div className="medicamento-cadastro-container">
             <div className="box-medicamento-1">
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Número da carteirinha do SUS</label>
                     <input
                         type="text"
@@ -37,11 +44,11 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             Digite apenas números
                         </p>
                     )}
-                </div>
+                </motion.div>
 
                 <div className="cointainer-add-document">
                     <span>Adicionar foto ou documento em PDF:</span>
-                    <div className="btn-add-document">
+                    <div onClick={() => setOpenModal(true)} className="btn-add-document">
                         <span>Adicionar documentos</span>{" "}
                         <img src={uploadImg} alt="" srcset="" />
                     </div>
@@ -80,7 +87,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
                     )}
                 </div>
                 {plan && (
-                    <div className="input-container">
+                    <motion.div
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="input-container"
+                    >
                         <label>Plano de saude da criança</label>
                         <input
                             type="text"
@@ -94,10 +106,15 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 Digite o plano de saude
                             </p>
                         )}
-                    </div>
+                    </motion.div>
                 )}
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Hospital mais próximo</label>
                     <input
                         type="text"
@@ -111,9 +128,14 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             O nome do hospital é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-cep-uf padding-bt">
+                <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-cep-uf padding-bt"
+                >
                     <div className="input-cep-container">
                         <label htmlFor="">CEP</label>
                         <div className="box-cep">
@@ -179,9 +201,14 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             </p>
                         )}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>Rua</label>
                     <input
                         type="text"
@@ -195,9 +222,14 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             A rua é obrigatoria
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>
                         Cuidados especificos que a creche deve ter com a
                         crianaça
@@ -209,7 +241,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                         className="input-cadastro"
                         {...register("cuidados", { required: true })}
                     />
-                </div>
+                </motion.div>
             </div>
             <div className="box-medicamento-2">
                 <div className="is-PCD-container">
@@ -247,7 +279,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
                     </div>
 
                     {isPcd && (
-                        <div className="tipo-pcd-container">
+                        <motion.div
+                            initial={{ opacity: 0, x: 8 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="tipo-pcd-container"
+                        >
                             <span>Tipo</span>
 
                             <select
@@ -287,7 +324,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                     Campo obrigatorio
                                 </p>
                             )}
-                        </div>
+                        </motion.div>
                     )}
                 </div>
 
@@ -323,7 +360,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
                 </div>
 
                 {tratamento && (
-                    <div className="input-container">
+                    <motion.div
+                        initial={{ opacity: 0, x: 8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="input-container"
+                    >
                         <label>Quais tratamentos?</label>
                         <input
                             type="text"
@@ -337,7 +379,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 Campo obrigatorio
                             </p>
                         )}
-                    </div>
+                    </motion.div>
                 )}
 
                 <div className="tratament-check-container">
@@ -377,7 +419,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
 
                 {medicamento && (
                     <>
-                        <div className="input-container">
+                        <motion.div
+                            initial={{ opacity: 0, x: 8 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="input-container"
+                        >
                             <label>Qual medicamento</label>
                             <input
                                 type="text"
@@ -393,9 +440,14 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                     Campo obrigatorio
                                 </p>
                             )}
-                        </div>
+                        </motion.div>
 
-                        <div className="medicamento-horas-quantidade-container">
+                        <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="medicamento-horas-quantidade-container"
+                        >
                             <div>
                                 <span>Em quantas horas?</span>
                                 <input
@@ -433,7 +485,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                     type="text"
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     </>
                 )}
 
@@ -469,7 +521,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
                 </div>
 
                 {comidas && (
-                    <div className="input-container">
+                    <motion.div
+                        initial={{ opacity: 0, x: 8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="input-container"
+                    >
                         <label>Comidas alégicas</label>
                         <input
                             type="text"
@@ -483,9 +540,10 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 Campo obrigatorio
                             </p>
                         )}
-                    </div>
+                    </motion.div>
                 )}
             </div>
+            {openModal && <ModalAddCarterinha setOpenModal={setOpenModal} />}
         </div>
     );
 };

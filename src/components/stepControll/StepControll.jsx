@@ -10,10 +10,12 @@ const StepControll = ({ step }) => {
         <div className="step-control-container">
             {step === 1 ? (
                 <h2>Dados do Responsável</h2>
-            ) : <h2>Dados da Criança</h2> ? (
+            ) : step === 2 ? (
+                <h2>Dados da Criança</h2>
+            ) : step === 3 ? (
                 <h2>Dados da Medicos</h2>
             ) : (
-                ""
+                <h2></h2>
             )}
 
             <div className="step-control">

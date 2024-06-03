@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import uploadImg from "../../assets/upload-images.png";
-import ModalAddCarterinha from "../modalAddCarterinha/ModalAddCarterinha";
+import { motion } from "framer-motion";
+import ModalAddRG from "../modalAddRG/ModalAddRG";
 
 const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
     const [openModal, setOpenModal] = useState(false);
@@ -8,8 +9,13 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
     return (
         <div className="info-geral-crianca">
             <div className="cadastro-crianca-box-1">
-                <div className="input-container">
-                    <label>Nomde completo do(a) filho(a)</label>
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
+                    <label>Nome completo do(a) filho(a)</label>
                     <input
                         type="text"
                         name=""
@@ -22,9 +28,14 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                             O nome é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="container-altura-peso-data">
+                <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="container-altura-peso-data"
+                >
                     <div className="container-data-input">
                         <label>Data de nascimento</label>
                         <div>
@@ -151,9 +162,14 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                             )}
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="container-add-responsavel">
+                <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="container-add-responsavel"
+                >
                     <div>
                         <div
                             onClick={addNewForm}
@@ -163,11 +179,16 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                         </div>
                         <span>Adicionar uma nova criança</span>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="cadastro-crianca-box-2">
-                <div className="input-container">
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>CPF</label>
                     <input
                         type="text"
@@ -187,8 +208,13 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                             O CPF ja existe
                         </p>
                     )}
-                </div>
-                <div className="input-container">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="input-container"
+                >
                     <label>RG</label>
                     <input
                         type="text"
@@ -202,9 +228,12 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                             O RG é obrigatorio
                         </p>
                     )}
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                    initial={{ opacity: 0, x: 8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
                     className="cointainer-add-document"
                     onClick={() => setOpenModal(true)}
                 >
@@ -217,9 +246,9 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
                         <img src={uploadImg} alt="" srcset="" />
                         <input className="ipt-upload" type="file" />
                     </div>
-                </div>
+                </motion.div>
             </div>
-            {openModal && <ModalAddCarterinha setOpenModal={setOpenModal} />}
+            {openModal && <ModalAddRG setOpenModal={setOpenModal} />}
         </div>
     );
 };
