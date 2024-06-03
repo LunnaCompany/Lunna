@@ -175,6 +175,7 @@ const Cadastro = () => {
             alturaDisc: data.altura,
             pesoDisc: data.peso,
             imgDisc: "base64ImagemPerfil",
+            deficiencia: data.deficiencia,
             fichaMed: dataFicha,
             contatoEmergencia: dataContato,
         };

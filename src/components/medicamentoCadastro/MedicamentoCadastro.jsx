@@ -292,7 +292,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 name="deficiencia"
                                 {...register("deficiencia", {
                                     validate: (value) => {
-                                        return value === "0";
+                                        return value !== "0";
                                     },
                                 })}
                             >
@@ -354,7 +354,7 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             />
                         </div>
                     </div>
-                    {errors?.deficiencia?.type === "validate" && (
+                    {errors?.tratamento?.type === "validate" && (
                         <p className="error-message-input">Campo obrigatorio</p>
                     )}
                 </div>
