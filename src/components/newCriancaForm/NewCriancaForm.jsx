@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import uploadImg from "../../assets/upload-images.png";
+import ModalAddCarterinha from "../modalAddCarterinha/ModalAddCarterinha";
 
-const NewCriancaForm = ({addNewForm, register, errors}) => {
-    
+const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <div className="info-geral-crianca">
             <div className="cadastro-crianca-box-1">
@@ -13,9 +15,13 @@ const NewCriancaForm = ({addNewForm, register, errors}) => {
                         name=""
                         id=""
                         className="input-cadastro"
-                        {...register("nomeFilho", {required: true})}
+                        {...register("nomeFilho", { required: true })}
                     />
-                    {errors?.nomeFilho?.type === "required" && <p className="error-message-input">O nome é obrigatorio</p>}
+                    {errors?.nomeFilho?.type === "required" && (
+                        <p className="error-message-input">
+                            O nome é obrigatorio
+                        </p>
+                    )}
                 </div>
 
                 <div className="container-altura-peso-data">
@@ -23,40 +29,138 @@ const NewCriancaForm = ({addNewForm, register, errors}) => {
                         <label>Data de nascimento</label>
                         <div>
                             <div className="data-input">
-                                <input type="text" {...register("dia", {required: true})}/>
+                                <input
+                                    type="text"
+                                    maxLength={2}
+                                    {...register("dia", {
+                                        required: true,
+                                        pattern: {
+                                            value: /^[0-9]+$/,
+                                        },
+                                        minLength: {
+                                            value: 2,
+                                        },
+                                    })}
+                                />
                                 <label htmlFor="">Dia</label>
                             </div>
 
                             <div className="data-input">
-                                <input type="text" {...register("mes", {required: true})}/>
+                                <input
+                                    type="text"
+                                    maxLength={2}
+                                    {...register("mes", {
+                                        required: true,
+                                        pattern: {
+                                            value: /^[0-9]+$/,
+                                        },
+                                        minLength: {
+                                            value: 2,
+                                        },
+                                    })}
+                                />
                                 <label htmlFor="">Mês</label>
                             </div>
                             <div className="data-input">
-                                <input type="text" {...register("ano", {required: true})}/>
+                                <input
+                                    type="text"
+                                    maxLength={4}
+                                    {...register("ano", {
+                                        required: true,
+                                        pattern: {
+                                            value: /^[0-9]+$/,
+                                        },
+                                        minLength: {
+                                            value: 4,
+                                        },
+                                    })}
+                                />
                                 <label htmlFor="">Ano</label>
                             </div>
                         </div>
-                        {(errors?.dia?.type === "required" || errors?.mes?.type === "required" || errors?.ano?.type === "required" ) && <p className="error-message-input">A data é obrigatoria</p>}
+                        {(errors?.dia?.type === "required" ||
+                            errors?.mes?.type === "required" ||
+                            errors?.ano?.type === "required") && (
+                            <p className="error-message-input">
+                                A data é obrigatoria
+                            </p>
+                        )}
+                        {(errors?.dia?.type === "pattern" ||
+                            errors?.mes?.type === "pattern" ||
+                            errors?.ano?.type === "pattern") && (
+                            <p className="error-message-input">
+                                A data está invalida
+                            </p>
+                        )}
+                        {(errors?.dia?.type === "minLength" ||
+                            errors?.mes?.type === "minLength" ||
+                            errors?.ano?.type === "minLength") && (
+                            <p className="error-message-input">
+                                A data está invalida
+                            </p>
+                        )}
                     </div>
 
                     <div className="container-altura-peso-input">
                         <div>
                             <label htmlFor="altura">Altura</label>
-                            <input type="text" name="altura" id="altura" {...register("altura", {required: true})}/>
-                            {errors?.altura?.type === "required" && <p className="error-message-input ml">A altura é obrigatoria</p>}
+                            <input
+                                type="text"
+                                name="altura"
+                                id="altura"
+                                {...register("altura", {
+                                    required: true,
+                                    pattern: {
+                                        value: /^[0-9.,]+$/,
+                                    },
+                                })}
+                            />
+                            {errors?.altura?.type === "required" && (
+                                <p className="error-message-input ml">
+                                    A altura é obrigatoria
+                                </p>
+                            )}
+                            {errors?.altura?.type === "pattern" && (
+                                <p className="error-message-input ml">
+                                    Altura invalida
+                                </p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="peso">Peso</label>
-                            <input type="text" name="peso" id="peso" {...register("peso", {required: true})}/>
-                            {errors?.peso?.type === "required" && <p className="error-message-input ml">O peso é obrigatorio</p>}
+                            <input
+                                type="text"
+                                name="peso"
+                                id="peso"
+                                {...register("peso", {
+                                    required: true,
+                                    pattern: {
+                                        value: /^[0-9.,]+$/,
+                                    },
+                                })}
+                            />
+                            {errors?.peso?.type === "required" && (
+                                <p className="error-message-input ml">
+                                    O peso é obrigatorio
+                                </p>
+                            )}
+                            {errors?.peso?.type === "pattern" && (
+                                <p className="error-message-input ml">
+                                    Peso é invalido
+                                </p>
+                            )}
                         </div>
                     </div>
-                  
                 </div>
 
                 <div className="container-add-responsavel">
                     <div>
-                        <div onClick={addNewForm} className="btn-add-responsavel">+</div>
+                        <div
+                            onClick={addNewForm}
+                            className="btn-add-responsavel"
+                        >
+                            +
+                        </div>
                         <span>Adicionar uma nova criança</span>
                     </div>
                 </div>
@@ -69,10 +173,20 @@ const NewCriancaForm = ({addNewForm, register, errors}) => {
                         type="text"
                         name=""
                         id=""
+                        maxLength={14}
                         className="input-cadastro"
-                        {...register("cpfCrianca", {required: true})}
+                        {...register("cpfCrianca", { required: true })}
                     />
-                    {errors?.cpfCrianca?.type === "required" && <p className="error-message-input ml">O CPF é obrigatorio</p>}
+                    {errors?.cpfCrianca?.type === "required" && (
+                        <p className="error-message-input ml">
+                            O CPF é obrigatorio
+                        </p>
+                    )}
+                    {cpfDiscente !== null && (
+                        <p className="error-message-input ml">
+                            O CPF ja existe
+                        </p>
+                    )}
                 </div>
                 <div className="input-container">
                     <label>RG</label>
@@ -81,19 +195,31 @@ const NewCriancaForm = ({addNewForm, register, errors}) => {
                         name=""
                         id=""
                         className="input-cadastro"
-                        {...register("rgCrianca", {required: true})}
+                        {...register("rgCrianca", { required: true })}
                     />
-                    {errors?.rgCrianca?.type === "required" && <p className="error-message-input ml">O RG é obrigatorio</p>}
+                    {errors?.rgCrianca?.type === "required" && (
+                        <p className="error-message-input ml">
+                            O RG é obrigatorio
+                        </p>
+                    )}
                 </div>
 
-                <div className="cointainer-add-document">
-                    <span>Adicionar foto ou documento em PDF:</span>
+                <div
+                    className="cointainer-add-document"
+                    onClick={() => setOpenModal(true)}
+                >
+                    <div className="container-error-upload-document">
+                        <span>Adicionar foto ou documento em PDF:</span>
+                    </div>
+
                     <div className="btn-add-document">
-                        <span>Adicionar documentos</span>{" "}
+                        <span>Adicionar documentos</span>
                         <img src={uploadImg} alt="" srcset="" />
+                        <input className="ipt-upload" type="file" />
                     </div>
                 </div>
             </div>
+            {openModal && <ModalAddCarterinha setOpenModal={setOpenModal} />}
         </div>
     );
 };

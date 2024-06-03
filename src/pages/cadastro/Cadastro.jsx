@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import lunnaLogo from "../../assets/lunna-logo.png";
 import "./Cadastro.css";
 import StepControll from "../../components/stepControll/StepControll";
@@ -10,8 +10,12 @@ import axios from "axios";
 
 const Cadastro = () => {
     const [imgResp, setImgResp] = useState();
+    const [imgRgResp, setimgRgResp] = useState(null);
     const [step, setStep] = useState(1);
-    const [errorResponse, setErrorResponse] = useState();
+    const [errorResponse, setErrorResponse] = useState(null);
+    const [cpfResponsavel, setCpfResponsavel] = useState(null);
+    const [cpfDiscente, setCpfDiscente] = useState(null);
+    const [emailResponsavel, setEmailResponsavel] = useState(null);
 
     const {
         register,
@@ -24,21 +28,67 @@ const Cadastro = () => {
         if ((step >= 1) & (step < 3)) {
             setStep(step + 1);
         }
-
-        console.log(step);
     };
 
     const handlePrevStep = () => {
         if ((step > 1) & (step <= 3)) {
             setStep(step - 1);
+            setCpfResponsavel(null);
+            setCpfDiscente(null);
         }
-        console.log(step);
     };
 
     const handleInputFile = (e) => {
         const file = e.target.files[0];
-        console.log("img " + file);
+        console.log(file);
         setImgResp(file);
+    };
+
+    const findResponsavelByCpf = async (cpf) => {
+        try {
+            const response = await axios.get(
+                `http://localhost:8080/responsavel/cpf/${cpf}`
+            );
+            setCpfResponsavel(response.data.cpfResp);
+            return true;
+        } catch (error) {
+            if (error.response.status === 404) {
+                setCpfResponsavel(null);
+                return false;
+            }
+        }
+    };
+    const findResponsavelByEmail = async (email) => {
+        try {
+            const response = await axios.get(
+                `http://localhost:8080/responsavel/email/${email}`
+            );
+            setEmailResponsavel(response.data.cpfResp);
+            return true;
+        } catch (error) {
+            if (error.response.status === 404) {
+                setEmailResponsavel(null);
+                console.log(errorResponse);
+                return false;
+            }
+        }
+    };
+
+    const findCriancaByCpf = async (cpf) => {
+        try {
+            const response = await axios.get(
+                `http://localhost:8080/discente/cpf/${cpf}`
+            );
+            setCpfDiscente(response.data.cpfDisc);
+            console.log(cpfDiscente);
+            return true;
+        } catch (error) {
+            if (error.response.status === 404) {
+                setCpfDiscente(null);
+                console.log(error);
+                return false;
+            }
+        }
     };
 
     const postNewResponsavel = async (data) => {
@@ -65,8 +115,8 @@ const Cadastro = () => {
         };
 
         formData.append("body", JSON.stringify(dataResp));
-        formData.append("ftPerfilResp", imgResp);
-        formData.append("ftRgResp", imgResp);
+        formData.append("ftPerfilResp", data.imgPerfil[0]);
+        formData.append("ftRgResp", data.imgPerfil[0]);
 
         try {
             const response = await axios.post(
@@ -107,6 +157,13 @@ const Cadastro = () => {
             qtdMed: data.quantidadeMed,
         };
 
+        const dataContato = {
+            nome: data.nomeContato,
+            numeroTelefone: data.telefoneContato,
+            numeroCelular: data.celularContato,
+            parentesco: data.parentesco,
+        };
+
         const dataCrianca = {
             cpfDisc: data.cpfCrianca,
             nomeDisc: data.nomeFilho,
@@ -115,10 +172,11 @@ const Cadastro = () => {
             pesoDisc: data.peso,
             imgDisc: "base64ImagemPerfil",
             fichaMed: dataFicha,
+            contatoEmergencia: dataContato
         };
 
         formData.append("body", JSON.stringify(dataCrianca));
-        formData.append("imgDisc", imgResp);
+        formData.append("imgDisc", data.imgPerfil[0]);
         formData.append("cpfResp", data.cpf);
 
         try {
@@ -178,6 +236,32 @@ const Cadastro = () => {
         }
     };
 
+    const postNewConatoEmergencia = async (data) => {
+        const dataContato = {
+            nome: data.nomeContato,
+            numeroTelefone: data.telefoneContato,
+            numeroCelular: data.celularContato,
+            parentesco: data.parentesco,
+        };
+
+        try {
+            const response = await axios.post(
+                "http://localhost:8080/contato-emergencia",
+                dataContato,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            console.log("Funciono " + JSON.stringify(response.data, null, 2));
+            return true;
+        } catch (error) {
+            handleError(error);
+            return false;
+        }
+    };
+
     const handleError = (error) => {
         if (error.response && error.response.data) {
             setErrorResponse(error.response.data);
@@ -188,17 +272,42 @@ const Cadastro = () => {
 
     const onSubmit = async (data) => {
         console.log(data);
+
         if (step === 3) {
             const responsavelSuccess = await postNewResponsavel(data);
             if (responsavelSuccess) {
                 const criancaSuccess = await postNewCrianca(data);
                 if (criancaSuccess) {
-                    await postNewFicha(data);
+                    const contatoSuccess = await postNewFicha(data);
+                    if (contatoSuccess) {
+                        await postNewConatoEmergencia(data)
+                    }
                 }
             }
         }
-        console.log(errorResponse);
-        handleNextStep();
+
+        if (step === 1) {
+            const cpf = await findResponsavelByCpf(data.cpf);
+            if (!cpf) {
+                if (cpfResponsavel === null) {
+                    const email = await findResponsavelByEmail(data.email);
+                    if (!email) {
+                        if (emailResponsavel === null) {
+                            handleNextStep();
+                        }
+                    }
+                }
+            }
+        }
+
+        if (step === 2) {
+            const cpf = await findCriancaByCpf(data.cpfCrianca);
+            if (!cpf) {
+                if (cpfDiscente === null) {
+                    handleNextStep();
+                }
+            }
+        }
     };
 
     return (
@@ -207,14 +316,22 @@ const Cadastro = () => {
             <StepControll step={step} />
             {step === 1 ? (
                 <ResponavelCadastro
+                    cpfResponsavel={cpfResponsavel}
+                    emailResponsavel={emailResponsavel}
                     register={register}
+                    imgRgResp={imgRgResp}
                     handleSubmit={handleSubmit}
                     errors={errors}
                     watch={watch}
                     handleInputFile={handleInputFile}
+                    setimgRgResp={setimgRgResp}
                 />
             ) : step === 2 ? (
-                <CriancaCadastro register={register} errors={errors} />
+                <CriancaCadastro
+                    cpfDiscente={cpfDiscente}
+                    register={register}
+                    errors={errors}
+                />
             ) : (
                 <MedicamentoCadastro register={register} errors={errors} />
             )}

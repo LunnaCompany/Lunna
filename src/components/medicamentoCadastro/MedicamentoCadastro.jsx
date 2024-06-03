@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import uploadImg from "../../assets/upload-images.png";
 import "./MedicamentoCadastro.css";
+import ModalAddCarterinha from "../modalAddCarterinha/ModalAddCarterinha";
 
 const MedicamentoCadastro = ({ register, errors }) => {
     const [plan, setPlan] = useState(false);
@@ -19,11 +20,21 @@ const MedicamentoCadastro = ({ register, errors }) => {
                         name=""
                         id=""
                         className="input-cadastro"
-                        {...register("sus", { required: true })}
+                        {...register("sus", {
+                            required: true,
+                            pattern: {
+                                value: /^[0-9]+$/,
+                            },
+                        })}
                     />
                     {errors?.sus?.type === "required" && (
                         <p className="error-message-input ml">
                             A carterinha é obrigatoria
+                        </p>
+                    )}
+                    {errors?.sus?.type === "pattern" && (
+                        <p className="error-message-input ml">
+                            Digite apenas números
                         </p>
                     )}
                 </div>
@@ -109,21 +120,49 @@ const MedicamentoCadastro = ({ register, errors }) => {
                             <input
                                 className="input-cep"
                                 type="text"
-                                {...register("hospitalCep", { required: true })}
+                                maxLength={5}
+                                {...register("hospitalCep", {
+                                    required: true,
+                                    pattern: {
+                                        value: /^[0-9]+$/,
+                                    },
+                                    minLength: {
+                                        value: 5,
+                                    },
+                                })}
                             />
                             <div></div>
                             <input
                                 type="text"
+                                maxLength={3}
                                 className="input-cep-digito"
                                 {...register("hospitalDigito", {
                                     required: true,
+                                    pattern: {
+                                        value: /^[0-9]+$/,
+                                    },
+                                    minLength: {
+                                        value: 3,
+                                    },
                                 })}
                             />
                         </div>
                         {(errors?.hospitalCep?.type === "required" ||
                             errors?.hospitalDigito?.type === "required") && (
                             <p className="error-message-input ml">
-                                O endereco é obrigatorio
+                                O CEP é obrigatorio
+                            </p>
+                        )}
+                        {(errors?.hospitalCep?.type === "pattern" ||
+                            errors?.hospitalDigito?.type === "pattern") && (
+                            <p className="error-message-input ml">
+                                Digite apenas números
+                            </p>
+                        )}
+                        {(errors?.hospitalCep?.type === "minLength" ||
+                            errors?.hospitalDigito?.type === "minLength") && (
+                            <p className="error-message-input ml">
+                                Quantidade de caracteres invalida
                             </p>
                         )}
                     </div>
@@ -362,6 +401,9 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 <input
                                     {...register("horasMed", {
                                         required: true,
+                                        pattern: {
+                                            value: /^[0-9.,]+$/,
+                                        },
                                     })}
                                     type="text"
                                 />
@@ -371,6 +413,12 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                         O campo é obrigatorio
                                     </p>
                                 )}
+                                {(errors?.quantidadeMed?.type === "pattern" ||
+                                    errors?.horasMed?.type === "pattern") && (
+                                    <p className="error-message-input ml">
+                                        Digite apenas números
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -378,6 +426,9 @@ const MedicamentoCadastro = ({ register, errors }) => {
                                 <input
                                     {...register("quantidadeMed", {
                                         required: true,
+                                        pattern: {
+                                            value: /^[0-9.,]+$/,
+                                        },
                                     })}
                                     type="text"
                                 />

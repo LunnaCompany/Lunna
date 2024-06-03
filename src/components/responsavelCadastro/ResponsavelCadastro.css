@@ -157,6 +157,13 @@
     width: 60%;
 }
 
+.container-error-upload{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 230px;
+}
+
 .upload-btn {
     background-color: #54fb83;
     width: 100%;
@@ -164,7 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem;
+  
     margin: 0.8rem 0;
     border-radius: 5px;
     cursor: pointer;
@@ -199,15 +206,20 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
     background-color: #54fb83;
     padding: 0.4rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.upload-btn-document span {
+.upload-btn-document label {
     color: #fff;
     font-size: 13px;
+}
+
+.ipt-upload{
+    display: none;
 }
 
 .container-button-cadastro {

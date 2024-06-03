@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+
 import "./CriancaCadastro.css";
 
 import NewCriancaForm from "../newCriancaForm/NewCriancaForm";
 import NewContatoForm from "../newContatoForm/NewContatoForm";
 
-const CriancaCadastro = ({register, errors}) => {
+const CriancaCadastro = ({ register, errors, cpfDiscente}) => {
     const [criancaForms, setCriancaForms] = useState([{ id: 0 }]);
     const [nextIdCrianca, setNextIdCrianca] = useState(1);
 
@@ -22,7 +22,9 @@ const CriancaCadastro = ({register, errors}) => {
         setNextIdContato(nextIdContato + 1);
     };
 
-  
+    console.log(contatoForms);
+
+
 
     return (
         <div className="cadastro-crianca-container">
@@ -30,6 +32,7 @@ const CriancaCadastro = ({register, errors}) => {
                 <NewCriancaForm
                     key={form.id}
                     id={form.id}
+                    cpfDiscente={cpfDiscente}
                     addNewForm={adicionarCriancaForm}
                     register={register}
                     errors={errors}
