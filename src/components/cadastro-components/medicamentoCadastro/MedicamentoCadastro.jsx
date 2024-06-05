@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uploadImg from "../../assets/upload-images.png";
+import uploadImg from "../../../assets/upload-images.png";
 import "./MedicamentoCadastro.css";
 import ModalAddCarterinha from "../modalAddCarterinha/ModalAddCarterinha";
 import { motion } from "framer-motion";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./StepControll.css";
-import done from "../../assets/Done.png";
+import done from "../../../assets/Done.png";
 
 const StepControll = ({ step }) => {
     const [stepSelect, setStepSelect] = useState(1);

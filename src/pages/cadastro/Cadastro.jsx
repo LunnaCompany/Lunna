@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import lunnaLogo from "../../assets/lunna-logo.png";
 import "./Cadastro.css";
-import StepControll from "../../components/stepControll/StepControll";
-import ResponavelCadastro from "../../components/responsavelCadastro/ResponavelCadastro";
-import CriancaCadastro from "../../components/criancaCadastro/CriancaCadastro";
-import MedicamentoCadastro from "../../components/medicamentoCadastro/MedicamentoCadastro";
+import StepControll from "../../components/cadastro-components/stepControll/StepControll";
+import ResponavelCadastro from "../../components/cadastro-components/responsavelCadastro/ResponavelCadastro";
+import CriancaCadastro from "../../components/cadastro-components/criancaCadastro/CriancaCadastro";
+import MedicamentoCadastro from "../../components/cadastro-components/medicamentoCadastro/MedicamentoCadastro";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { CardCadastroSucess } from "../../components/cardCadastroSucess/CardCadastroSucess";
+import { CardCadastroSucess } from "../../components/cadastro-components/cardCadastroSucess/CardCadastroSucess";
 
 const Cadastro = () => {
     const [imgResp, setImgResp] = useState();
@@ -319,6 +319,7 @@ const Cadastro = () => {
 
     return (
         <section className={`page-cadastro-lunna ${sucess && "page-cadastro-sucess"}`}>
+
             <img className="lunna-logo" src={lunnaLogo} alt="" />
             <StepControll step={step} />
             {step === 1 ? (

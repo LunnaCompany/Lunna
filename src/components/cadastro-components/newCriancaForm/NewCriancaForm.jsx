@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uploadImg from "../../assets/upload-images.png";
+import uploadImg from "../../../assets/upload-images.png";
 import { motion } from "framer-motion";
 import ModalAddRG from "../modalAddRG/ModalAddRG";
 

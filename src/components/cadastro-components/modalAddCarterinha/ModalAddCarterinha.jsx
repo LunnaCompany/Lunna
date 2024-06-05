@@ -1,17 +1,16 @@
 import React, { useCallback, useState } from "react";
-import "./ModalAddRG.css";
+import "./ModalAddCarterinha.css";
 import { useDropzone } from "react-dropzone";
-import rg from "../../assets/rg-example.png";
-import upload from "../../assets/upload.png";
+import carterinha from "../../../assets/carterinha-exemplo.png";
+import upload from "../../../assets/upload.png";
 
-const ModalAddRG = ({ setOpenModal, setimgRgResp }) => {
+const ModalAddCarterinha = ({ setOpenModal }) => {
     const [file, setFile] = useState();
     const [preview, setPreview] = useState(null);
 
     const onDrop = useCallback((acceptedFiles) => {
         const currentFile = acceptedFiles[0];
         setFile(currentFile);
-        setimgRgResp(currentFile);
         setPreview(URL.createObjectURL(currentFile));
     }, []);
 
@@ -23,18 +22,22 @@ const ModalAddRG = ({ setOpenModal, setimgRgResp }) => {
             "image/png": [".png", ".jpg"],
         },
     });
-
     return (
-        <div className="dark-background-modal">
+        <div
+            className="dark-background-modal"
+            
+        >
             <div className="modal-file-upload">
                 <div className="head-modal-file"></div>
-                <h2>Instuções para enviar a foto do RG</h2>
-                <img className="rg-example" src={rg} alt="" />
-                <h3>Foto do RG aberto</h3>
+                <h2>Instuções para enviar a foto da carteirinha</h2>
+                <img className="carterinha-example" src={carterinha} alt="" />
+                <h3>Inserir aqui</h3>
                 <label
                     htmlFor="imgRgResp"
                     className="input-file-container"
+                   
                     {...dropzone.getRootProps()}
+                    
                 >
                     {file ? (
                         <img src={preview} className="preview-img" alt="" />
@@ -42,7 +45,7 @@ const ModalAddRG = ({ setOpenModal, setimgRgResp }) => {
                         <img src={upload} alt="" />
                     )}
 
-                    <input id="imgRgResp" type="file" {...dropzone.getInputProps()} />
+                    <input id="imgRgResp" {...dropzone.getInputProps()} />
                 </label>
 
                 <div className="container-button-upload-modal">
@@ -53,5 +56,4 @@ const ModalAddRG = ({ setOpenModal, setimgRgResp }) => {
         </div>
     );
 };
-
-export default ModalAddRG;
+export default ModalAddCarterinha;

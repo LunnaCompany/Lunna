@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ResponsavelCadastro.css";
-import camera from "../../assets/Camera.png";
-import uploadImg from "../../assets/upload-images.png";
+import camera from "../../../assets/Camera.png";
+import uploadImg from "../../../assets/upload-images.png";
 import ModalAddRG from "../modalAddRG/ModalAddRG";
 import { motion } from "framer-motion";
 

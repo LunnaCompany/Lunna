@@ -1,6 +1,6 @@
 import React from "react";
 import "./cardCadastroSucess.css";
-import Icon from "../../assets/cadastro-sucess.png";
+import Icon from "../../../assets/cadastro-sucess.png";
 
 export function CardCadastroSucess() {
     return (
