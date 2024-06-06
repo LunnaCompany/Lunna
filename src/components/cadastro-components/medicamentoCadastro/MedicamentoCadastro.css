@@ -20,8 +20,6 @@
     padding: 2rem 0;
 }
 
-.container-plano-saude span {
-}
 
 .container-plano-saude .container-input-plano {
     display: flex;
@@ -124,8 +122,4 @@
     justify-content: space-between;
     gap: 0.4rem;
     width: 30%;
-}
-
-.alergias-check-container div input{
-    
 }

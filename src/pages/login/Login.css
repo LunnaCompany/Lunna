@@ -1,0 +1,86 @@
+.page-login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./assets/background-login.png");
+    background-size: cover;
+}
+.container {
+    background-color: #faf3fb;
+    height: 100%;
+    width: 100%;
+    max-width: 1087px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 60px;
+}
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 52px;
+    height: 90%;
+    width: 80%;
+    overflow: hidden;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content-login {
+    height: 100%;
+    width: 100%;
+}
+.container h1 {
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    color: #606060;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+}
+.login p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #606060;
+}
+.senha {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.senha input {
+    width: 100%;
+}
+
+.span-esqueceu-senha {
+    padding-left: 42.7%;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #606060;
+}
+
+.senha span {
+    color: #9747ff;
+    font-style: italic;
+}
+.divImg {
+    background-color: #faf3fb;
+    display: flex;
+    justify-content: end;
+    padding: 1.5rem;
+}
+
+.container-error-login {
+    width: 85%;
+    padding-top: 6px;
+    display: flex;
+    justify-content: flex-start;
+
+}
