@@ -1,0 +1,106 @@
+.info-home-lunna-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.box-info-home-lunna-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 3rem;
+}
+
+.box-info-home-lunna-section img {
+    width: 40%;
+}
+
+.box-content-info-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.title-info-home {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 70%;
+}
+.title-info-home h2 {
+    font-family: "title font";
+    margin-bottom: 2%;
+}
+
+.title-info-home img {
+    width: 18%;
+    max-width: 130px;
+}
+
+.box-info-home-lunna-section div h2 {
+    max-width: 373px;
+    width: 40%;
+    text-align: center;
+    color: #594d4d;
+}
+
+.box-info-home-lunna-section div p {
+    max-width: 473px;
+    margin-top: 2rem;
+    font-size: clamp(0.8rem, 0.3rem + 1vw, 1rem);
+}
+
+@media (max-width: 1330px) {
+    .info-home-lunna-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1110px) {
+    .title-info-home img {
+        display: none;
+    }
+    .box-info-home-lunna-section div h2 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 779px) {
+    .box-info-home-lunna-section img {
+        display: none;
+    }
+
+    .box-info-home-lunna-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-info-home-lunna-section div h2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .info-home-lunna-section {
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .box-content-info-home {
+        width: 100%;
+    }
+    .box-info-home-lunna-section div p {
+        font-size: 14px;
+    }
+}

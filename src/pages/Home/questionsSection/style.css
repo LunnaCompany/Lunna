@@ -1,0 +1,113 @@
+.section-questions {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section-questions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 19vh;
+}
+
+.content-section-questions .questions-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.box-questions-content {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.box-questions-content::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 10px;
+}
+
+.questions-more-infos {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+    background-color: #9747ff;
+    color: #fff;
+}
+
+.questions-more-infos div h2 {
+    color: #fff;
+    font-size: clamp(1.5rem, 0.8em + 1vw, 3.5rem);
+    margin-bottom: 4%;
+}
+
+.questions-more-infos div p {
+    color: #fff;
+    font-size: clamp(1rem, 0.3em + 1vw, 2rem);
+}
+
+.questions-more-infos .btn-more-infos {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    padding: 1rem 0;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.3em + 0.8vw, 1.5rem);
+    cursor: pointer;
+}
+
+@media (max-width: 1212px) {
+    .questions-more-infos .btn-more-infos {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-questions {
+        height: 100vh;
+        justify-content: space-around;
+    }
+    .content-section-questions .main-img-section-questions {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .questions-more-infos .btn-more-infos {
+        width: 25%;
+    }
+}
+
+@media (max-width: 715px) {
+    .questions-more-infos {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .questions-more-infos .btn-more-infos {
+        width: 70%;
+    }
+}
+
+@media (max-width: 650px) {
+    .content-section-questions .questions-content {
+        width: 70%;
+    }
+    .content-section-questions .questions-content h2 {
+        text-align: center;
+    }
+}

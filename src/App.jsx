@@ -1,13 +1,12 @@
-import "./App.css";
-import Cadastro from "./pages/cadastro/Cadastro";
-import Login from "./pages/login/Login";
+import { BrowserRouter as Router } from "react-router-dom";
+import { RoutesLunna } from "./routes/RoutesLunna";
 
 function App() {
     return (
-        <>
-            <Login />
-        </>
-    ); 
+        <Router>
+            <RoutesLunna />
+        </Router>
+    );
 }
 
 export default App;

@@ -1,0 +1,36 @@
+.section-banner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.section-banner img {
+    width: 25%;
+}
+
+@media (max-width: 1110px) {
+    .section-banner h2 {
+        font-size: clamp(2.5rem, 1rem + 1vw, 3rem);
+        left: 16%;
+    }
+
+    .section-banner h2::before {
+        font-size: clamp(2.5rem, 1rem + 1vw, 3rem);
+    }
+}
+
+@media (max-width: 620px) {
+    .section-banner img {
+        height: 150%;
+    }
+
+    .section-banner h2 {
+        font-size: clamp(1.3rem, 1rem + 1vw, 2rem);
+        top: 50%;
+        left: 16%;
+    }
+
+    .section-banner h2::before {
+        font-size: clamp(1.3rem, 1rem + 1vw, 2rem);
+    }
+}

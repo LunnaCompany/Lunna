@@ -157,7 +157,7 @@
     width: 60%;
 }
 
-.container-error-upload{
+.container-error-upload {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -171,15 +171,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
     margin: 0.8rem 0;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .upload-btn label {
-    font-size: 13px;
-    padding: 1rem;
+    font-size: 12px;
+    width: 100%;
+
+    padding: 0.4rem;
     cursor: pointer;
     color: #fff;
 }
@@ -218,7 +220,7 @@
     font-size: 13px;
 }
 
-.ipt-upload{
+.ipt-upload {
     display: none;
 }
 

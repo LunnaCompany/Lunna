@@ -1,0 +1,128 @@
+.lang-button {
+    position: relative;
+    width: 12vw;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #31c1ff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: clamp(0.68rem, 0.3em + 1vw, 0.914rem);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 4vw;
+}
+
+.lang-button-open {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.lang-button .lang-content {
+    display: flex;
+    align-items: center;
+
+    width: 50%;
+}
+.lang-button img {
+    margin-right: 8px;
+    width: 30%;
+}
+
+.lang-drop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    background-color: #31c1ff;
+    width: 100%;
+
+    height: 100%;
+    bottom: -100%;
+}
+
+.last-drop {
+    border-radius: 0px 0px 20px 20px;
+}
+
+.lang-drop .lang-content {
+    display: flex;
+    justify-content: center;
+}
+
+.lang-drop .lang-content span {
+    width: 40%;
+    font-size: 12px;
+}
+
+.lang-drop .lang-content img {
+    width: 30%;
+}
+
+.arrow-lang {
+    --color: #000;
+    --size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.arrow-lang .chevron-down {
+    position: absolute;
+    animation: keyframes-return 0.5s;
+}
+
+/* ------ On check event ------ */
+.arrow-lang input:checked ~ .chevron-down {
+    animation: keyframes-rotate 0.5s;
+    transform: rotate(180deg);
+}
+
+/* ------ Hide the default checkbox ------ */
+.arrow-lang input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes keyframes-return {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 430px) {
+    .lang-button img {
+        width: 20%;
+    }
+
+    .lang-drop .lang-content img {
+        width: 18%;
+    }
+}

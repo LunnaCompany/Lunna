@@ -45,9 +45,12 @@
     width: 50%;
 }
 .login p {
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Inter", sans-serif;
     color: #606060;
+}
+.login p span {
+    color: #9747ff;
 }
 .senha {
     width: 100%;
@@ -82,5 +85,4 @@
     padding-top: 6px;
     display: flex;
     justify-content: flex-start;
-
 }

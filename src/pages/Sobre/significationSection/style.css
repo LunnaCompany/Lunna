@@ -1,0 +1,129 @@
+.section-significado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-significado .titulo2 {
+    font-size: 40px;
+    margin: 6rem 0;
+}
+
+.titulo2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "title font";
+    font-weight: 700;
+}
+
+.div03 {
+    background-image: url(../../../assets/fundolousa.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 10rem;
+    justify-content: center;
+}
+
+.inicial {
+    color: #f53491;
+    font-size: 96px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.content-siginificado {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+.igação {
+    color: rgba(49.09, 193.23, 255, 0.9);
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.unna {
+    color: #f53491;
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.niao {
+    color: #feb018;
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.otificacao {
+    color: #9747ff;
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.utrição {
+    color: #f76daf;
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+.companhamento {
+    color: #63ffec;
+    font-size: 64px;
+    font-family: Cabin Sketch;
+    font-weight: 400;
+}
+
+@media (max-width: 950px) {
+    .inicial {
+        font-size: 72px;
+    }
+
+    .text-significado {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 690px) {
+    .content-siginificado {
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .inicial {
+        font-size: 62px;
+    }
+
+    .text-significado {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .section-significado .titulo2 {
+        font-size: 30px;
+    }
+
+    .inicial {
+        font-size: 52px;
+    }
+
+    .text-significado {
+        font-size: 20px;
+    }
+}

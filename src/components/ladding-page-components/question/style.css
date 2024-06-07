@@ -1,0 +1,33 @@
+.box-questions {
+    margin-bottom: 8%;
+}
+
+.content-section-questions .questions-content h2 {
+    margin-bottom: 5%;
+}
+
+.content-section-questions .questions-content div {
+    max-width: 100%;
+}
+
+.content-section-questions .questions-content div p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.questions-content .question {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.questions-content .question img {
+    cursor: pointer;
+    padding: 3px;
+}
+
+.img-plus-question {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}

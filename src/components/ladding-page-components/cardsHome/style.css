@@ -1,0 +1,16 @@
+.swiper-wrapper {
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.container-home-corousel {
+    max-width: 90%;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+}

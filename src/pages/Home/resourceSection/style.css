@@ -1,0 +1,21 @@
+.page-resorce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10%;
+    background-image: url(../../../assets/resource-bacground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fcf5f5;
+}
+
+.title-page-resorce {
+    margin: 6rem 0;
+    font-family: "title font";
+    color: #ffab08;
+    font-size: clamp(2rem, 1rem + 1vw, 2.5rem);
+}
+

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Inter:wght@100..900&display=swap");
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcf5f5;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.home-content h1 {
+    font-size: clamp(8rem, 6rem + 1vw, 9rem);
+    line-height: 15vh;
+    font-family: "Cabin Sketch", sans-serif;
+    color: #f53491;
+}
+
+.home-content h2 {
+    font-size: clamp(2rem, 1rem + 1vw, 2.5rem);
+
+    font-weight: 600;
+    color: #9747ff;
+}
+
+.home-content p {
+    font-size: clamp(1rem, 0.3rem + 1vw, 1.12rem);
+
+    max-width: 466px;
+}
+
+.home-content-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-content-main img {
+    width: 40%;
+    touch-action: none;
+}
+
+.button-home-content {
+    width: 30%;
+    background-color: #ffcc4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border-radius: 28px;
+    color: #fff;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.container-card-home {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.button-card-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 7.5vw;
+    margin-top: 1rem;
+}
+
+.button-card-home div {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ff459f;
+    cursor: pointer;
+}
+
+.prev-card-home {
+    background-color: #ff459f;
+    color: #fff;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.next-card-home {
+    background-color: #fcf5f5;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1120px) {
+    .home-content-main {
+        justify-content: center;
+    }
+    .home-content-main img {
+        display: none;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .button-card-home {
+        width: 10vw;
+        margin-top: 4vh;
+        margin-bottom: 10vh;
+    }
+
+    .container-card-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card-home {
+        width: 20%;
+    }
+}
+
+@media (max-width: 515px) {
+    .main-home {
+        height: 90vh;
+    }
+
+    .button-card-home {
+        margin-bottom: 0;
+    }
+
+    .home-content-main div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-content h1 {
+        font-size: 6rem;
+    }
+
+    .home-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+        max-width: 70%;
+    }
+
+    .button-card-home {
+        margin-left: 0;
+    }
+
+    .button-card-home {
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

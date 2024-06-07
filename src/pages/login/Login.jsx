@@ -8,15 +8,28 @@ import Icon1 from "../../assets/lock.png";
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 function Login() {
     const [token, setToken] = useState("");
     const [errorResponse, setErrorResponse] = useState(false);
+    const navigate = useNavigate();
+
+    const scrollToPage = (page, elementId) => {
+        navigate(page);
+
+        setTimeout(() => {
+            scroller.scrollTo(elementId, {
+                duration: 800,
+                smooth: true,
+                offset: -50,
+            });
+        }, 10);
+    };
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-        watch,
     } = useForm();
 
     const handleToken = (token) => {
@@ -46,14 +59,13 @@ function Login() {
     const onSubmit = async (data) => {
         console.log(data);
         handleLogin(data);
- 
     };
 
     console.log(errorResponse);
 
     return (
         <main className="page-login">
-            <div className="container-login">
+            <div id="login" className="container-login">
                 <Baby />
                 <div className="content-login">
                     <div className="divImg">
@@ -133,7 +145,17 @@ function Login() {
                                 handleSubmit={handleSubmit}
                             />
                             <p>
-                                Não tem uma conta? /<span>Cadastre-se</span>
+                                Não tem uma conta? /
+                                <span
+                                    onClick={() =>
+                                        scrollToPage(
+                                            "/Lunna-landing-page/cadastro",
+                                            "cadastro"
+                                        )
+                                    }
+                                >
+                                    Cadastre-se
+                                </span>
                             </p>
                         </div>
                     </div>

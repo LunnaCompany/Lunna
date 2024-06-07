@@ -1,0 +1,123 @@
+.card-equipe {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-picture-equipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto {
+    position: relative;
+}
+
+.picture-adult-equipe {
+    height: 311px;
+    width: 301px;
+
+    z-index: 999;
+}
+
+.hend-equipe {
+    position: absolute;
+    top: -20%;
+    left: -35%;
+    background: none;
+}
+
+.foto-cri img {
+    width: 142px;
+    height: 142px;
+    margin-top: 150px;
+}
+
+.container-names {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+.img-redes {
+    margin-bottom: 0px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 24px;
+}
+
+.name h3 {
+    font-size: clamp(1rem, 0.7em + 1vw, 1.6rem);
+}
+
+.funcion-developer {
+    font-size: clamp(1rem, 0.7em + 1vw, 1.6rem);
+    width: 100%;
+    font-weight: bold;
+}
+
+.primeiro {
+    color: #4bc9ff;
+}
+
+.segundo {
+    color: #ff459f;
+}
+
+@media (max-width: 630px) {
+    .picture-adult-equipe {
+        width: 200px;
+        height: 200px;
+    }
+
+    .foto-cri img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .hend-equipe {
+        width: 70%;
+        top: -12%;
+        left: -35%;
+    }
+}
+
+@media (max-width: 500px) {
+    .picture-adult-equipe {
+        width: 180px;
+        height: 180px;
+    }
+
+    .foto-cri img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .hend-equipe {
+        width: 60%;
+        top: -12%;
+        left: -25%;
+    }
+
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-size: 24px;
+    }
+
+    .segundo{
+        text-align: center;
+        font-size: 14px;
+    }
+}

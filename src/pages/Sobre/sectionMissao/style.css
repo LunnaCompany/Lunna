@@ -1,0 +1,103 @@
+.section-missao {
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mira {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 5rem;
+}
+.imgvalores {
+    width: 400px;
+}
+.mira img {
+    width: 24%;
+}
+.mira .mira-conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.mira .mira-conteudo p {
+    font-size: 18px;
+    max-width: 100%;
+    width: max-content;
+}
+.mira-conteudo h2 {
+    font-size: 50px;
+}
+.valores-card {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+.valores-card img {
+    width: 20%;
+}
+.valores-card-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.valores-card h2 {
+    font-size: 50px;
+}
+.valores-card ol li {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    max-width: max-content;
+}
+.valores-card ol {
+    max-width: 60%;
+}
+.valores-card ol li span {
+    font-weight: bold;
+}
+
+@media (max-width: 975px) {
+    .mira img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 770px) {
+   
+
+    .mira img {
+        display: none;
+    }
+
+    .mira {
+        width: 100%;
+    }
+
+    .mira-conteudo {
+        align-items: center;
+    }
+
+    .mira-conteudo p {
+        width: 90%;
+    }
+
+    .valores-card img {
+        display: none;
+    }
+
+    .valores-card {
+        width: 100%;
+    }
+
+    .valores-card-conteudo {
+        width: 100%;
+    }
+}

@@ -8,6 +8,7 @@ import MedicamentoCadastro from "../../components/cadastro-components/medicament
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { CardCadastroSucess } from "../../components/cadastro-components/cardCadastroSucess/CardCadastroSucess";
+import { useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
     const [imgResp, setImgResp] = useState();
@@ -18,6 +19,7 @@ const Cadastro = () => {
     const [cpfDiscente, setCpfDiscente] = useState(null);
     const [emailResponsavel, setEmailResponsavel] = useState(null);
     const [sucess, setSucess] = useState(false);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -317,10 +319,31 @@ const Cadastro = () => {
         }
     };
 
-    return (
-        <section className={`page-cadastro-lunna ${sucess && "page-cadastro-sucess"}`}>
+    const scrollToPage = (page, elementId) => {
+        navigate(page);
 
-            <img className="lunna-logo" src={lunnaLogo} alt="" />
+        setTimeout(() => {
+            scroller.scrollTo(elementId, {
+                duration: 800,
+                smooth: true,
+                offset: -50,
+            });
+        }, 10);
+    };
+
+    return (
+        <section
+            id="cadastro"
+            className={`page-cadastro-lunna ${
+                sucess && "page-cadastro-sucess"
+            }`}
+        >
+            <img
+                className="lunna-logo"
+                src={lunnaLogo}
+                alt=""
+                onClick={() => scrollToPage("/Lunna-landing-page", "home")}
+            />
             <StepControll step={step} />
             {step === 1 ? (
                 <ResponavelCadastro
