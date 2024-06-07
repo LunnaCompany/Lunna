@@ -7,7 +7,7 @@ export function Cardequipe({ dados }) {
     return (
         <div className="card-equipe">
             <div className="box-picture-equipe">
-                <div className="foto">
+                <div className="foto-container-equipe">
                     <motion.img
                         initial={{ opacity: 0, x: 15 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -29,7 +29,7 @@ export function Cardequipe({ dados }) {
                     initial={{ opacity: 0, x: 15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 1 }}
-                    className="foto-cri"
+                    className="foto-cri-equipe"
                 >
                     <img src={dados.picture_kid} alt="" />
                 </motion.div>

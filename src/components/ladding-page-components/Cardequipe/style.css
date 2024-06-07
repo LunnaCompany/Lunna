@@ -1,6 +1,7 @@
 .card-equipe {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
 }
 
 .box-picture-equipe {
@@ -9,25 +10,25 @@
     justify-content: center;
 }
 
-.foto {
+.foto-container-equipe {
     position: relative;
 }
 
 .picture-adult-equipe {
     height: 311px;
     width: 301px;
-
     z-index: 999;
 }
 
 .hend-equipe {
     position: absolute;
-    top: -20%;
-    left: -35%;
+    top: -5%;
+    left: -30%;
     background: none;
+    width: 50%;
 }
 
-.foto-cri img {
+.foto-cri-equipe img {
     width: 142px;
     height: 142px;
     margin-top: 150px;
@@ -78,7 +79,7 @@
         height: 200px;
     }
 
-    .foto-cri img {
+    .foto-cri-equipe img {
         width: 62px;
         height: 62px;
     }
@@ -96,7 +97,7 @@
         height: 180px;
     }
 
-    .foto-cri img {
+    .foto-cri-equipe img {
         width: 62px;
         height: 62px;
     }

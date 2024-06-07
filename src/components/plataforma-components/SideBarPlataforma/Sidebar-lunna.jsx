@@ -108,7 +108,7 @@ function Sidebar() {
                         <GoGear size="25" color="white" />
                         <span className="item-description">Configurações</span>
                     </button>
-                    <button className="logout_btn">
+                    <button className="logout_btn" onClick={() => scrollToPage("/Lunna-landing-page", "home")}>
                         <LuArrowRightToLine size="25" color="white" />
                         <span className="item-description">Sair</span>
                     </button>
