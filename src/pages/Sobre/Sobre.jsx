@@ -7,10 +7,10 @@ import Rodape from "../../components/ladding-page-components/Rodape/Rodape";
 import QuemSomosSection from "./quemSomosSection/QuemSomosSection";
 import { SignificationSection } from "./significationSection/significationSection";
 
-const Sobre = ({ translateText, translate }) => {
+const Sobre = ({ translateText, handleTranslate }) => {
     return (
         <>
-            <NavBar translateText={translateText} handleTranslate={translate} />
+            <NavBar translateText={translateText} handleTranslate={handleTranslate} />
             <MainSobre translateText={translateText} />
             <SectionMissao translateText={translateText} />
             <QuemSomosSection translateText={translateText} />

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+.tudo-memoria{
+
+    overflow-y: scroll;
+    height: 410px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.container-filtro{
+    display: flex;
+    justify-content: space-around;
+    gap: 600px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+
+.fitro-section p{
+ padding-top: 25px;
+ font-style: normal;
+}
+
+.btn-section button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #FB3CFF;
+}
+
+.btn-favoritos{
+    height: 45px;
+    width: 160px;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #fff;
+}
+
+
+
+

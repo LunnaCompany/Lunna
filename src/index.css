@@ -12,6 +12,9 @@
     list-style: none;
     text-decoration: none;
     font-family: "Inter", sans-serif;
+}
+
+p {
     color: #444;
 }
 

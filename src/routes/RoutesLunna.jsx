@@ -12,6 +12,10 @@ import Cadastro from "../pages/cadastro/Cadastro";
 import Login from "../pages/login/Login";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import TemplateMainPlataforma from "../pages/plataforma/TemplateMainPlataforma/TemplateMainPlataforma";
+import PerfilDiscente from "../components/plataforma-components/perfil-discente/Perfil-discente";
+import PerfilMemoria from "../components/plataforma-components/Perfil-Memoria/Perfil-Memoria";
+import Atividades from "../pages/plataforma/Atividades/Atividades";
 
 export const RoutesLunna = () => {
     const [translateText, setTranslateText] = useState(TextsLandingPage);
@@ -53,8 +57,6 @@ export const RoutesLunna = () => {
                 console.log(error);
             }
         };
-
-       
     }, [navigate]);
 
     const checkValidadeteToken = (token) => {
@@ -122,7 +124,32 @@ export const RoutesLunna = () => {
             <Route path="/Lunna-landing-page/cadastro" element={<Cadastro />} />
             <Route path="/Lunna-landing-page/login" element={<Login />} />
 
-            <Route path="/Lunna-landing-page/teste" element={<h1>Logado</h1>} />
+            <Route
+                path="/Lunna-landing-page/perfil"
+                element={
+                    <TemplateMainPlataforma>
+                        <PerfilDiscente />
+                    </TemplateMainPlataforma>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/memoria"
+                element={
+                    <TemplateMainPlataforma>
+                        <PerfilMemoria />
+                    </TemplateMainPlataforma>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/atividade"
+                element={
+                    <TemplateMainPlataforma>
+                        <Atividades />
+                    </TemplateMainPlataforma>
+                }
+            />
         </Routes>
     );
 };

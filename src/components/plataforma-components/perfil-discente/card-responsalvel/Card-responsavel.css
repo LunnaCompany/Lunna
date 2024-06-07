@@ -1,0 +1,27 @@
+.container-parentes{
+    width: 401px;
+    height: 440px;
+    border-radius: 20px;
+    background-color: #FFE7AB;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.img-parente img{
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+}
+
+
+.info-parente{
+    padding-top: 10px;
+    padding: 15px;
+
+}
+
+.info-parente ul li{
+    list-style-type: none;
+    padding-bottom: 15px;
+}

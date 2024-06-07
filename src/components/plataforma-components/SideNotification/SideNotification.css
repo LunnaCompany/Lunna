@@ -1,0 +1,57 @@
+.SideNotification-Background {
+   width: 100%;
+   height: 100vh;
+   background-color: #9d9d9d7d;
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   justify-content: center;
+}
+
+.SideNotification {
+   height: 75%;
+   width: 20%;
+   border-radius: 20px;
+   -webkit-box-shadow: 1px 3px 21px 8px rgba(0, 0, 0, 0.35);
+   -moz-box-shadow: 1px 3px 21px 8px rgba(0, 0, 0, 0.35);
+   box-shadow: 1px 3px 21px 8px rgba(0, 0, 0, 0.35);
+   background-color: white;
+   border: 2px solid black;
+}
+.SideNotification-SectionIcons {
+   height: 10%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 200px;
+}
+.SideNotification-Icon {
+   display: flex;
+   align-items: center;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+   -webkit-box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   -moz-box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   height: 40px;
+   width: 40px;
+   justify-content: center;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+}
+.SideNotification-Icon:hover {
+   background-color: rgba(232, 232, 232, 0.858);
+   transform: scale(1.15);
+}
+.SideNotifications-RotateIcon {
+   transform: rotate(180deg);
+}
+.SideNotification-Cards {
+   border: solid 2px rgba(0, 0, 0, 0.269);
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 3px;
+}

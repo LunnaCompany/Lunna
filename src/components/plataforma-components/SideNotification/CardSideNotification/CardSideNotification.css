@@ -1,0 +1,48 @@
+.CardSideNotification {
+   width: auto;
+   height: 15vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+}
+.CardSideNotification-Border {
+   -webkit-box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   -moz-box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   box-shadow: 1px 3px 14px 8px rgba(0, 0, 0, 0.04);
+   width: 95%;
+   height: 95%;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   border: 2px solid grey;
+}
+
+.CardSideNotification-Photo {
+   border: solid 2px #A49D9D;
+   border-radius: 47%;
+   height: 65%;
+   width: 25%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+.CardSideNotification-Photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.CardSideNotification-TextNotification {
+   width: 60%;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.CardSideNotification-TextNotification p {
+   font-size: 15px;
+   text-align: center;
+}

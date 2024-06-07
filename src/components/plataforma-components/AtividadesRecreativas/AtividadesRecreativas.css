@@ -1,0 +1,35 @@
+.conteiner {
+    width: 100%;
+    height: 80px;
+    background: rgb(245, 52, 145);
+    background: linear-gradient(
+        90deg,
+        rgba(245, 52, 145, 1) 0%,
+        rgba(174, 25, 96, 1) 100%,
+        rgba(173, 37, 102, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+img {
+    width: 60px;
+}
+.conteiner .text {
+    color: #fff;
+    font-size: 13px;
+}
+
+.content-lunna {
+    display: flex;
+    flex-direction: column;
+}
+.content-lunna-cards {
+    display: flex;
+    justify-content: center;
+ 
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    align-items: center;
+}

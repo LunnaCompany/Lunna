@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Klee+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-color: #98989873;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.section {
+    width: 945px;
+    height: 483px;
+    border-radius: 29px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 8%;
+    font-family: "Inter", sans-serif;
+}
+.superior {
+    background-color: #feb018;
+    width: 945px;
+    height: 72px;
+    border-radius: 29px 29px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 29px 29px;
+    background-color: white;
+    gap: 33px;
+}
+.mudar-foto-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100px;
+
+    gap: 15px;
+}
+
+.mudar-foto-perfil img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.mudar-foto-perfil p {
+    width: 100px;
+    text-align: center;
+    color: #4f4a4a;
+    font-weight: 600;
+}
+.alterar-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 308px;
+}
+.background-atual,
+.background-novo {
+    width: 684px;
+    height: 138px;
+    border-radius: 13px;
+}
+.background-atual {
+    background-color: black;
+    overflow: hidden;
+}
+.background-atual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.background-novo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 500;
+    color: #4f4a4a;
+    background: #dedede;
+    border: 2px dashed;
+}
+.background-novo img {
+    width: 82px;
+    height: 75px;
+}
+.foto {
+    border: none;
+    border-radius: 100%;
+    width: 120%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 11px 13px 18px -16px rgba(161, 161, 161, 1);
+}
+.foto img {
+    width: 200px;
+    height: 100%;
+}
+.alterar-perfil-icon {
+    cursor: pointer;
+}

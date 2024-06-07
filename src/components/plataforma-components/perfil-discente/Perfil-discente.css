@@ -1,0 +1,181 @@
+.div-tudo{
+   overflow-y: scroll;
+}
+
+
+.info-cri{
+    
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.info-cri-dois{
+    display: flex;
+    justify-content:space-around;
+    gap: 150px;
+    padding-top: 650px;
+}
+
+.foto-perfil-discente {
+    width: 177px;
+    height: 177px;
+    left: 5%;
+}
+
+.foto-perfil-discente img{
+    width: 100%;
+}
+
+.info-kids h2{
+    font-size: 20px;
+    width: 70%;
+    color: #FEB018;
+    padding-top: 20px;
+}
+
+.info-kids ul li{
+    font-size: 16px;
+    padding-top: 30px;
+    list-style-type: none;
+}
+
+.info-kids-two ul li{
+ list-style-type: none;
+ padding-top: 38px;
+}
+
+.btn-edit{
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #FEB018;
+    border: none;
+}
+
+.line{
+    width: 80%;
+    border-bottom: 4px  solid #FEB018;
+    color: #FEB018;
+    padding-top: 20px;
+}
+
+.info-med{
+    display: flex;
+    list-style-type: none;
+}
+
+
+.info-med ul li{
+    list-style-type: none;
+    padding-bottom: 25px;
+}
+
+
+.info-med-two{
+    padding-top: 30px;
+}
+
+.info-meio{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.info-sus{
+    display: flex;
+    gap: 100px;
+    padding-top: 20px;
+}
+.info-contact ul li{
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+.info-contact h2{
+    display: flex;
+    font-size: 18px;
+    color: #FEB018;
+}
+
+
+.info-total h2{
+    padding-bottom: 30px;
+    color: #FEB018;
+    font-size: 18px;
+}
+
+
+.info-total ul li{
+
+    padding-top: 20px;
+}
+.info-total{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+
+}
+
+.info-contact h2{
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.info-contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 115px;
+    
+}
+
+.line-two{
+    height: 840px;
+    border-right: 4px  solid #FEB018;
+    color: #FEB018;
+}
+
+
+.line-tree{
+    width: 80%;
+    border-bottom: 4px  solid #FEB018;
+    color: #FEB018;
+}
+
+
+
+.section-parentes{
+padding-top: 30px;
+padding-bottom: 10px;
+width: 1000px;
+height: 0px;
+
+
+} 
+
+.title-parentes{
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    color: #FEB018;
+    font-size: 20px;
+    font-style: justify;
+    padding-bottom: 20px;
+}
+
+.parentes-section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    padding-left: 35px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+

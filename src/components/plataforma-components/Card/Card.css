@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poetsen+One&display=swap");
+* {
+   font-family: "Inter", sans-serif;
+}
+.AtividadesRecreativas-Card {
+   width: 20%;
+   height: 49vh;
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   background-color: white;
+   -webkit-box-shadow: 10px 10px 23px -8px rgba(0, 0, 0, 0.41);
+   -moz-box-shadow: 10px 10px 23px -8px rgba(0, 0, 0, 0.41);
+   box-shadow: 10px 10px 23px -8px rgba(0, 0, 0, 0.41);
+   overflow: hidden;
+}
+.AtividadesRecreativas-Others {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 45%;
+}
+
+.AtividadesRecreativas-Background {
+   width: 100%;
+   height: 15vh;
+   border-radius: 5px;
+   background-image: url("./img/background.png");
+   background-size: cover;
+}
+
+p {
+   font-size: 10px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+#AtividadesRecreativas-H3 {
+   background-color: rgb(0, 26, 255);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: rgb(245, 52, 145);
+   background: linear-gradient(
+      90deg,
+      rgba(245, 52, 145, 1) 0%,
+      rgba(173, 37, 102, 1) 100%
+   );
+   height: 40px;
+   color: white;
+}
+#AtividadesRecreativas-Descricao {
+   padding: 10px;
+   text-align: left;
+   color: #606060;
+   font-weight: 600;
+}
+.AtividadesRecreativas-Others p {
+   color: #3c3939;
+   font-weight: 600;
+   width: 100%;
+   display: flex;
+   align-items: start;
+   padding-left: 20px;
+}
+.AtividadesRecreativas-Icones {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   gap: 17px;
+}
+.AtividadesRecreativas-Icones img {
+   width: 38px;
+}
+
+.overlay-ativity {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.863);
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.pink-card {
+   height: 205px;
+   width: 421px;
+   background: rgb(245, 52, 145);
+   background: linear-gradient(
+      90deg,
+      rgba(245, 52, 145, 1) 0%,
+      rgba(174, 25, 96, 1) 100%,
+      rgba(173, 37, 102, 1) 100%
+   );
+   display: flex;
+   gap: 27px;
+}
+.purple-card {
+   height: 205px;
+   width: 421px;
+   background: rgb(151, 71, 255);
+   background: linear-gradient(
+      90deg,
+      rgba(151, 71, 255, 1) 0%,
+      rgba(72, 3, 163, 1) 100%
+   );
+   display: flex;
+   gap: 27px;
+}
+.pinkWhite-card {
+   height: 205px;
+   width: 421px;
+   background: rgb(251, 71, 255);
+   background: linear-gradient(
+      90deg,
+      rgba(251, 71, 255, 1) 0%,
+      rgba(187, 5, 191, 1) 100%
+   );
+   display: flex;
+   gap: 27px;
+}
+.yellow-card {
+   height: 205px;
+   width: 421px;
+   background: rgb(254, 176, 24);
+   background: linear-gradient(
+      90deg,
+      rgba(254, 176, 24, 1) 0%,
+      rgba(156, 103, 2, 1) 100%
+   );
+   display: flex;
+   gap: 27px;
+}
+.blue-card {
+   height: 205px;
+   width: 421px;
+   background: rgb(49, 193, 255);
+   background: linear-gradient(
+      90deg,
+      rgba(49, 193, 255, 1) 0%,
+      rgba(2, 125, 179, 1) 100%
+   );
+   display: flex;
+   gap: 27px;
+}
