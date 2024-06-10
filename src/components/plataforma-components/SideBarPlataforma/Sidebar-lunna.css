@@ -1,157 +1,152 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
 
-* {
-   margin: 0;
-   padding: 0;
-   font-family: "Inter", sans-serif;
-}
 #logo-lunna {
-   width: 125px;
-   height: 36px;
-   align-items: center;
-
+    width: 125px;
+    height: 36px;
+    align-items: center;
 }
 #sidebar {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   gap: 40px;
-   background-color: #080340;
-   height: 100vh;
-   border-radius: 0px 18px 18px 0px;
-   position: absolute;
-   transition: all 0.5s;
-   min-width: 82px;
-   z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    background-color: #080340;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: absolute;
+    transition: all 0.5s;
+    min-width: 82px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .sidebar_content {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 12px;
-   gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 30px;
 }
 
 .user {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-   border-bottom: 2px solid #e3e9f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 2px solid #e3e9f7;
 }
 .user button {
-   transition: transform 0.7s ease;
+    transition: transform 0.7s ease;
 }
 
 .user_infos {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .side_items {
-   display: flex;
-   flex-direction: column;
-   list-style: none;
-   gap: 8px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 8px;
 }
 
 .side-item {
-   border-radius: 10px;
-   padding: 10px;
-   cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .side-item.active {
-   background-color: #9747ff;
+    background-color: #9747ff;
 }
 
 .side-item:hover:not(.active),
 .logout_btn:hover {
-   background-color: #9747ff;
+    background-color: #9747ff;
 }
 
 .side-item a {
-   text-decoration: none;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .side-item a i {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 35px;
-   height: 35px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
 }
 
 .logout {
-   border-top: 2px solid #e3e9f7;
-   padding-right: 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   height: 15vh;
-   gap: 10px;
+    border-top: 2px solid #e3e9f7;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    gap: 10px;
 }
 
 .logout_btn {
-   border: none;
-   font-size: 14px;
-   display: flex;
-   gap: 7px;
-   align-items: center;
-   text-align: start;
-   cursor: pointer;
-   background-color: transparent;
-   border-radius: 10px;
-   justify-content: center;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 10px;
+    justify-content: center;
 }
 
 .open_btn {
-   background-color: #080340;
-   color: #e3e9f7;
-   border: none;
-   cursor: pointer;
-   height: 45px;
-   width: 45px;
+    background-color: #080340;
+    color: #e3e9f7;
+    border: none;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
 }
 
 .open-sidebar .open_btn {
-   transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .item-description {
-   width: 0px;
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
-   font-size: 20px;
-   transition: width 0.6s;
-   height: 0px;
-   color: #fff;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    transition: width 0.6s;
+    height: 0px;
+    color: #fff;
 }
 #sidebar.open-sidebar {
-   min-width: 15%;
+    min-width: 15%;
 }
 
 #sidebar.open-sidebar .item-description {
-   width: 140px;
-   height: auto;
+    width: 140px;
+    height: auto;
 }
 
 #sidebar.open-sidebar .side-item a {
-   justify-content: flex-start;
-   gap: 14px;
-   display: flex;
-   justify-content: space-around;
+    justify-content: flex-start;
+    gap: 14px;
+    display: flex;
+    justify-content: space-around;
 }
 .CiViewList {
-   stroke-width: 0.88;
+    stroke-width: 0.88;
 }
-

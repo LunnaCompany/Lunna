@@ -15,18 +15,32 @@
 .info-cri-dois{
     display: flex;
     justify-content:space-around;
-    gap: 150px;
-    padding-top: 650px;
+ 
+    width: 80%;
+    margin-top: 700px;
 }
 
 .foto-perfil-discente {
-    width: 177px;
-    height: 177px;
-    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 0.5rem;
+    border: 6px solid #FFD073;
+    border-radius: 10px;
+
 }
 
 .foto-perfil-discente img{
-    width: 100%;
+    width: 130px;
+    height: 130px;
+
+}
+
+.info-kids-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info-kids h2{
@@ -44,7 +58,7 @@
 
 .info-kids-two ul li{
  list-style-type: none;
- padding-top: 38px;
+ padding-top: 28px;
 }
 
 .btn-edit{

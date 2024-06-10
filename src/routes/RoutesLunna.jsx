@@ -16,6 +16,8 @@ import TemplateMainPlataforma from "../pages/plataforma/TemplateMainPlataforma/T
 import PerfilDiscente from "../components/plataforma-components/perfil-discente/Perfil-discente";
 import PerfilMemoria from "../components/plataforma-components/Perfil-Memoria/Perfil-Memoria";
 import Atividades from "../pages/plataforma/Atividades/Atividades";
+import Avisos from "../pages/plataforma/avisos/Avisos";
+import TemplateSecundaryPlataforma from "../pages/plataforma/TemplateSecundaryPlataforma/TemplateSecundaryPlataforma";
 
 export const RoutesLunna = () => {
     const [translateText, setTranslateText] = useState(TextsLandingPage);
@@ -148,6 +150,15 @@ export const RoutesLunna = () => {
                     <TemplateMainPlataforma>
                         <Atividades />
                     </TemplateMainPlataforma>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/avisos"
+                element={
+                    <TemplateSecundaryPlataforma>
+                        <Avisos />
+                    </TemplateSecundaryPlataforma>
                 }
             />
         </Routes>

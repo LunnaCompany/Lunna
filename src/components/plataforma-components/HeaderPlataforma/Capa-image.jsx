@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Capa-image.css";
 import fotomain from "./images/capa.png";
 import fotoresponsavel from "./images/fotoresponsavel.png";
@@ -14,13 +14,40 @@ import { MdOutlinePhotoCamera } from "react-icons/md";
 import CardSideNotification from "../SideNotification/CardSideNotification/CardSideNotification";
 import SideNotification from "../SideNotification/SideNotification/";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 //
 function Capa() {
     //
     const [overlay, setOverlay] = useState(false);
     const [notificationOverlay, setNotificationOverlay] = useState(false);
+    const [imagePerfil, setImagePerfil] = useState("");
     const navigate = useNavigate();
+    const email = localStorage.getItem("email");
+
+    useEffect(() => {
+        const fetchDataResp = async () => {
+            const response = await axios.get(
+                `http://localhost:8080/responsavel/email/${email}`
+            );
+            console.log(response.data);
+            fetchImgResp(encodeURIComponent(response.data.ftPerfilResp));
+        };
+
+        const fetchImgResp = async (image) => {
+            const response = await axios.get(
+                `http://localhost:8080/images?filename=${image}`,
+                { responseType: "arraybuffer" }
+            );
+            setImagePerfil(response.data);
+        };
+
+        fetchDataResp();
+    }, []);
+
+    const getImage = (img) => {
+        return URL.createObjectURL(new Blob([img]));
+    };
 
     const scrollToPage = (page, elementId) => {
         navigate(page);
@@ -33,7 +60,7 @@ function Capa() {
             });
         }, 10);
     };
-    //
+
     return (
         <div className="container-banner">
             <div className="capa">
@@ -58,7 +85,7 @@ function Capa() {
                 </div>
 
                 <div className="foto-mae">
-                    <img src={fotoresponsavel} alt="" />
+                    <img src={getImage(imagePerfil)} alt="" />
                     <div className="picture-cotainer">
                         <button className="picture">
                             {" "}
@@ -73,9 +100,33 @@ function Capa() {
 
             <div className="barra-container">
                 <div className="barra">
-                    <h2 onClick={() => scrollToPage("/Lunna-landing-page/perfil", "perfil")}>Perfil do Gabriel</h2>
-                    <h2 onClick={() => scrollToPage("/Lunna-landing-page/memoria", "memoria")}>Memorias</h2>
-                    <h2 onClick={() => scrollToPage("/Lunna-landing-page/atividade", "perfil")}>Atividades do Gabriel</h2>
+                    <h2
+                        onClick={() =>
+                            scrollToPage("/Lunna-landing-page/perfil", "perfil")
+                        }
+                    >
+                        Perfil do Gabriel
+                    </h2>
+                    <h2
+                        onClick={() =>
+                            scrollToPage(
+                                "/Lunna-landing-page/memoria",
+                                "memoria"
+                            )
+                        }
+                    >
+                        Memorias
+                    </h2>
+                    <h2
+                        onClick={() =>
+                            scrollToPage(
+                                "/Lunna-landing-page/atividade",
+                                "perfil"
+                            )
+                        }
+                    >
+                        Atividades do Gabriel
+                    </h2>
                     <h2>Enquetes Passadas</h2>
                 </div>
             </div>

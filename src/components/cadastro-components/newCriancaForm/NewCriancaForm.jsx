@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import uploadImg from "../../../assets/upload-images.png";
 import { motion } from "framer-motion";
 import ModalAddRG from "../modalAddRG/ModalAddRG";
+import camera from "../../../assets/Camera.png";
 
 const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
     const [openModal, setOpenModal] = useState(false);
@@ -183,6 +184,44 @@ const NewCriancaForm = ({ addNewForm, register, errors, cpfDiscente }) => {
             </div>
 
             <div className="cadastro-crianca-box-2">
+                
+            <div className="container-foto-perfil">
+                    <motion.div
+                        initial={{ opacity: 0, x: 8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="box-add-foto"
+                    >
+                        <label htmlFor="">Subir foto de perfil:</label>
+
+                        <div className="upload-btn btn-perfil-disc">
+                            <label htmlFor="file">Adicionar documentos</label>
+                            <input
+                                type="file"
+                                name="perfil"
+                                id="file"
+                                accept="image/png, image/jpeg"
+                                {...register("imgPerfilDisc", { required: true })}
+                            />
+                            <img src={uploadImg} alt="" />
+                        </div>
+                        {errors?.imgPerfilDisc?.type === "required" && (
+                            <p className="error-message-input">
+                                A imagem é obrigatoria
+                            </p>
+                        )}
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="ft-perfil-camera-container"
+                    >
+                        <img src={camera} alt="" />
+                    </motion.div>
+                </div>
+
                 <motion.div
                     initial={{ opacity: 0, x: 8 }}
                     whileInView={{ opacity: 1, x: 0 }}

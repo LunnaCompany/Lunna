@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 function Login() {
     const [token, setToken] = useState("");
+    const [email, setEmail] = useState("");
     const [errorResponse, setErrorResponse] = useState(false);
     const navigate = useNavigate();
 
@@ -37,6 +38,11 @@ function Login() {
         setToken(token);
     };
 
+    const handleUserEmail = (email) =>{
+        localStorage.setItem("email", email);
+        setEmail(token);
+    }
+
     const handleLogin = async (data) => {
         try {
             const response = await axios.post(
@@ -48,6 +54,7 @@ function Login() {
             );
             console.log(response.data);
             handleToken(response.data.token);
+            handleUserEmail(data.emailLogin);
             setErrorResponse(false);
         } catch (error) {
             if (error.response.status === 400) {

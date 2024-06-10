@@ -183,7 +183,7 @@ const Cadastro = () => {
         };
 
         formData.append("body", JSON.stringify(dataCrianca));
-        formData.append("imgDisc", data.imgPerfil[0]);
+        formData.append("imgDisc", data.imgPerfilDisc[0]);
         formData.append("cpfResp", data.cpf);
 
         try {

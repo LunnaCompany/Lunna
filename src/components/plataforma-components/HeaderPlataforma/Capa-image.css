@@ -71,9 +71,14 @@
    display: flex;
    position: absolute;
    left: 9%;
-   top: 30%;
-   width: 177px;
-   height: 177px;
+   top: 35%;
+   width: 140px;
+   height: 140px;
+
+}
+
+.foto-mae img{
+   border-radius: 50%;
 }
 
 .picture {

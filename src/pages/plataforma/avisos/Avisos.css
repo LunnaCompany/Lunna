@@ -1,0 +1,18 @@
+.page-avisos {
+  
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4%;
+    overflow: auto;
+    padding: 0.5rem;
+}
+
+.btn-add-new-aviso{
+    position: absolute;
+    right: 3%;
+    bottom: 6%;
+}

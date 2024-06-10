@@ -1,6 +1,7 @@
 import React from "react";
 import "./cardCadastroSucess.css";
 import Icon from "../../../assets/cadastro-sucess.png";
+import { Link } from "react-router-dom";
 
 export function CardCadastroSucess() {
     return (
@@ -19,7 +20,7 @@ export function CardCadastroSucess() {
                         <span>Ir para o meu e-mail</span>
                     </p>
                 </div>
-                <div className="card-btn-cadastro">Continuar</div>
+                <div className="card-btn-cadastro"><Link to={"/"}>Continuar</Link></div>
             </div>
         </>
     );

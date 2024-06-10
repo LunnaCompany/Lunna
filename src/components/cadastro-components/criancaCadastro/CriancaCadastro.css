@@ -19,6 +19,18 @@
 
 .cadastro-crianca-box-1 {
     width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.btn-perfil-disc {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-perfil-disc label {
+    color: #fff;
+    width: fit-content;
 }
 
 .add-input-container {

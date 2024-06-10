@@ -50,7 +50,7 @@ function Sidebar() {
 
                 <div className="sidebar_content">
                     <ul className="side_items">
-                        <li className="side-item active">
+                        <li className="side-item">
                             <a href="#">
                                 <GoHome size="25" color="white" />
                                 <span className="item-description">Home</span>
@@ -68,7 +68,7 @@ function Sidebar() {
                                 <span className="item-description">Chat</span>
                             </a>
                         </li>
-                        <li className="side-item">
+                        <li className="side-item" onClick={() => scrollToPage("/Lunna-landing-page/avisos", "perfil")}>
                             <a href="#">
                                 <TbAlertSquareRounded size="25" color="white" />
                                 <span className="item-description">Avisos</span>
