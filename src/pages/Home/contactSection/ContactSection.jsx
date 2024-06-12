@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import celular from "../../../assets/celular.png";
 import enviar from "../../../assets/enviar.png";
-
+import { FaRegPaperPlane } from "react-icons/fa";
 const ContactSection = ({ translateText }) => {
     return (
         <section id="contato" className="section-contact">
@@ -68,7 +68,9 @@ const ContactSection = ({ translateText }) => {
                                 }
                                 required
                             />
-                            <img src={enviar} alt="" />
+                            <div className="btn-enviar-contact-section">
+                            <FaRegPaperPlane  size={25}/>
+                            </div>
                         </div>
                     </div>
                 </div>

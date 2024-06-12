@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 
 .footer-lunna {
-    height: 40vh;
+    height: 5vh;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -35,17 +35,19 @@
     align-items: center;
     list-style: none;
     font-weight: bold;
+    gap: 15px;
+    padding-right: 90px;
 }
 
 .footer-link {
-    margin-right: 1rem;
+    
     font-size: 14px;
     text-decoration: none;
     color: black;
 }
 
 .device {
-    width: 80%;
+    width: 83%;
     height: 3px;
     border: 1px solid #000000;
     background-color: #171717;
@@ -57,6 +59,7 @@
 
 .footer-contacts p {
     color: black;
+    font-size: 15px;
 }
 
 .footer-social-media {

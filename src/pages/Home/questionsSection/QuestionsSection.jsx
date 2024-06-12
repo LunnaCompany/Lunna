@@ -16,16 +16,15 @@ const QuestionsSection = ({ translateText }) => {
                 <div className="questions-content">
                     <h2>{translateText.perguntas_frequentes_txt}</h2>
                     <div className="box-questions-content">
-                        <Question />
-                        <Question />
-                        <Question />
+                    <Question translateText={translateText} />
+                        <Question translateText={translateText}/>
+                        <Question translateText={translateText} />
                     </div>
                 </div>
             </div>
             <div className="questions-more-infos">
                 <div>
-                    <h2>{translateText.precisa_de_mais_informacoes_txt}</h2>
-                    <p>{translateText.entre_em_cantato_com_a_gente_txt}</p>
+                    <h2>{translateText.precisa_de_mais_informacoes_txt}</h2> 
                 </div>
 
                 <div className="btn-more-infos">

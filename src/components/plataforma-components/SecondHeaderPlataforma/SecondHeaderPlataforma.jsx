@@ -16,7 +16,7 @@ const SecondHeaderPlataforma = () => {
                 `http://localhost:8080/responsavel/email/${email}`
             );
             await fetchPerfilDisc(
-                encodeURIComponent(response.data.discentes[0].imgDisc)
+                encodeURIComponent(response.data.ftPerfilResp)
             );
             console.log(response.data.discentes[0]);
 

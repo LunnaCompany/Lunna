@@ -46,7 +46,7 @@ export const RoutesLunna = () => {
 
         const fetchData = async () => {
             try {
-                const response = axios.get(
+                const response = axios.get( 
                     "http://localhost:8080/responsavel",
                     {
                         headers: {

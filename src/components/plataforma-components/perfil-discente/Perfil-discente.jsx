@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Perfil-discente.css";
-import fotocri from "../../../assets/fotocrianca.png";
 import { FaPen } from "react-icons/fa";
 import parente1 from "../../../assets/parente1.png";
 import parente2 from "../../../assets/Parente2.png";
@@ -8,10 +7,12 @@ import parente3 from "../../../assets/Parente3.png";
 import parente4 from "../../../assets/Parente4.png";
 import { Cardresponsavel } from "./card-responsalvel/Card-responsavel";
 import axios from "axios";
+import { ContatoEmergencia } from "./info-contato-emergencia/contato-emergencia";
 function PerfilDiscente() {
     const [imagePerfilDisc, setImagePerfilDisc] = useState("");
     const [dataDiscente, setDataDiscente] = useState([]);
     const email = localStorage.getItem("email");
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,6 +41,15 @@ function PerfilDiscente() {
     const getImage = (img) => {
         return URL.createObjectURL(new Blob([img]));
     };
+
+    function CalcIdade() {
+        const dataNascimento = new Date(dataDiscente.dataNasDisc);
+        const dataAtual = new Date();
+        const idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+        return idade;
+    }
+
+    console.log(dataDiscente)
 
     const dataCardresponsavel = [
         {
@@ -78,6 +88,17 @@ function PerfilDiscente() {
         },
     ];
 
+    const dataContatoEmergencia = [
+
+        {
+            nomeRelacao: dataDiscente?.contato?.nome,
+            relacao: dataDiscente?.contato?.parentesco,
+            telefoneRelacao: dataDiscente?.contato?.numeroCelular,
+        },
+
+       
+    ]
+
     return (
         <div id="perfil" className="div-tudo">
             <div className="info-cri">
@@ -100,7 +121,7 @@ function PerfilDiscente() {
                             </li>
                             <li>
                                 {" "}
-                                <strong>Data de nascimento: </strong> 04/05/2020
+                                <strong>Data de nascimento: </strong> {dataDiscente.dataNasDisc}
                             </li>
                         </ul>
                     </div>
@@ -108,15 +129,15 @@ function PerfilDiscente() {
                     <div className="info-kids-two">
                         <ul>
                             <li>
-                                <strong>Idade:</strong> 04
+                                <strong>Idade:</strong> {CalcIdade()}
                             </li>
                             <li>
                                 {" "}
-                                <strong> Altura: </strong> 98 cm
+                                <strong> Altura: </strong> {dataDiscente.alturaDisc}
                             </li>
                             <li>
                                 {" "}
-                                <strong>Peso:</strong> 16 kg
+                                <strong>Peso:</strong> {dataDiscente.pesoDisc}
                             </li>
                         </ul>
                     </div>
@@ -132,16 +153,17 @@ function PerfilDiscente() {
 
                 <div className="info-med">
                     <div className="info-meio">
+                        <h2 className="info-saude-sus-name">Informações de saúde:</h2>
                         <div className="info-sus">
                             <ul>
                                 <li>
                                     {" "}
-                                    <strong>Carteirinha SUS:</strong>{" "}
-                                    12345678910112
+                                    <strong>Carteirinha SUS:</strong> {dataDiscente?.fichaMed?.numCartSus}
+
                                 </li>
                                 <li>
                                     {" "}
-                                    <strong>Plano de Saúde:</strong> Saude Total
+                                    <strong>Plano de Saúde:</strong> {dataDiscente?.fichaMed?.planSaud}
                                 </li>
                                 <li>
                                     {" "}
@@ -156,60 +178,15 @@ function PerfilDiscente() {
                                     </li>
                                     <li>
                                         {" "}
-                                        <strong> Tipo:</strong> TDHA
+                                        <strong> Tipo:</strong> {dataDiscente.deficiencia}
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="info-contact">
-                            <h2>Contatos de emergências:</h2>
-                            <ul>
-                                <li>
-                                    {" "}
-                                    <strong>Nome:</strong> Marcos dos Anjos
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Relação com a criança:</strong> Pai
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Número de Telefone:</strong> (11)
-                                    98765-4321
-                                </li>
-                            </ul>
-                            <h2>Contatos de emergências:</h2>
-                            <ul>
-                                <li>
-                                    {" "}
-                                    <strong>Nome:</strong> Marcos dos Anjos
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Relação com a criança:</strong> Pai
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Número de Telefone:</strong> (11)
-                                    98765-4321
-                                </li>
-                            </ul>
-                            <h2>Contatos de emergências:</h2>
-                            <ul>
-                                <li>
-                                    {" "}
-                                    <strong>Nome:</strong> Marcos dos Anjos
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Relação com a criança:</strong> Pai
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Número de Telefone:</strong> (11)
-                                    98765-4321
-                                </li>
-                            </ul>
+                            {dataContatoEmergencia.map((contatoemergencia) => (
+                                <ContatoEmergencia dados={contatoemergencia} />
+                            ))}
                         </div>
                     </div>
                     <div className="line-two"></div>
@@ -223,7 +200,15 @@ function PerfilDiscente() {
                                     {" "}
                                     Endereço do hospital mais próximo:
                                 </strong>{" "}
-                                Av. julio preste
+                                {dataDiscente?.fichaMed?.endereco?.rua}
+                            </li>
+                            <li>
+                                {" "}
+                                <strong>
+                                    {" "}
+                                    Nome do hospital:
+                                </strong>{" "}
+                                {dataDiscente?.fichaMed?.endereco?.nomeHospital}
                             </li>
                             <li>
                                 {" "}
@@ -231,31 +216,25 @@ function PerfilDiscente() {
                                     {" "}
                                     Realiza algum tratamento médico:
                                 </strong>{" "}
-                                Não
+                                {dataDiscente?.fichaMed?.descTratamento}
                             </li>
                             <li>
                                 {" "}
-                                <strong> Comidas Alergênicas:</strong> Gabriel é
-                                alérgico a amendoim e frutos do mar.
+                                <strong> Comidas Alergênicas: </strong>
+                                {dataDiscente?.fichaMed?.comidasAlergicas}
+                            </li>
+
+                            <li>
+                                {" "}
+                                <strong> Cuidados específicos:</strong> {dataDiscente?.fichaMed?.cuidados}
                             </li>
                             <li>
                                 {" "}
-                                <strong> Medicamentos que Toma:</strong> Gabriel
-                                toma ocasionalmente paracetamol para febre.
+                                <strong> Medicamentos que Toma:</strong> {dataDiscente?.fichaMed?.remedios}
                             </li>
                             <li>
                                 {" "}
-                                <strong> Cuidados específicos:</strong> Nenhum
-                            </li>
-                            <li>
-                                {" "}
-                                <strong>Medicamentos que Toma:</strong> Soluções
-                                salina
-                            </li>
-                            <li>
-                                {" "}
-                                <strong>Em quantas horas:</strong> de 2 gotas ou
-                                jatos em cada narina
+                                <strong>Em quantas horas:</strong> de {dataDiscente?.fichaMed?.qtdHoraMed} em {dataDiscente?.fichaMed?.qtdHoraMed} horas
                             </li>
                             <li>
                                 {" "}

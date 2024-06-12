@@ -1,7 +1,7 @@
 .card-equipe {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .box-picture-equipe {
@@ -15,23 +15,27 @@
 }
 
 .picture-adult-equipe {
-    height: 311px;
-    width: 301px;
+    height: 251px;
+    width: 241px;
     z-index: 999;
 }
 
 .hend-equipe {
     position: absolute;
     top: -5%;
-    left: -30%;
+    left: -20%;
     background: none;
     width: 50%;
 }
 
+
+
+
 .foto-cri-equipe img {
-    width: 142px;
-    height: 142px;
+    width: 80px;
+    height: 80px;
     margin-top: 150px;
+    
 }
 
 .container-names {

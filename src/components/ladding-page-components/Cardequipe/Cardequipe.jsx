@@ -31,7 +31,9 @@ export function Cardequipe({ dados }) {
                     transition={{ duration: 0.8, delay: 1 }}
                     className="foto-cri-equipe"
                 >
+                    <div className="img-aaaaaaa">
                     <img src={dados.picture_kid} alt="" />
+                    </div>
                 </motion.div>
             </div>
 

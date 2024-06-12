@@ -12,13 +12,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background-color: #fcf5f5;
+    padding-bottom: 120px;
 }
 .container-cards-equipe {
     display: flex;
     justify-content: center;
-    width: 80%;
-    gap: 10%;
+    width: 70%;
+    gap: 20%;
     flex-wrap: wrap;
 }

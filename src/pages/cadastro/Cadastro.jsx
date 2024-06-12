@@ -42,8 +42,6 @@ const Cadastro = () => {
         }
     };
 
-    console.log(sucess);
-
     const handleInputFile = (e) => {
         const file = e.target.files[0];
         console.log(file);

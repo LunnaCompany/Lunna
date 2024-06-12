@@ -2,10 +2,10 @@ import React from "react";
 import "./style.css";
 import { motion } from "framer-motion";
 
-export const SignificationSection = () => {
+export const SignificationSection = ({translateText}) => {
     return (
         <section className="section-significado">
-            <div className="titulo2">Significado de Lunna</div>
+            <div className="titulo2">{translateText.significadolunna}</div>
             <div className="div03">
                 <div className="content-siginificado">
                     <motion.span

@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 
-export const PlansSection = () => {
+export const PlansSection = ({translateText}) => {
     const [slidePerView, setSlidePerView] = useState(3);
 
     useEffect(() => {
@@ -36,50 +36,39 @@ export const PlansSection = () => {
     const dataCard = [
         {
             valor: "R$0",
-            subtitulo: "Teste 30 dias gratis",
+            subtitulo: translateText.subtitulo01,
             icone1: Icon1,
             icone2: Icon2,
-            beneficio1: "Comunicação direta por chat com os professores.",
-            beneficio2:
-                "Rotina diaria de atividades e cronograma de alimentação.",
-            beneficio3:
-                "Mural de atividades feitas em sala e fotos para guardar de recordação.",
-            beneficio4:
-                "Notificação com ordem de prioridade e aviso prévio do horario de saida e entrada.",
-
+            beneficio1: translateText.beneficio1,
+            beneficio2: translateText.beneficio2,
+            beneficio3: translateText.beneficio3,
+            beneficio4: translateText.beneficio4,
             contentLateral: ["F", "r", "e", "e"],
             color: "azul-plans",
             animationY: -35,
         },
         {
-            valor: "R$0",
-            subtitulo: "Economize 15% com a mensalidade. ",
+            valor: "R$700",
+            subtitulo: translateText.subtitulo02,
             icone1: Icon1,
             icone2: Icon2,
-            beneficio1: "Comunicação direta por chat com os professores.",
-            beneficio2:
-                "Rotina diaria de atividades e cronograma de alimentação.",
-            beneficio3:
-                "Mural de atividades feitas em sala e fotos para guardar de recordação.",
-            beneficio4:
-                "Notificação com ordem de prioridade e aviso prévio do horario de saida e entrada.",
+            beneficio1: translateText.beneficio1,
+            beneficio2: translateText.beneficio2,
+            beneficio3: translateText.beneficio3,
+            beneficio4: translateText.beneficio4,
             contentLateral: ["M", "e", "n", "s", "a", "l"],
             color: "rosa-plans",
             animationY: 35,
         },
         {
-            valor: "R$0",
-            subtitulo: "Economize 200% com o nosso plano anual. ",
+            valor: "R$1.200",
+            subtitulo: translateText.subtitulo,
             icone1: Icon1,
             icone2: Icon2,
-
-            beneficio1: "Comunicação direta por chat com os professores.",
-            beneficio2:
-                "Rotina diaria de atividades e cronograma de alimentação.",
-            beneficio3:
-                "Mural de atividades feitas em sala e fotos para guardar de recordação.",
-            beneficio4:
-                "Notificação com ordem de prioridade e aviso prévio do horario de saida e entrada.",
+            beneficio1: translateText.beneficio1,
+            beneficio2: translateText.beneficio2,
+            beneficio3: translateText.beneficio3,
+            beneficio4: translateText.beneficio4,
             contentLateral: [Estrela, "A", "n", "u", "a", "l"],
             color: "roxo-plans",
             animationY: -35,
@@ -104,7 +93,7 @@ export const PlansSection = () => {
                             key={index}
                             className="container-plans-corousel"
                         >
-                            <CardPlans data={card} />
+                            <CardPlans translateText={translateText} data={card} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

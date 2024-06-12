@@ -5,7 +5,7 @@ import valores from "../../../assets/img-valores.png";
 import "./style.css";
 import { motion } from "framer-motion";
 
-export const SectionMissao = () => {
+export const SectionMissao = ({translateText}) => {
     return (
         <section className="section-missao">
             <div className="mira">
@@ -21,12 +21,9 @@ export const SectionMissao = () => {
                     transition={{ duration: 0.8 }}
                     className="mira-conteudo"
                 >
-                    <h2>Missão</h2>
+                    <h2>{translateText.titulomissao}</h2>
                     <p>
-                        Conectar e fortalecer os laços entre pais, pedagogos e
-                        crianças, proporcionando uma experiência de comunicação
-                        transparente, colaborativa e enriquecedora na jornada de
-                        cuidado e educação infantil.
+                        {translateText.descricaomissao}
                     </p>
                 </motion.div>
             </div>
@@ -43,13 +40,9 @@ export const SectionMissao = () => {
                     transition={{ duration: 0.8 }}
                     className="mira-conteudo"
                 >
-                    <h2>Visão</h2>
+                    <h2>{translateText.titulovisao}</h2>
                     <p>
-                        Ser a principal plataforma de referência no apoio ao
-                        desenvolvimento integral das crianças, tornando-se um
-                        elo essencial na parceria entre creches e famílias,
-                        promovendo um ambiente de confiança, acolhimento e
-                        crescimento mútuo.
+                        {translateText.descricaovisao}
                     </p>
                 </motion.div>
             </div>
@@ -62,18 +55,14 @@ export const SectionMissao = () => {
                     src={valores}
                 />
                 <div className="valores-card-conteudo">
-                    <h2>Valores</h2>
+                    <h2>{translateText.titulovalor}</h2>
                     <ol>
                         <motion.li
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <span>Transparência</span>: Priorizamos a
-                            comunicação aberta e honesta em todas as interações,
-                            garantindo que pais e pedagogos estejam sempre
-                            informados sobre o bem-estar e o progresso das
-                            crianças na creche.
+                            <span>{translateText.descricaospan1} </span>{translateText.descricaovalor1}
                         </motion.li>
 
                         <motion.li
@@ -81,10 +70,7 @@ export const SectionMissao = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                            <span>Colaboração</span>: Acreditamos no poder da
-                            parceria entre famílias e instituições de educação
-                            infantil para promover o desenvolvimento saudável e
-                            feliz das crianças.
+                            <span>{translateText.descricaospan2}</span>{translateText.descricaovalor2}
                         </motion.li>
 
                         <motion.li
@@ -92,10 +78,7 @@ export const SectionMissao = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
                         >
-                            <span>Inovação</span>: Buscamos constantemente novas
-                            maneiras de aprimorar nossos serviços e tecnologias,
-                            adaptando-nos às necessidades em evolução das
-                            famílias e das creches.
+                            <span>{translateText.descricaospan3}</span>{translateText.descricaovalor3}
                         </motion.li>
 
                         <motion.li
@@ -103,10 +86,7 @@ export const SectionMissao = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
                         >
-                            <span>Respeito</span>: Valorizamos a diversidade e a
-                            individualidade de cada criança e família,
-                            promovendo um ambiente inclusivo e acolhedor para
-                            todos.
+                            <span>{translateText.descricaospan4}</span>{translateText.descricaovalor4}
                         </motion.li>
 
                         <motion.li
@@ -114,10 +94,7 @@ export const SectionMissao = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 1 }}
                         >
-                            <span>Cuidado</span>: Comprometemo-nos a oferecer um
-                            ambiente seguro, amoroso e estimulante para o
-                            crescimento e o desenvolvimento integral de todas as
-                            crianças atendidas pela Lunna.
+                            <span>{translateText.descricaospan5}</span>{translateText.descricaovalor5}
                         </motion.li>
                     </ol>
                 </div>

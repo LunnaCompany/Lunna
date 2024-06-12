@@ -1,0 +1,149 @@
+.head-select-name-turma {
+    width: 100%;
+}
+
+.container-select-name-turma {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 65%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.head-select-name-turma {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(151, 71, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(151, 71, 255, 1) 35%,
+        rgba(91, 43, 153, 1) 100%
+    );
+}
+
+.head-select-name-turma h2{
+    color: #fff;
+}
+
+.content-add-name-tema-turma {
+    width: 100%;
+    height: 72%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.content-add-name-turma {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-add-name-turma label {
+    font-weight: bold;
+}
+
+.content-add-name-turma input {
+    width: 55%;
+    background-color: #e8e3e3;
+    border-radius: 15px;
+    padding: 0.8rem 1rem;
+    outline: none;
+    border: none;
+}
+
+.content-add-tema-turma {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.colors-tema-container {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.content-add-tema-turma .colors-tema-container div {
+    background-color: red;
+    padding: 1.6rem;
+    border-radius: 50%;
+}
+
+.tema-turma-1 {
+    background-image: url(../../../assets/tema-color-1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tema-turma-2 {
+    background-image: url(../../../assets/tema-color-2.png);
+    background-size: cover;
+    background-position: center;
+}
+.tema-turma-3 {
+    background-image: url(../../../assets/tema-color-3.png);
+    background-size: cover;
+    background-position: center;
+}
+.tema-turma-4 {
+    background-image: url(../../../assets/tema-color-4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.content-add-turno-turma {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content-add-turno-turma span {
+    font-weight: bold;
+}
+
+.content-add-turno-turma select {
+    width: 16%;
+    padding: 0.8rem 0.6rem;
+    background-color: #e8e3e3;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container-btn-select-name-turma {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-select-name-turma {
+    background-color: #01f545;
+    border-radius: 10px;
+    padding: 0.7rem;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.footer-select-name-turma {
+    width: 100%;
+    height: 8%;
+    background: rgb(151, 71, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(151, 71, 255, 1) 35%,
+        rgba(91, 43, 153, 1) 100%
+    );
+}

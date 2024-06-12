@@ -20,36 +20,34 @@ export const TestimonySection = ({ translateText }) => {
         {
             title: "Escola - Prof º Rosalita",
             subtitle: "Diretora Marta",
-            content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            content:translateText.card_depoimento_1_txt,
             image: cardImg1,
         },
         {
             title: "Escola - Luizer",
             subtitle: "Diretora Paula",
-            content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            content:translateText.card_depoimento_2_txt,
             image: cardImg2,
         },
         {
             title: "Escola - Kinte",
             subtitle: "Diretor Ricard",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_3_txt,
             image: cardImg3,
         },
         {
             title: "Escola - Rui beta",
             subtitle: "Diretora Lia",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+                translateText.card_depoimento_4_txt,
             image: cardImg4,
         },
         {
             title: "Escola - Crescendo",
             subtitle: "Diretor Gustavo",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_5_txt,
             image: cardImg5,
         },
     ];
@@ -59,35 +57,35 @@ export const TestimonySection = ({ translateText }) => {
             title: "Escola - Prof º Rosalita",
             subtitle: "Diretora Marta",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_6_txt,
             image: cardImg6,
         },
         {
             title: "Escola - Luizer",
             subtitle: "Diretora Paula",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_7_txt,
             image: cardImg7,
         },
         {
             title: "Escola - Kinte",
             subtitle: "Diretor Ricard",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_8_txt,
             image: cardImg8,
         },
         {
             title: "Escola - Rui beta",
             subtitle: "Diretora Lia",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_9_txt,
             image: cardImg9,
         },
         {
             title: "Escola - Crescendo",
             subtitle: "Diretor Gustavo",
             content:
-                "Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim j",
+            translateText.card_depoimento_10_txt,
             image: cardImg4,
         },
     ];

@@ -11,16 +11,22 @@
     display: flex;
 }
 
-.input-box img {
+.btn-enviar-contact-section {
     width: 70px;
     height: 70px;
+    border-radius: 50%;
     margin-right: 10px;
     margin-top: 40px;
+    border: #9747FF 3px solid;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
 }
 
 .section-contact {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,6 +88,11 @@
 
 .input-box input:hover {
     background-color: #eeeeee75;
+}
+
+
+.phone-contact-section{
+    width: 250px;
 }
 
 @media (max-width: 1060px) {

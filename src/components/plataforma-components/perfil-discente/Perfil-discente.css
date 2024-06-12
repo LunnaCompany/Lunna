@@ -1,21 +1,20 @@
-.div-tudo{
-   overflow-y: scroll;
+.div-tudo {
+    overflow-y: scroll;
+    height: 60vh;
 }
 
-
-.info-cri{
-    
+.info-cri {
     display: flex;
     flex-direction: column;
-    height: 460px;
+    height: 100%;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.info-cri-dois{
+.info-cri-dois {
     display: flex;
-    justify-content:space-around;
- 
+    justify-content: space-around;
+
     width: 80%;
     margin-top: 700px;
 }
@@ -26,165 +25,164 @@
     justify-content: center;
     height: fit-content;
     padding: 0.5rem;
-    border: 6px solid #FFD073;
+    border: 6px solid #ffd073;
     border-radius: 10px;
-
 }
 
-.foto-perfil-discente img{
+.foto-perfil-discente img {
     width: 130px;
     height: 130px;
-
 }
 
-.info-kids-two{
+.info-kids-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.info-kids h2{
+.info-kids h2 {
     font-size: 20px;
     width: 70%;
-    color: #FEB018;
+    color: #feb018;
     padding-top: 20px;
 }
 
-.info-kids ul li{
+.info-kids ul li {
     font-size: 16px;
     padding-top: 30px;
     list-style-type: none;
 }
 
-.info-kids-two ul li{
- list-style-type: none;
- padding-top: 28px;
+.info-kids-two ul li {
+    list-style-type: none;
+    padding-top: 28px;
 }
 
-.btn-edit{
+.btn-edit {
     width: 45px;
     height: 40px;
     border-radius: 10px;
-    background-color: #FEB018;
+    background-color: #feb018;
     border: none;
 }
 
-.line{
+.line {
     width: 80%;
-    border-bottom: 4px  solid #FEB018;
-    color: #FEB018;
+    border-bottom: 4px solid #feb018;
+    color: #feb018;
     padding-top: 20px;
 }
 
-.info-med{
+.info-med {
     display: flex;
     list-style-type: none;
 }
 
-
-.info-med ul li{
+.info-med ul li {
     list-style-type: none;
     padding-bottom: 25px;
 }
 
-
-.info-med-two{
+.info-med-two {
     padding-top: 30px;
 }
 
-.info-meio{
+.info-meio {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: 30px;
     align-items: center;
+
+
 }
 
-.info-sus{
+.info-sus {
     display: flex;
     gap: 100px;
     padding-top: 20px;
 }
-.info-contact ul li{
+.info-contact ul {
+
+
+    width: 76%;
+}
+.info-contact ul li {
     list-style-type: none;
-    padding-bottom: 30px;
-}
 
-.info-contact h2{
+    padding-bottom: 30px;
     display: flex;
-    font-size: 18px;
-    color: #FEB018;
+    justify-content: space-between;
 }
 
+.info-contact h2 {
+    display: flex;
+    padding: 0 2rem ;
+    font-size: 18px;
+    color: #feb018;
+}
 
-.info-total h2{
+.info-total h2 {
     padding-bottom: 30px;
-    color: #FEB018;
+    color: #feb018;
     font-size: 18px;
 }
 
-
-.info-total ul li{
-
+.info-total ul li {
     padding-top: 20px;
 }
-.info-total{
+.info-total {
     display: flex;
     flex-direction: column;
     padding: 30px;
     align-items: center;
-
 }
 
-.info-contact h2{
+.info-contact h2 {
     padding-bottom: 30px;
     padding-top: 15px;
+    width: 70%;
+
 }
 
-.info-contact{
+.info-contact {
     width: 100%;
     display: flex;
+    align-items: center;
+
     flex-direction: column;
-    padding-left: 115px;
-    
 }
 
-.line-two{
+.line-two {
     height: 840px;
-    border-right: 4px  solid #FEB018;
-    color: #FEB018;
+    border-right: 4px solid #feb018;
+    color: #feb018;
 }
 
-
-.line-tree{
+.line-tree {
     width: 80%;
-    border-bottom: 4px  solid #FEB018;
-    color: #FEB018;
+    border-bottom: 4px solid #feb018;
+    color: #feb018;
 }
 
+.section-parentes {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 1000px;
+    height: 0px;
+}
 
-
-.section-parentes{
-padding-top: 30px;
-padding-bottom: 10px;
-width: 1000px;
-height: 0px;
-
-
-} 
-
-.title-parentes{
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    color: #FEB018;
+.title-parentes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #feb018;
     font-size: 20px;
     font-style: justify;
     padding-bottom: 20px;
 }
 
-.parentes-section{
+.parentes-section {
     display: flex;
     justify-content: space-evenly;
     gap: 100px;
@@ -192,4 +190,3 @@ height: 0px;
     padding-top: 30px;
     flex-wrap: wrap;
 }
-

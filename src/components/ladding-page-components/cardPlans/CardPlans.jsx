@@ -25,16 +25,16 @@ const CardPlans = ({ data }) => {
                             </div>
 
                             <div>
-                                <img src={data.icone2} alt="" />
+                                <img src={data.icone1} alt="" />
                                 <p>{data.beneficio2}</p>
                             </div>
 
                             <div>
-                                <img src={data.icone2} alt="" />
+                                <img src={data.icone1} alt="" />
                                 <p>{data.beneficio3}</p>
                             </div>
                             <div>
-                                <img src={data.icone2} alt="" />
+                                <img src={data.icone1} alt="" />
                                 <p>{data.beneficio4}</p>
                             </div>
                         </div>

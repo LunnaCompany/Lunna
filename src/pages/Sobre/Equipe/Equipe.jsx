@@ -24,12 +24,12 @@ import raquelft from "../../../assets/raquelft.png";
 import tefaft from "../../../assets/tefaft.png";
 import "./style.css";
 
-export function Equipe() {
+export function Equipe({translateText}) {
     const dataEquipe = [
         {
             nome: "Davi Machado",
             cargo_principal: "PO",
-            cargo_secundario: "Desenvolvedor Front End",
+            cargo_secundario: "Front-End",
             picture_adult: davimachado,
             picture_kid: davicri,
             hand: handroxo,
@@ -40,7 +40,7 @@ export function Equipe() {
         {
             nome: "Raquel Luna",
             cargo_principal: "Scrum master",
-            cargo_secundario: "Desenvolvedora Front End",
+            cargo_secundario: "Front-End",
             picture_adult: raquelft,
             picture_kid: lunacri,
             hand: handblue,
@@ -50,7 +50,7 @@ export function Equipe() {
         {
             nome: "Abraão Santos",
             cargo_principal: "Financeiro",
-            cargo_secundario: "Desenvolvedor Front End",
+            cargo_secundario: "Full-stack",
             picture_adult: abraaoft,
             picture_kid: abraaocri,
             hand: handyellow,
@@ -62,7 +62,7 @@ export function Equipe() {
         {
             nome: "Eliana Silva",
             cargo_principal: "Designer UI | UX",
-            cargo_secundario: "Desenvolvedora Front End",
+            cargo_secundario: "Front-End",
             picture_adult: elift,
             picture_kid: elicri,
             hand: handrosa,
@@ -73,7 +73,7 @@ export function Equipe() {
         {
             nome: "Lucas Vilarindo",
             cargo_principal: "Social Media",
-            cargo_secundario: "Desenvolvedor Front End",
+            cargo_secundario: "Front-End",
             picture_adult: lucasft,
             picture_kid: lucascri,
             hand: handebluewhite,
@@ -84,7 +84,7 @@ export function Equipe() {
         {
             nome: "Anthony Ndubisi",
             cargo_principal: "Desenvolvedor",
-            cargo_secundario: "Front End",
+            cargo_secundario: "Full-stack",
             picture_adult: anthoft,
             picture_kid: anthocri,
             hand: handrosashock,
@@ -95,7 +95,7 @@ export function Equipe() {
         {
             nome: "Stefany Rocha",
             cargo_principal: "Social Media",
-            cargo_secundario: "Desenvolvedora Front End",
+            cargo_secundario: "Front-End",
             picture_adult: tefaft,
             picture_kid: tefacri,
             hand: handroxo,
@@ -106,7 +106,7 @@ export function Equipe() {
         {
             nome: "Eduardo Santos",
             cargo_principal: "Desenvolvedor",
-            cargo_secundario: "Front End",
+            cargo_secundario: "Full-stack",
             picture_adult: eduft,
             picture_kid: educri,
             hand: handgreen,
@@ -116,7 +116,7 @@ export function Equipe() {
     ];
     return (
         <section className="section-equipe">
-            <h2 className="title">Quem são os rostos por trás do projeto ?</h2>
+            <h2 className="title">{translateText.rostosportras}</h2>
             <div className="container-cards-equipe">
                 {dataEquipe.map((equipe, index) => (
                     <Cardequipe key={index} dados={equipe} />

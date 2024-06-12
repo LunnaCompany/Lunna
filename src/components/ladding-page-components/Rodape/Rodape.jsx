@@ -58,9 +58,7 @@ export function Rodape({ translateText }) {
                     <div className="footer-social-media">
                         <div className="paragrafo">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Facilis nihil, tempora,
-                                expedita quae se
+                            Direitos Autorais © [Ano] Lunna Company. Todos os direitos reservados. 
                             </p>
                         </div>
 

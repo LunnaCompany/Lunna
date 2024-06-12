@@ -30,6 +30,8 @@
 .card-benefits div p {
     max-width: 80%;
     text-align: center;
+    font-size: 13px;
+    color: #000;
 }
 
 .rosa-benefits div {

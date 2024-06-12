@@ -30,7 +30,6 @@ function Capa() {
             const response = await axios.get(
                 `http://localhost:8080/responsavel/email/${email}`
             );
-            console.log(response.data);
             fetchImgResp(encodeURIComponent(response.data.ftPerfilResp));
         };
 
