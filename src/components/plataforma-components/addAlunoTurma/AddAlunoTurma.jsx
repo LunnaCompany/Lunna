@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./AddAlunoTurma.css";
-import fotoCrianca from "../../../assets/davicri.png";
+import close from "../../../assets/close-card-turma.png";
+
 import axios from "axios";
 
-const AddAlunoTurma = () => {
+const AddAlunoTurma = ({ closeAll }) => {
     const [dataDiscente, setDataDiscente] = useState([]);
     const [activeCards, setActiveCards] = useState([]);
     useEffect(() => {
@@ -87,6 +88,7 @@ const AddAlunoTurma = () => {
             <div className="container-add-aluno-turma">
                 <div className="head-add-aluno-turma">
                     <h2>Criando nova turma</h2>
+                    <img onClick={closeAll} src={close} alt="" />
                 </div>
 
                 <div className="container-all-criancas">
@@ -118,7 +120,12 @@ const AddAlunoTurma = () => {
                             ? "Desmarcar Todos"
                             : "Selecionar Todos"}
                     </label>
-                    <input type="checkbox" name="" id="" onChange={handleSelectAll}/>
+                    <input
+                        type="checkbox"
+                        name=""
+                        id=""
+                        onChange={handleSelectAll}
+                    />
                 </div>
             </div>
         </div>

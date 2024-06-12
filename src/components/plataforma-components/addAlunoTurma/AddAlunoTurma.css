@@ -13,6 +13,7 @@
 .head-add-aluno-turma {
     width: 100%;
     height: 15%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +24,12 @@
         rgba(251, 71, 255, 1) 35%,
         rgba(192, 24, 195, 1) 100%
     );
+}
+
+.head-add-aluno-turma img {
+    position: absolute;
+    right: 3%;
+    width: 4%;
 }
 
 .container-all-criancas {
@@ -63,10 +70,9 @@
 
 .active-card-crianca {
     background-color: #9747ff;
-    
 }
 
-.active-card-crianca div span{
+.active-card-crianca div span {
     color: #fff;
 }
 

@@ -7,6 +7,7 @@ import left from "../../../assets/arrow-left-header.png";
 const SecondHeaderPlataforma = () => {
     const [imagePerfil, setImagePerfil] = useState("");
     const [dataDiscente, setDataDiscente] = useState([]);
+    const [dataResponsavel, setDataResponsavel] = useState([]);
     const [activeBtn, setActiveBtn] = useState(false);
     const email = localStorage.getItem("email");
 
@@ -15,15 +16,16 @@ const SecondHeaderPlataforma = () => {
             const response = await axios.get(
                 `http://localhost:8080/responsavel/email/${email}`
             );
-            await fetchPerfilDisc(
+            await fetchPerfilResp(
                 encodeURIComponent(response.data.ftPerfilResp)
             );
             console.log(response.data.discentes[0]);
 
             setDataDiscente(response.data.discentes[0]);
+            setDataResponsavel(response.data)
         };
 
-        const fetchPerfilDisc = async (image) => {
+        const fetchPerfilResp = async (image) => {
             const response = await axios.get(
                 `http://localhost:8080/images?filename=${image}`,
                 { responseType: "arraybuffer" }
@@ -34,6 +36,8 @@ const SecondHeaderPlataforma = () => {
 
         fetchData();
     }, [email]);
+
+
 
     const getImage = (img) => {
         return URL.createObjectURL(new Blob([img]));
@@ -82,9 +86,7 @@ const SecondHeaderPlataforma = () => {
                 <div></div>
                 <div className="content-perfil-second-header">
                     <img src={getImage(imagePerfil)} alt="" />
-                    <span>
-                        {dataDiscente.nomeDisc}
-                    </span>
+                    <span>{dataResponsavel.nomeResp}</span>
                 </div>
             </div>
         </div>

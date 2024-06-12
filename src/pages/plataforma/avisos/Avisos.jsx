@@ -6,12 +6,16 @@ import Turma from "../../../components/plataforma-components/Turmas/Turma";
 import { AddTurma } from "../../../components/plataforma-components/addTurma/addTurma";
 import AddAlunoTurma from "../../../components/plataforma-components/addAlunoTurma/AddAlunoTurma";
 
-
-
 const Avisos = () => {
     const [open, setOpen] = useState(false);
     const [openNameTurma, setOpenNameTurma] = useState(false);
     const [openAddAluno, setOpenAddAluno] = useState(false);
+
+    const closeAll = () => {
+        setOpen(false);
+        setOpenAddAluno(false);
+        setOpenAddAluno(false);
+    };
 
     return (
         <div className="page-avisos">
@@ -24,9 +28,21 @@ const Avisos = () => {
                 <img src={add} alt="" />
             </div>
 
-            {open && <Turma setOpen={setOpen} setOpenNameTurma={setOpenNameTurma}/>}
-            {openNameTurma && <AddTurma setOpenNameTurma={setOpenNameTurma} setOpenAddAluno={setOpenAddAluno}/>}
-            {openAddAluno && <AddAlunoTurma setOpenNameTurma={setOpenNameTurma}/>}
+            {open && (
+                <Turma setOpen={setOpen} setOpenNameTurma={setOpenNameTurma} />
+            )}
+            {openNameTurma && (
+                <AddTurma
+                    setOpenNameTurma={setOpenNameTurma}
+                    setOpenAddAluno={setOpenAddAluno}
+                />
+            )}
+            {openAddAluno && (
+                <AddAlunoTurma
+                    setOpenNameTurma={setOpenNameTurma}
+                    closeAll={closeAll}
+                />
+            )}
         </div>
     );
 };
