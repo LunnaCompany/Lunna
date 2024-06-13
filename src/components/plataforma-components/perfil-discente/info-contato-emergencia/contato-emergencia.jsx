@@ -1,7 +1,7 @@
 export function ContatoEmergencia({ dados }) {
     return (
         <>
-            <h2>Contatos de emergências:</h2>
+            <h2>Contatos de Emergencias:</h2>
             <ul>
                 <li>
                     {" "}
@@ -10,7 +10,7 @@ export function ContatoEmergencia({ dados }) {
                 </li>
                 <li>
                     {" "}
-                    <strong>Relação com a criança:</strong> {dados.relacao}
+                    <strong>Grau de Parentesco:</strong> {dados.relacao}
                 </li>
                 <li>
                     {" "}

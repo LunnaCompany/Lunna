@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./AddAlunoTurma.css";
 import close from "../../../assets/close-card-turma.png";
+import { motion } from "framer-motion";
 
 import axios from "axios";
 
-const AddAlunoTurma = ({ closeAll }) => {
+const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
     const [dataDiscente, setDataDiscente] = useState([]);
     const [activeCards, setActiveCards] = useState([]);
     useEffect(() => {
@@ -85,10 +86,34 @@ const AddAlunoTurma = ({ closeAll }) => {
 
     return (
         <div className="dark-background-turma">
-            <div className="container-add-aluno-turma">
+            <motion.div
+                initial={{ opacity: 0, y: -8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="container-add-aluno-turma"
+            >
                 <div className="head-add-aluno-turma">
                     <h2>Criando nova turma</h2>
                     <img onClick={closeAll} src={close} alt="" />
+                </div>
+
+                <div className="container-quantidade-alunos">
+                    <div className="box-selecionar-all-discentes">
+                        <label htmlFor="">
+                            {activeCards.length === dataDiscente.length
+                                ? "Desmarcar Todos"
+                                : "Selecionar Todos"}
+                        </label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id=""
+                            onChange={handleSelectAll}
+                        />
+                    </div>
+                    <div className="quantidade-alunos">
+                        {activeCards.length}/{dataDiscente.length}
+                    </div>
                 </div>
 
                 <div className="container-all-criancas">
@@ -111,23 +136,18 @@ const AddAlunoTurma = ({ closeAll }) => {
                     ))}
                 </div>
 
-                <div className="quantidade-alunos">
-                    {activeCards.length}/{dataDiscente.length}
+                <div className="container-btn-add-aluno-turma">
+                    <div
+                        className="btn-add-aluno-turma"
+                        onClick={() => {
+                            setOpenAviso(true);
+                            setOpenAddAluno(false);
+                        }}
+                    >
+                        continuar
+                    </div>
                 </div>
-                <div className="box-selecionar-all-discentes">
-                    <label htmlFor="">
-                        {activeCards.length === dataDiscente.length
-                            ? "Desmarcar Todos"
-                            : "Selecionar Todos"}
-                    </label>
-                    <input
-                        type="checkbox"
-                        name=""
-                        id=""
-                        onChange={handleSelectAll}
-                    />
-                </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

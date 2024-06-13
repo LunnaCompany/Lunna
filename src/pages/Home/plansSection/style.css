@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background-color: #fcf5f5;
 }
@@ -42,6 +42,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 300px;
 }
 
 @media (max-width: 503px) {

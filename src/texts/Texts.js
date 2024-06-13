@@ -8,7 +8,7 @@ export const TextsLandingPage = {
     depoimentos_txt: "Depoimentos",
     entrar_txt: "Entrar",
     cadastrar_txt: "Cadastre-se",
-    acompanhamento_kids: "Acompanhamento Kids",
+    acompanhamento_kids: "Acompanhamento",
     inicio_main_text_txt: "A Lunna oferece um acompanhamento detalhado do dia a dia do seu bebê na creche, incluindo alimentação, rotina, atividades e momentos especiais registrados em fotos, tudo em um só lugar!",
     saiba_mais_txt: "Saiba mais",
     alimentacao_txt: "Alimentação",
@@ -64,7 +64,7 @@ export const TextsLandingPage = {
     card_depoimento_10_txt: "A Lunna fez uma grande diferença na comunicação com os professores via chat. Sinto-me sempre presente na rotina escolar do meu filho.",
     repostapergunta: "Implementamos medidas de segurança técnicas e organizacionais para proteger seus dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição. Utilizamos criptografia e outras tecnologias de segurança para proteger seus dados.",
     titlepergunto: "Como funciona a segurança da Lunna ?",
-    subtitulo01: "Teste 30 dias grátis.",
+    subtitulo01: "Plano personalizável por número de discentes.",
     subtitulo02: "Economize com o nosso plano semestral.",
     subtitulo: "Economize 20% com o nosso plano anual.",
     assinarplano: "Assinar",
@@ -72,6 +72,8 @@ export const TextsLandingPage = {
     beneficio2: "Rotina diária de atividades e cronograma de alimentação.",
     beneficio3: "Mural de atividades feitas em sala e fotos para guardar de recordação.",
     beneficio4: "Notificação com ordem de prioridade e aviso prévio do horário de saída e entrada.",
+    beneficio5: "Este plano suporta o cadastro de até 450 discentes.",
+    beneficio6: "Este plano suporta o cadastro de até 960 discentes.",
     subtitulosobre1: "Somos um grupo apaixonado de estudantes, unidos por uma missão comum: criar uma solução inovadora para simplificar a comunicação e o acompanhamento dos filhos na creche.",
     subtitulosobre2: "Nossa jornada começou com um objetivo claro: desenvolver umaferramenta que promova a ligação entre pais, pedagogos e crianças, unindo-os em uma comunidade colaborativa. Assim nasceu a Lunna, uma combinação de 'ligação', 'união', 'notificação' e 'acompanhamento', refletindo nossos valores fundamentais.",
     subtitulosobre3: "Valorizamos transparência, participação dos pais e individualidade das crianças. Queremos criar um ambiente onde os pais se sintam conectados e informados sobre o desenvolvimento de seus filhos. Nosso objetivo é revolucionar a comunicação na creche, proporcionando uma experiência mais envolvente e significativa para todos. Lunna - conectando pais, pedagogos e crianças em uma jornada de aprendizado e crescimento",
@@ -92,6 +94,7 @@ export const TextsLandingPage = {
     descricaovalor5: ": Comprometemo-nos a oferecer um ambiente seguro, amoroso e estimulante para o crescimento e o desenvolvimento integral de todas as crianças atendidas pela Lunna.",
     significadolunna: "Significado de Lunna",
     rostosportras: "Quem são os rostos por trás do projeto ?",
+    beneficio7: "O plano é valído somente para mais de 960 discentes."
 
 
 
@@ -106,7 +109,7 @@ export const TextsLandingPage_en = {
     depoimentos_txt: "Reference",
     entrar_txt: "Sign In",
     cadastrar_txt: "Sign Up",
-    acompanhamento_kids: "Kids Monitoring",
+    acompanhamento_kids: "Monitoring",
     inicio_main_text_txt:
         "Lunna offers detailed monitoring for your baby's daily routine at daycare, including feeding, routine, activities, and special moments recorded in photos, all in one place!",
     saiba_mais_txt: "Learn More",
@@ -258,7 +261,9 @@ export const TextsLandingPage_en = {
     descricaovalor5: ": We are committed to providing a safe, loving, and stimulating environment for the holistic growth and development of all children served by Lunna.",
     significadolunna: "Meaning of Lunna",
     rostosportras: "Who are the faces behind the project ?",
-    
+    beneficio5: "This plan supports the enrollment of up to 450 students.",
+    beneficio6: "This plan supports the enrollment of up to 960 students.",
+    beneficio7: "The plan is valid only for more than 960 students."
 
 };
 
@@ -272,7 +277,7 @@ export const TextsLandingPage_es = {
     depoimentos_txt: "Testimonios",
     entrar_txt: "Iniciar sesión",
     cadastrar_txt: "Registrarse",
-    acompanhamento_kids: "Seguimiento de Niños",
+    acompanhamento_kids: "Seguimiento",
     inicio_main_text_txt:
         "¡Lunna ofrece un seguimiento detallado de la rutina diaria de su bebé en la guardería, incluyendo alimentación, rutina, actividades y momentos especiales registrados en fotos, todo en un solo lugar!",
     saiba_mais_txt: "Más información",
@@ -390,7 +395,9 @@ export const TextsLandingPage_es = {
     descricaovalor5: ": Nos comprometemos a proporcionar un ambiente seguro, amoroso y estimulante para el crecimiento y desarrollo integral de todos los niños atendidos por Lunna.",
     significadolunna: "Significado de Lunna",
     rostosportras: "Quiénes son los rostros detrás del proyecto ?",
-    
+    beneficio5: "Este plan admite el registro de hasta 450 estudiantes.",
+    beneficio6: "Este plan admite el registro de hasta 960 estudiantes.",
+    beneficio7: "El plan es válido solo para más de 960 estudiantes."
 };
 
 export const TextsLandingPage_fr = {
@@ -403,7 +410,7 @@ export const TextsLandingPage_fr = {
     depoimentos_txt: "Témoignages",
     entrar_txt: "Se connecter",
     cadastrar_txt: "S'inscrire",
-    acompanhamento_kids: "Suivi des enfants",
+    acompanhamento_kids: "Suivi",
     inicio_main_text_txt:
         "Lunna offre un suivi détaillé de la routine quotidienne de votre bébé à la crèche, comprenant l'alimentation, la routine, les activités et les moments spéciaux enregistrés en photos, le tout en un seul endroit !",
     saiba_mais_txt: "En savoir plus",
@@ -557,4 +564,7 @@ export const TextsLandingPage_fr = {
     descricaovalor4: ": Nous valorisons la diversité et l'individualité de chaque enfant et famille, en promouvant un environnement inclusif et accueill.",
     significadolunna: "Signification de Lunna",
     rostosportras: "Qui sont les visages derrière le projet ?",
+    beneficio5: "Ce plan permet l'inscription de jusqu'à 450 étudiants.",
+    beneficio6: "Ce plan permet l'inscription de jusqu'à 960 étudiants.",
+    beneficio7: "Le plan est valable uniquement pour plus de 960 étudiants."
 };

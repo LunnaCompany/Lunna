@@ -35,20 +35,8 @@ export const PlansSection = ({translateText}) => {
 
     const dataCard = [
         {
-            valor: "R$0",
-            subtitulo: translateText.subtitulo01,
-            icone1: Icon1,
-            icone2: Icon2,
-            beneficio1: translateText.beneficio1,
-            beneficio2: translateText.beneficio2,
-            beneficio3: translateText.beneficio3,
-            beneficio4: translateText.beneficio4,
-            contentLateral: ["F", "r", "e", "e"],
-            color: "azul-plans",
-            animationY: -35,
-        },
-        {
-            valor: "R$700",
+            precodesconto: "De R$1200 por",
+            valor: "R$900",
             subtitulo: translateText.subtitulo02,
             icone1: Icon1,
             icone2: Icon2,
@@ -56,12 +44,14 @@ export const PlansSection = ({translateText}) => {
             beneficio2: translateText.beneficio2,
             beneficio3: translateText.beneficio3,
             beneficio4: translateText.beneficio4,
-            contentLateral: ["M", "e", "n", "s", "a", "l"],
+            beneficio5: translateText.beneficio5,
+            contentLateral: [],
             color: "rosa-plans",
             animationY: 35,
         },
         {
-            valor: "R$1.200",
+            precodesconto: "De R$1800 por",
+            valor: "R$1.440",
             subtitulo: translateText.subtitulo,
             icone1: Icon1,
             icone2: Icon2,
@@ -69,10 +59,28 @@ export const PlansSection = ({translateText}) => {
             beneficio2: translateText.beneficio2,
             beneficio3: translateText.beneficio3,
             beneficio4: translateText.beneficio4,
-            contentLateral: [Estrela, "A", "n", "u", "a", "l"],
+            beneficio5: translateText.beneficio6,
+            
+            contentLateral: [],
             color: "roxo-plans",
             animationY: -35,
         },
+        {
+            preecodesconto01: "R$ 1.00 por discente",
+            valor: "Personalizável",
+            subtitulo: translateText.subtitulo01,
+            icone1: Icon1,
+            icone2: Icon2,
+            beneficio1: translateText.beneficio1,
+            beneficio2: translateText.beneficio2,
+            beneficio3: translateText.beneficio3,
+            beneficio4: translateText.beneficio4,
+            beneficio5: translateText.beneficio7,
+            contentLateral: [],
+            color: "azul-plans",
+            animationY: -35,
+        },
+        
     ];
 
     return (

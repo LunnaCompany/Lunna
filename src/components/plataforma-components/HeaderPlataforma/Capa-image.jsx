@@ -114,7 +114,7 @@ function Capa() {
                             )
                         }
                     >
-                        Memorias
+                        Memórias
                     </h2>
                     <h2
                         onClick={() =>

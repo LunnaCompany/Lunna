@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 60%;
-    height: 65%;
+    height: 74%;
     border-radius: 15px;
     overflow: hidden;
     background-color: #fff;
@@ -76,19 +76,21 @@
     color: #fff;
 }
 
+.container-quantidade-alunos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
 .quantidade-alunos {
-    position: absolute;
-    right: 5%;
-    top: 20%;
     color: #9747ff;
     font-weight: bold;
 }
 
 .box-selecionar-all-discentes {
-    position: absolute;
     width: 20%;
-    left: 5%;
-    top: 20%;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -112,4 +114,24 @@
     color: #000;
     text-align: center;
     line-height: 20px;
+}
+
+.container-btn-add-aluno-turma {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.8rem;
+}
+
+.container-add-aluno-turma .btn-add-aluno-turma{
+    background-color: green;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #9747ff;
+    padding: 0.7rem;
 }

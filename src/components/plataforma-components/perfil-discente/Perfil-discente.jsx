@@ -13,7 +13,6 @@ function PerfilDiscente() {
     const [dataDiscente, setDataDiscente] = useState([]);
     const email = localStorage.getItem("email");
 
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(
@@ -49,7 +48,7 @@ function PerfilDiscente() {
         return idade;
     }
 
-    console.log(dataDiscente)
+    console.log(dataDiscente);
 
     const dataCardresponsavel = [
         {
@@ -89,15 +88,12 @@ function PerfilDiscente() {
     ];
 
     const dataContatoEmergencia = [
-
         {
             nomeRelacao: dataDiscente?.contato?.nome,
             relacao: dataDiscente?.contato?.parentesco,
             telefoneRelacao: dataDiscente?.contato?.numeroCelular,
         },
-
-       
-    ]
+    ];
 
     return (
         <div id="perfil" className="div-tudo">
@@ -121,7 +117,8 @@ function PerfilDiscente() {
                             </li>
                             <li>
                                 {" "}
-                                <strong>Data de nascimento: </strong> {dataDiscente.dataNasDisc}
+                                <strong>Data de nascimento: </strong>{" "}
+                                {dataDiscente.dataNasDisc}
                             </li>
                         </ul>
                     </div>
@@ -133,7 +130,8 @@ function PerfilDiscente() {
                             </li>
                             <li>
                                 {" "}
-                                <strong> Altura: </strong> {dataDiscente.alturaDisc}
+                                <strong> Altura: </strong>{" "}
+                                {dataDiscente.alturaDisc}
                             </li>
                             <li>
                                 {" "}
@@ -153,21 +151,20 @@ function PerfilDiscente() {
 
                 <div className="info-med">
                     <div className="info-meio">
-                        <h2 className="info-saude-sus-name">Informações de saúde:</h2>
+                        <h2 className="info-saude-sus-name">
+                            Informações de saúde:
+                        </h2>
                         <div className="info-sus">
                             <ul>
                                 <li>
                                     {" "}
-                                    <strong>Carteirinha SUS:</strong> {dataDiscente?.fichaMed?.numCartSus}
-
+                                    <strong>Carteirinha SUS:</strong>{" "}
+                                    {dataDiscente?.fichaMed?.numCartSus}
                                 </li>
                                 <li>
                                     {" "}
-                                    <strong>Plano de Saúde:</strong> {dataDiscente?.fichaMed?.planSaud}
-                                </li>
-                                <li>
-                                    {" "}
-                                    <strong>Tipo sanguínio:</strong> A+
+                                    <strong>Plano de Saúde:</strong>{" "}
+                                    {dataDiscente?.fichaMed?.planSaud}
                                 </li>
                             </ul>
                             <div className="info-med-med">
@@ -178,7 +175,8 @@ function PerfilDiscente() {
                                     </li>
                                     <li>
                                         {" "}
-                                        <strong> Tipo:</strong> {dataDiscente.deficiencia}
+                                        <strong> Tipo:</strong>{" "}
+                                        {dataDiscente.deficiencia}
                                     </li>
                                 </ul>
                             </div>
@@ -192,7 +190,7 @@ function PerfilDiscente() {
                     <div className="line-two"></div>
 
                     <div className="info-total">
-                        <h2>Contatos de emergências:</h2>
+                        <h2>Contatos de Emergencias:</h2>
                         <ul>
                             <li>
                                 {" "}
@@ -204,10 +202,7 @@ function PerfilDiscente() {
                             </li>
                             <li>
                                 {" "}
-                                <strong>
-                                    {" "}
-                                    Nome do hospital:
-                                </strong>{" "}
+                                <strong> Nome do hospital:</strong>{" "}
                                 {dataDiscente?.fichaMed?.endereco?.nomeHospital}
                             </li>
                             <li>
@@ -220,21 +215,25 @@ function PerfilDiscente() {
                             </li>
                             <li>
                                 {" "}
-                                <strong> Comidas Alergênicas: </strong>
+                                <strong> Comidas alérgicas: </strong>
                                 {dataDiscente?.fichaMed?.comidasAlergicas}
                             </li>
 
                             <li>
                                 {" "}
-                                <strong> Cuidados específicos:</strong> {dataDiscente?.fichaMed?.cuidados}
+                                <strong> Cuidados específicos:</strong>{" "}
+                                {dataDiscente?.fichaMed?.cuidados}
                             </li>
                             <li>
                                 {" "}
-                                <strong> Medicamentos que Toma:</strong> {dataDiscente?.fichaMed?.remedios}
+                                <strong> Medicações prescritas:</strong>{" "}
+                                {dataDiscente?.fichaMed?.remedios}
                             </li>
                             <li>
                                 {" "}
-                                <strong>Em quantas horas:</strong> de {dataDiscente?.fichaMed?.qtdHoraMed} em {dataDiscente?.fichaMed?.qtdHoraMed} horas
+                                <strong>Em quantas horas:</strong> de{" "}
+                                {dataDiscente?.fichaMed?.qtdHoraMed} em{" "}
+                                {dataDiscente?.fichaMed?.qtdHoraMed} horas
                             </li>
                             <li>
                                 {" "}

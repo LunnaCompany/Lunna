@@ -26,15 +26,14 @@
 
 .home-content h2 {
     font-size: clamp(2rem, 1rem + 1vw, 2.5rem);
-
     font-weight: 600;
     color: #9747ff;
+    padding-bottom: 15px;
 }
 
 .home-content p {
     font-size: clamp(1rem, 0.3rem + 1vw, 1.12rem);
-
-    max-width: 466px;
+    max-width: 490px;
 }
 
 .home-content-main {

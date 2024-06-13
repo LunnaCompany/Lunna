@@ -6,13 +6,14 @@
     border-radius: 30px;
     overflow: hidden;
     cursor: pointer;
+    max-height: 300px;
 }
 
 .testimony-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
+    padding: 2.5rem ;
 }
 
 .testimony-card .testimony-content h2 {
@@ -25,10 +26,10 @@
 }
 
 .testimony-content p {
-    font-size: 13.7px;
+    font-size: 14px;
     color: #fff;
     padding: 1rem;
-    max-width: 200px;
+    max-width: 720px;
 }
 
 .testimony-card img {

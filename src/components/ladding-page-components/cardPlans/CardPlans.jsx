@@ -15,6 +15,8 @@ const CardPlans = ({ data }) => {
                 <div className="container-card-plan-content">
                     <div className="card-plan-content">
                         <div className="head-card-plan">
+                            <p id="preco-desconto-altera">{data.preecodesconto01}</p>
+                            <p>{data.precodesconto}</p> 
                             <h2>{data.valor}</h2>
                             <h3>{data.subtitulo}</h3>
                         </div>
@@ -36,6 +38,11 @@ const CardPlans = ({ data }) => {
                             <div>
                                 <img src={data.icone1} alt="" />
                                 <p>{data.beneficio4}</p>
+                            </div>
+
+                            <div>
+                                <img src={data.icone1} alt="" />
+                                <p style={{ fontWeight: 'bold' }} >{data.beneficio5}</p>
                             </div>
                         </div>
 

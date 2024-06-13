@@ -1,0 +1,143 @@
+.container-add-new-aviso {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.head-add-new-aviso {
+    height: 13%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+    background: rgb(251, 71, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(251, 71, 255, 1) 35%,
+        rgba(192, 24, 195, 1) 100%
+    );
+}
+
+.content-add-new-aviso {
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-input-add-title-aviso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.box-input-add-title-aviso {
+    color: #505050;
+    font-weight: 800;
+}
+
+.box-input-add-title-aviso input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    border-radius: 11px;
+    background-color: #e8e3e3;
+}
+
+.box-input-add-content-aviso {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    color: #505050;
+    font-weight: 800;
+}
+
+.box-input-add-content-aviso textarea {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    border-radius: 11px;
+    background-color: #e8e3e3;
+}
+
+.box-add-importancia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 11%;
+}
+
+.container-nivel-importancia {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+}
+
+.container-nivel-importancia div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.3rem;
+    border-radius: 10px;
+    width: 30%;
+    font-weight: bold;
+}
+
+.container-nivel-importancia div input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #f7eeee;
+}
+
+.nivel-normal {
+    background-color: #98e0ff;
+    color: #31c1ff;
+}
+
+.nivel-atencao {
+    background-color: #ffe196;
+    color: #ffa902;
+}
+
+.nivel-importante {
+    background-color: #ff94a1;
+    color: #ff002e;
+}
+
+.container-btn-enviar-aviso {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-btn-enviar-aviso div {
+    width: 20%;
+    padding: 0.4rem;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fb34ff;
+    cursor: pointer;
+}

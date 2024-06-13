@@ -5,11 +5,14 @@ import add from "../../../assets/add-aviso.png";
 import Turma from "../../../components/plataforma-components/Turmas/Turma";
 import { AddTurma } from "../../../components/plataforma-components/addTurma/addTurma";
 import AddAlunoTurma from "../../../components/plataforma-components/addAlunoTurma/AddAlunoTurma";
+import AddAviso from "../../../components/plataforma-components/addAviso/AddAviso";
+import { AnimatePresence } from "framer-motion";
 
 const Avisos = () => {
     const [open, setOpen] = useState(false);
     const [openNameTurma, setOpenNameTurma] = useState(false);
     const [openAddAluno, setOpenAddAluno] = useState(false);
+    const [openAddAviso, setOpenAviso] = useState(false);
 
     const closeAll = () => {
         setOpen(false);
@@ -29,19 +32,36 @@ const Avisos = () => {
             </div>
 
             {open && (
-                <Turma setOpen={setOpen} setOpenNameTurma={setOpenNameTurma} />
+                <AnimatePresence>
+                    <Turma
+                        setOpen={setOpen}
+                        setOpenNameTurma={setOpenNameTurma}
+                    />
+                </AnimatePresence>
             )}
             {openNameTurma && (
-                <AddTurma
-                    setOpenNameTurma={setOpenNameTurma}
-                    setOpenAddAluno={setOpenAddAluno}
-                />
+                <AnimatePresence>
+                    <AddTurma
+                        setOpenNameTurma={setOpenNameTurma}
+                        setOpenAddAluno={setOpenAddAluno}
+                    />
+                </AnimatePresence>
             )}
             {openAddAluno && (
-                <AddAlunoTurma
-                    setOpenNameTurma={setOpenNameTurma}
-                    closeAll={closeAll}
-                />
+                <AnimatePresence>
+                    <AddAlunoTurma
+                        setOpenNameTurma={setOpenNameTurma}
+                        setOpenAddAluno={setOpenAddAluno}
+                        setOpenAviso={setOpenAviso}
+                        closeAll={closeAll}
+                    />
+                </AnimatePresence>
+            )}
+
+            {openAddAviso && (
+                <AnimatePresence>
+                    <AddAviso setOpenAviso={setOpenAviso} />
+                </AnimatePresence>
             )}
         </div>
     );

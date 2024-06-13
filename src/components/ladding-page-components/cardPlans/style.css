@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    max-height: 500px;
+    height: 90vh;
+    max-height: 550px;
+    padding-top: 50px;
 }
 
 .container-card-plan-content {
@@ -124,6 +125,19 @@
 .roxo-plans {
     background-color: #9747ff;
 }
+
+.head-card-plan p{
+   text-decoration: line-through;
+   font-size: 14px;
+   color:#9747ff;
+   padding-bottom: 5px;
+   font-weight: bold;
+}
+
+#preco-desconto-altera{
+    text-decoration: none;
+}
+
 
 @media (max-width: 600px){
     .card-plan-content .head-card-plan h2{
