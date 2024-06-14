@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddAviso.css";
 import { motion } from "framer-motion";
 
-const AddAviso = ({ setOpenAviso }) => {
+const AddAviso = ({ setOpenAviso, onSubmit, handleSubmit }) => {
     const [selectedOption, setSelectedOption] = useState("");
 
     const handleOptionChange = (event) => {
@@ -68,7 +68,7 @@ const AddAviso = ({ setOpenAviso }) => {
                     </div>
 
                     <div className="container-btn-enviar-aviso">
-                        <div onClick={() => setOpenAviso(false)}>Enviar</div>
+                        <div onClick={() => {setOpenAviso(false); handleSubmit(onSubmit)()}}>Enviar</div>
                     </div>
                 </div>
             </motion.div>

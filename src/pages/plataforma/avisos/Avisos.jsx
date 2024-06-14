@@ -7,6 +7,7 @@ import { AddTurma } from "../../../components/plataforma-components/addTurma/add
 import AddAlunoTurma from "../../../components/plataforma-components/addAlunoTurma/AddAlunoTurma";
 import AddAviso from "../../../components/plataforma-components/addAviso/AddAviso";
 import { AnimatePresence } from "framer-motion";
+import { useForm } from "react-hook-form";
 
 const Avisos = () => {
     const [open, setOpen] = useState(false);
@@ -18,6 +19,21 @@ const Avisos = () => {
         setOpen(false);
         setOpenAddAluno(false);
         setOpenAddAluno(false);
+    };
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        watch,
+    } = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data);
+    };
+
+    const onSubmitTurma = (data) => {
+        console.log(data);
     };
 
     return (
@@ -42,6 +58,10 @@ const Avisos = () => {
             {openNameTurma && (
                 <AnimatePresence>
                     <AddTurma
+                        register={register}
+                        errors={errors}
+                        onSubmitTurma={onSubmitTurma}
+                        handleSubmit={handleSubmit}
                         setOpenNameTurma={setOpenNameTurma}
                         setOpenAddAluno={setOpenAddAluno}
                     />
@@ -60,7 +80,11 @@ const Avisos = () => {
 
             {openAddAviso && (
                 <AnimatePresence>
-                    <AddAviso setOpenAviso={setOpenAviso} />
+                    <AddAviso
+                        setOpenAviso={setOpenAviso}
+                        handleSubmit={handleSubmit}
+                        onSubmit={onSubmit}
+                    />
                 </AnimatePresence>
             )}
         </div>

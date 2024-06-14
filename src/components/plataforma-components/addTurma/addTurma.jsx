@@ -2,7 +2,14 @@ import React from "react";
 import "./addTurma.css";
 import { motion } from "framer-motion";
 
-export const AddTurma = ({ setOpenAddAluno, setOpenNameTurma }) => {
+export const AddTurma = ({
+    setOpenAddAluno,
+    setOpenNameTurma,
+    register,
+    errors,
+    handleSubmit,
+    onSubmitTurma,
+}) => {
     return (
         <div className="dark-background-turma">
             <motion.div
@@ -18,7 +25,18 @@ export const AddTurma = ({ setOpenAddAluno, setOpenNameTurma }) => {
                 <div className="content-add-name-tema-turma">
                     <div className="content-add-name-turma">
                         <label htmlFor="">Nome da turma:</label>
-                        <input type="text" id="nameTurma" />
+                        <div className="container-input-add-name-turma">
+                            <input
+                                {...register("nomeTurma", { required: true })}
+                                type="text"
+                                id="nameTurma"
+                            />
+                            {errors?.nomeTurma?.type === "required" && (
+                                <p className="error-message-input">
+                                    Campo obrigatorio
+                                </p>
+                            )}
+                        </div>
                     </div>
 
                     <div className="content-add-tema-turma">
@@ -43,8 +61,9 @@ export const AddTurma = ({ setOpenAddAluno, setOpenNameTurma }) => {
                         <div
                             className="btn-select-name-turma"
                             onClick={() => {
-                                setOpenAddAluno(true);
-                                setOpenNameTurma(false);
+                                !errors && setOpenAddAluno(true);
+                                !errors && setOpenNameTurma(false);
+                                
                             }}
                         >
                             Confirmar
