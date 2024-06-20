@@ -18,6 +18,8 @@ import PerfilMemoria from "../components/plataforma-components/Perfil-Memoria/Pe
 import Atividades from "../pages/plataforma/Atividades/Atividades";
 import Avisos from "../pages/plataforma/avisos/Avisos";
 import TemplateSecundaryPlataforma from "../pages/plataforma/TemplateSecundaryPlataforma/TemplateSecundaryPlataforma";
+import { ChatRoom } from "../pages/plataforma/chatRoom/ChatRoom";
+import TemplateChat from "../pages/plataforma/TemplateChat/TemplateChat";
 
 export const RoutesLunna = () => {
     const [translateText, setTranslateText] = useState(TextsLandingPage);
@@ -46,7 +48,7 @@ export const RoutesLunna = () => {
 
         const fetchData = async () => {
             try {
-                const response = axios.get( 
+                const response = axios.get(
                     "http://localhost:8080/responsavel",
                     {
                         headers: {
@@ -105,6 +107,15 @@ export const RoutesLunna = () => {
                 }
             />
             <Route
+                path="/Lunna"
+                element={
+                    <Home
+                        translateText={translateText}
+                        handleTranslate={translate}
+                    />
+                }
+            />
+            <Route
                 path="/Lunna-landing-page"
                 element={
                     <Home
@@ -113,6 +124,7 @@ export const RoutesLunna = () => {
                     />
                 }
             />
+
             <Route
                 path="/Lunna-landing-page/sobre-nos"
                 element={
@@ -159,6 +171,15 @@ export const RoutesLunna = () => {
                     <TemplateSecundaryPlataforma>
                         <Avisos />
                     </TemplateSecundaryPlataforma>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/chat"
+                element={
+                    <TemplateChat>
+                        <ChatRoom />
+                    </TemplateChat>
                 }
             />
         </Routes>

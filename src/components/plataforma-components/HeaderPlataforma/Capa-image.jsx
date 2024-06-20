@@ -21,6 +21,7 @@ function Capa() {
     //
     const [overlay, setOverlay] = useState(false);
     const [notificationOverlay, setNotificationOverlay] = useState(false);
+    const [dataCrianca, setDataCrianca] = useState();
     const [imagePerfil, setImagePerfil] = useState("");
     const navigate = useNavigate();
     const email = localStorage.getItem("email");
@@ -31,6 +32,7 @@ function Capa() {
                 `http://localhost:8080/responsavel/email/${email}`
             );
             fetchImgResp(encodeURIComponent(response.data.ftPerfilResp));
+            setDataCrianca(response.data.discentes[0]);
         };
 
         const fetchImgResp = async (image) => {
@@ -104,7 +106,7 @@ function Capa() {
                             scrollToPage("/Lunna-landing-page/perfil", "perfil")
                         }
                     >
-                        Perfil do Gabriel
+                        Perfil do {dataCrianca?.nomeDisc}
                     </h2>
                     <h2
                         onClick={() =>
@@ -124,7 +126,7 @@ function Capa() {
                             )
                         }
                     >
-                        Atividades do Gabriel
+                        Atividades do {dataCrianca?.nomeDisc}
                     </h2>
                     <h2>Enquetes Passadas</h2>
                 </div>

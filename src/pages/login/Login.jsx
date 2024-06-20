@@ -40,6 +40,7 @@ function Login() {
 
     const handleUserEmail = (email) =>{
         localStorage.setItem("email", email);
+        sessionStorage.setItem("email", email)
         setEmail(token);
     }
 

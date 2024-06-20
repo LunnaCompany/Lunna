@@ -64,7 +64,7 @@ function Sidebar() {
                         </li>
                         <li className="side-item">
                             <a href="#">
-                                <BiMessageSquareDots color="white" size="25" />
+                                <BiMessageSquareDots color="white" size="25" onClick={() => scrollToPage("/Lunna-landing-page/chat", "chat")}/>
                                 <span className="item-description">Chat</span>
                             </a>
                         </li>

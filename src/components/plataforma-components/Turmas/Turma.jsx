@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Turma.css";
 import CardTurma from "../cardTurma/CardTurma";
 import add from "../../../assets/add-new-card-turma.png";
 import { motion } from "framer-motion";
+import axios from "axios";
 
-const Turma = ({ setOpen, setOpenNameTurma }) => {
+const Turma = ({ setOpen, handleNextStep, setStep }) => {
+    const [dataTurma, setDataTurma] = useState([]);
+    useEffect(() => {
+        const fechData = async () => {
+            const response = await axios.get("http://localhost:8080/turma");
+            console.log(response.data);
+            setDataTurma(response.data);
+        };
+
+        fechData();
+    }, []);
+
     return (
         <div className="dark-background-turma">
             <motion.div
@@ -17,17 +29,20 @@ const Turma = ({ setOpen, setOpenNameTurma }) => {
                     <h2>Escolha a Turma</h2>
                 </div>
                 <div className="content-card-add-turma">
-                    <CardTurma nomeTurma="Turma Girassol" />
-                    <CardTurma nomeTurma="Turma Pipoca" />
-                    <CardTurma nomeTurma="Turma Goiabada" />
-                    <CardTurma nomeTurma="Turma Atum" />
+                    {dataTurma.map((data) => (
+                        <CardTurma
+                            setStep={setStep}
+                            nomeTurma={data.nomeTurma}
+                            tema={data.tema}
+                        />
+                    ))}
                 </div>
 
                 <div className="box-btn-add-turma-card">
                     <div
                         onClick={() => {
                             setOpen(false);
-                            setOpenNameTurma(true);
+                            handleNextStep();
                         }}
                         className="btn-add-turma-card"
                     >

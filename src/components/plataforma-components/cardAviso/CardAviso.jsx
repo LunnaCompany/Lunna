@@ -2,26 +2,23 @@ import React from "react";
 import "./CardAviso.css";
 import fotoPedagogo from "../../../assets/foto-pedagogo.png"
 
-const CardAviso = () => {
+const CardAviso = ({data}) => {
     return (
-        <div className="card-aviso">
+        <div className="card-aviso" key={data.idAviso}>
             <div className="container-card-perfil-pedagogo">
                 <img src={fotoPedagogo} alt="" />
                 <span>Pedagoga Marta</span>
             </div>
 
             <div className="content-card-aviso">
-                <h3>Importância do Brincar:</h3>
+                <h3>{data.tituloAviso}:</h3>
                 <p>
-                    Queridos pais, o brincar é a linguagem natural das crianças
-                    e uma ferramenta poderosa para o desenvolvimento físico,
-                    cognitivo, emocional e social. Encorajamos vocês a reservar
-                    tempo para brincadeiras criativas e exploratórias em casa
+                    {data.conteudoAviso}
                 </p>
             </div>
 
             <div className="footer-card-aviso">
-                <span>Importante</span>
+                <span>{data.importancia}</span>
 
                 <div>
                     <label htmlFor="">Não Lido</label>

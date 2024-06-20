@@ -8,6 +8,8 @@ export default function Atividades() {
             <AtividadesRecreativas />
             <div className="content-lunna-cards">
                 <Card />
+                <Card />
+                <Card />
             </div>
         </div>
     );

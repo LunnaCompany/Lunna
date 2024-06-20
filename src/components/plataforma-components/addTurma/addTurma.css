@@ -43,6 +43,7 @@
 .content-add-name-turma {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -109,6 +110,13 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.content-add-turno-turma div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .content-add-turno-turma span {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddAviso.css";
 import { motion } from "framer-motion";
 
-const AddAviso = ({ setOpenAviso, onSubmit, handleSubmit }) => {
+const AddAviso = ({ register, errors, onSubmit, handleSubmit }) => {
     const [selectedOption, setSelectedOption] = useState("");
 
     const handleOptionChange = (event) => {
@@ -20,12 +20,35 @@ const AddAviso = ({ setOpenAviso, onSubmit, handleSubmit }) => {
                 <div className="content-add-new-aviso">
                     <div className="box-input-add-title-aviso">
                         <label>Titulo:</label>
-                        <input type="text" />
+                        <div>
+                            <input
+                                {...register("tituloTurma", { required: true })}
+                                type="text"
+                            />
+                            {errors?.tituloTurma?.type === "required" && (
+                                <p className="error-message-input">
+                                    Campo obrigatorio
+                                </p>
+                            )}
+                        </div>
                     </div>
 
                     <div className="box-input-add-content-aviso">
                         <label>Aviso:</label>
-                        <textarea name="" id=""></textarea>
+                        <div className="conteudo-aviso-container">
+                            <input
+
+                                {...register("conteudoAviso", {
+                                    required: true,
+                                })}
+                                type="text"
+                            />
+                            {errors?.conteudoAviso?.type === "required" && (
+                                <p className="error-message-input">
+                                    Campo obrigatorio
+                                </p>
+                            )}
+                        </div>
                     </div>
 
                     <div className="box-add-importancia">
@@ -37,38 +60,58 @@ const AddAviso = ({ setOpenAviso, onSubmit, handleSubmit }) => {
                                     type="radio"
                                     name=""
                                     id="normal"
-                                    value="option1"
-                                    checked={selectedOption === "option1"}
+                                    value="Normal"
+                                    {...register("importancia", {
+                                        required: true,
+                                    })}
+                                    checked={selectedOption === "Normal"}
                                     onChange={handleOptionChange}
                                 />
                             </div>
                             <div className="nivel-atencao">
-                                <label htmlFor="normal">Atenção</label>
+                                <label htmlFor="atencao">Atenção</label>
                                 <input
                                     type="radio"
                                     name=""
-                                    id="normal"
-                                    value="option2"
-                                    checked={selectedOption === "option2"}
+                                    id="atencao"
+                                    value="Atenção"
+                                    {...register("importancia", {
+                                        required: true,
+                                    })}
+                                    checked={selectedOption === "Atenção"}
                                     onChange={handleOptionChange}
                                 />
                             </div>
                             <div className="nivel-importante">
-                                <label htmlFor="normal">Importante</label>
+                                <label htmlFor="Importante">Importante</label>
                                 <input
                                     type="radio"
                                     name=""
-                                    id="normal"
-                                    value="option3"
-                                    checked={selectedOption === "option3"}
+                                    id="Importante"
+                                    value="Importante"
+                                    {...register("importancia", {
+                                        required: true,
+                                    })}
+                                    checked={selectedOption === "Importante"}
                                     onChange={handleOptionChange}
                                 />
                             </div>
                         </div>
+                        {errors?.importancia?.type === "required" && (
+                            <p className="error-message-input">
+                                Campo obrigatorio
+                            </p>
+                        )}
                     </div>
 
                     <div className="container-btn-enviar-aviso">
-                        <div onClick={() => {setOpenAviso(false); handleSubmit(onSubmit)()}}>Enviar</div>
+                        <div
+                            onClick={() => {
+                                handleSubmit(onSubmit)();
+                            }}
+                        >
+                            Enviar
+                        </div>
                     </div>
                 </div>
             </motion.div>

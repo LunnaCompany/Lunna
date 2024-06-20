@@ -28,7 +28,7 @@ img {
 .content-lunna-cards {
     display: flex;
     justify-content: center;
- 
+    gap: 4rem;
     background-color: rgb(255, 255, 255);
     height: 60vh;
     align-items: center;

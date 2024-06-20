@@ -47,7 +47,7 @@ const SecondHeaderPlataforma = () => {
         <div className="second-header-plataforma">
             <div className="content-second-header-plataforma">
                 <div className="saudaçoes-second-header-plataforma">
-                    <span>Olá Laura!</span>
+                    <span>Olá {dataResponsavel.nomeResp}!</span>
                     <span>avisos do {dataDiscente.nomeDisc}</span>
                 </div>
 

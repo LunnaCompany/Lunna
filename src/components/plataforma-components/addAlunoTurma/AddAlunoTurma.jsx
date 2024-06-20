@@ -5,9 +5,15 @@ import { motion } from "framer-motion";
 
 import axios from "axios";
 
-const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
+const AddAlunoTurma = ({
+    closeAll,
+    onSubmit,
+    handleSubmit,
+    setListDiscentes,
+}) => {
     const [dataDiscente, setDataDiscente] = useState([]);
     const [activeCards, setActiveCards] = useState([]);
+    const [selectedChildren, setSelectedChildren] = useState([]);
     useEffect(() => {
         const fetchPerfilDisc = async (image) => {
             try {
@@ -21,6 +27,7 @@ const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
                 return null;
             }
         };
+        
 
         const fetchData = async () => {
             try {
@@ -28,17 +35,41 @@ const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
                     "http://localhost:8080/discente"
                 );
 
+                
+
                 const dataWithProfiles = await Promise.all(
                     response.data.map(async (data) => ({
-                        idDisc: data.idDisc,
-                        nomeDisc: data.nomeDisc,
-                        dataNasDisc: data.dataNasDisc,
-                        imgDisc: await fetchPerfilDisc(
-                            encodeURIComponent(data.imgDisc)
-                        ),
-                    }))
-                );
+                      idDisc: data.idDisc,
+                      nomeDisc: data.nomeDisc,
+                      dataNasDisc: data.dataNasDisc,
+                      imgDisc: data.imgDisc,
+                      alturaDisc: data.alturaDisc,
+                      cpfDisc: data.cpfDisc,
+                      contato: {
+                        nome: data?.contato?.nome,
+                        numeroTelefone: data?.contato?.numeroTelefone,
+                        numeroCelular: data?.contato?.numeroCelular,
+                        parentesco: data?.contato?.parentesco
+                      },
+                      deficiencia: data.deficiencia,
+                      fichaMed: {
+                        planSaud: data?.fichaMed?.planSaud,
+                        cuidados: data?.fichaMed?.cuidados,
+                        numCartSus: data?.fichaMed?.numCartSus,
+                        remedios: data?.fichaMed?.remedios,
+                        comidasAlergicas: data?.fichaMed?.comidasAlergicas
+                      },
+                      pesoDisc: data.pesoDisc,
+                      responsavel: {
+                        nomeResp: data?.idResp[0]?.nomeResp,
+                        cpfResp: data?.idResp[0]?.cpfResp,
+                        emailResp: data?.idResp[0]?.emailResp
+                      },
 
+                    }))
+                  );
+                  
+                  
                 setDataDiscente((prevData) => {
                     const newData = dataWithProfiles.filter(
                         (newData) =>
@@ -57,24 +88,39 @@ const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
         fetchData();
     }, []);
 
+    
+
     const getImage = (img) => {
         return URL.createObjectURL(new Blob([img]));
     };
 
-    const handleClickCard = (id) => {
-        setActiveCards((prevActiveCards) =>
-            prevActiveCards.includes(id)
-                ? prevActiveCards.filter((cardId) => cardId !== id)
-                : [...prevActiveCards, id]
-        );
+    const handleClickCard = (child) => {
+        const isActive = activeCards.includes(child.idDisc);
+        if (isActive) {
+            setActiveCards((prevActiveCards) => prevActiveCards.filter((cardId) => cardId !== child.idDisc));
+            setSelectedChildren((prevSelectedChildren) => prevSelectedChildren.filter((c) => c.idDisc !== child.idDisc));
+            setListDiscentes((prevSelectedChildren) => prevSelectedChildren.filter((c) => c.idDisc !== child.idDisc));
+        } else {
+            setActiveCards((prevActiveCards) => [...prevActiveCards, child.idDisc]);
+            setSelectedChildren((prevSelectedChildren) => [...prevSelectedChildren, child]);
+            setListDiscentes((prevSelectedChildren) => [...prevSelectedChildren, child]);
+        }
+
+        console.log("teste: ", selectedChildren);
     };
 
     const handleSelectAll = () => {
         if (activeCards.length === dataDiscente.length) {
             setActiveCards([]);
+            setSelectedChildren([]);
+            setListDiscentes([]);
         } else {
             setActiveCards(dataDiscente.map((data) => data.idDisc));
+            setSelectedChildren(dataDiscente);
+            setListDiscentes(dataDiscente);
         }
+
+       
     };
 
     function CalcIdade(data) {
@@ -125,7 +171,7 @@ const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
                                     : ""
                             }`}
                             key={data.idDisc}
-                            onClick={() => handleClickCard(data.idDisc)}
+                            onClick={() => handleClickCard(data)}
                         >
                             <img src={getImage(data.imgDisc)} alt="" />
                             <div>
@@ -140,8 +186,7 @@ const AddAlunoTurma = ({ closeAll, setOpenAviso, setOpenAddAluno }) => {
                     <div
                         className="btn-add-aluno-turma"
                         onClick={() => {
-                            setOpenAviso(true);
-                            setOpenAddAluno(false);
+                            handleSubmit(onSubmit)();
                         }}
                     >
                         continuar

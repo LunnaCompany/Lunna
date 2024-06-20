@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@font-face {
+    font-family: "title font";
+    src: url(./assets/fonts/PoetsenOne-Regular.ttf);
+}
+
+
+
+.container-logo-sobre-nos {
+    width: 100%;
+    height: 100%;
+    background-color: #fcf5f5;
+}
+
+.title-logo-sobre-nos {
+    position: relative;
+    font-family: "title font";
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.title-logo-sobre-nos::before{
+    content: "Nossa logo";
+    position: absolute;
+    top: -6px;
+    color: #ff459f;
+
+}
+
+.container-logos-sobre-nos-lunnna {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.section-logos-mao-sobre-nos {
+    background-image: url("../../../assets/lousalogossobrenos.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-logos-mao-sobre-nos {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.logo-sobre-nos {
+    width: 260px;
+    height: 250px;
+}

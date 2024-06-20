@@ -375,7 +375,7 @@ const Cadastro = () => {
                     <div
                         className="continuar-btn"
                         onClick={() => {
-                            handleNextStep, handleSubmit(onSubmit)();
+                            handleSubmit(onSubmit)();
                         }}
                     >
                         Próximo
