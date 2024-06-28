@@ -1,7 +1,7 @@
 # Front-End Lunna
 
 <div align="center">
-![Imagem do WhatsApp de 2024-06-28 à(s) 11 34 53_2d445e76](https://github.com/LunnaCompany/Lunna/assets/147529312/dd9d0413-2d65-454a-aa3b-3933f51c6383)
+![Lunna](https://github.com/LunnaCompany/Lunna/assets/147529312/597224d5-b34c-4307-9045-1eb4737ad79e)
 </div>
 <br/>
 
