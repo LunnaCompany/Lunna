@@ -1,7 +1,7 @@
 # Front-End Lunna
 
 <div align="center">
-![Lunna](https://github.com/LunnaCompany/Lunna/assets/147529312/bb438bc4-eb13-48f8-93bd-b7e11cfc18a0)
+<img ![Lunna](https://github.com/LunnaCompany/Lunna/assets/147529312/ee470725-0cbe-4cdf-a9d3-fd70d6bd2af1) />
 
 </div>
 <br/>
