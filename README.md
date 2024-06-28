@@ -55,6 +55,7 @@ npm run dev
   <tr>
     <td align="center">
       <a href="https://github.com/LucasVilarindo" title="Lucas Vilarindo">
+          <img src="https://github.com/LucasVilarindo.png" width="100px;" alt="Foto do Lucas"/><br>
         <sub>
           <b>Lucas Vilarindo</b>
         </sub>
@@ -62,7 +63,7 @@ npm run dev
     </td>
     <td align="center">
       <a href="https://github.com/TechAbraao" title="Abraão Santos">
-         <img src="https://github.com/TechAbraao.png" width="100px;" alt="Foto do Marcos"/><br>
+         <img src="https://github.com/TechAbraao.png" width="100px;" alt="Foto do Abraão"/><br>
         <sub>
           <b>Abraão Santos</b>
         </sub>
@@ -70,6 +71,7 @@ npm run dev
     </td>
     <td align="center">
       <a href="https://github.com/anthonyDev01" title="Anthony Ndubisi">
+         <img src="https://github.com/anthonyDev01.png" width="100px;" alt="Foto do Anthony"/><br>
         <sub>
           <b>Anthony Ndubisi</b>
         </sub>
@@ -77,6 +79,7 @@ npm run dev
     </td>
      <td align="center">
       <a href=https://github.com/Stefany3108" title="Stefany Barreto">
+         <img src="https://github.com/Stefany3108.png" width="100px;" alt="Foto do Stefany"/><br>
         <sub>
           <b>Stefany Barreto</b>
         </sub>
@@ -84,6 +87,7 @@ npm run dev
     </td>
      <td align="center">
       <a href=https://github.com/Lulunna" title="Raquel Luna">
+          <img src="https://github.com/Lulunna.png" width="100px;" alt="Foto do Raquel"/><br>
         <sub>
           <b>Raquel Luna</b>
         </sub>
@@ -91,6 +95,7 @@ npm run dev
     </td>
      <td align="center">
       <a href="https://github.com/Eliana100" title="Eliana Nunes">
+          <img src="https://github.com/Eliana100.png" width="100px;" alt="Foto da Eliana"/><br>
         <sub>
           <b>Eliana Nunes</b>
         </sub>
@@ -98,6 +103,7 @@ npm run dev
     </td>
  <td align="center">
       <a href="https://github.com/EduardoS-Silva" title="Eduardo Silva">
+          <img src="https://github.com/EduardoS-Silva.png" width="100px;" alt="Foto do Eduardo"/><br>
         <sub>
           <b>Eduardo Silva</b>
         </sub>
@@ -105,6 +111,7 @@ npm run dev
     </td>
      <td align="center">
       <a href="https://github.com/DaviBMachado" title="Davi Bernardes">
+          <img src="https://github.com/DaviBMachado.png" width="100px;" alt="Foto do Davi"/><br>
         <sub>
           <b>Davi Bernardes</b>
         </sub>
