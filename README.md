@@ -62,6 +62,7 @@ npm run dev
     </td>
     <td align="center">
       <a href="https://github.com/TechAbraao" title="Abraão Santos">
+         <img src="https://github.com/TechAbraao.png" width="100px;" alt="Foto do Marcos"/><br>
         <sub>
           <b>Abraão Santos</b>
         </sub>
