@@ -55,7 +55,6 @@ npm run dev
   <tr>
     <td align="center">
       <a href="https://github.com/LucasVilarindo" title="Lucas Vilarindo">
-      
         <sub>
           <b>Lucas Vilarindo</b>
         </sub>
