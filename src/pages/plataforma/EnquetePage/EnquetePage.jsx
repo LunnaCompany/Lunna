@@ -15,8 +15,7 @@ const EnquetePage = () => {
                 imagem={PedagogaMarta}
                 datainicio="Hoje 12/02"
                 datafinal="Até 10/04"
-                pergunta="Como você prefere que a hora
-da soneca seja conduzida na creche?"
+                pergunta="Como você prefere que a hora da soneca seja conduzida na creche?"
                 opcao01="Ambiente tranquilo com música suave"
                 opcao02="Uso de luzes baixas e sons relaxantes"
                 opcao03="Rotina individualizada de acordo com as preferências da criança"
@@ -33,6 +32,8 @@ da soneca seja conduzida na creche?"
                 opcao02="Precisa melhorar"
                 opcao03="Esta bom, mas pode melhorar"
                 opcao04="Ruim, decaiu bastante"
+                 colorinput="color-input-blue"
+                
             />
 
             <EnqueteCard
@@ -45,6 +46,8 @@ da soneca seja conduzida na creche?"
                 opcao02="Jogos educativos, como quebra-cabeça"
                 opcao03="Plantio de flores ou vegetais e cuidados com um pequeno jardim"
                 opcao04="Experimentos simples que despertem a curiosidade sobre o mundo ao redor."
+                colorinput="color-input-yellow"
+                
             />
 
             <EnqueteCard
@@ -57,6 +60,7 @@ da soneca seja conduzida na creche?"
                 opcao02="pintura com aquarela, ao ar livre"
                 opcao03="Dança com musicas animadas"
                 opcao04="Esportes adaptados para os pequenos"
+                colorinput="color-input-roxo"
             />
         </div>
     );

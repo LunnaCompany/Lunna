@@ -16,7 +16,7 @@
     font-family: "Roboto", sans-serif;
 }
 .LumiIcon img {
-    width: 30%;
+    width: 25%;
 }
 .LumiIcon:hover {
     transform: scale(1.03);

@@ -39,7 +39,19 @@ export const RoutesLunna = () => {
 
     const navigate = useNavigate();
 
-    
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (
+            !token &&
+            location.pathname !== "/Lunna-landing-page/login" &&
+            location.pathname !== "/" &&
+            location.pathname !== "/Lunna-landing-page" &&
+            location.pathname !== "/Lunna-landing-page/sobre-nos"
+        ) {
+            navigate("/Lunna-landing-page/login", { replace: true });
+            console.log("executando");
+        }
+    }, [navigate]);
 
     useEffect(() => {
         const tokenr =
@@ -261,10 +273,10 @@ export const RoutesLunna = () => {
                     <TemplateChat>
                         <EnquetePage />
                         <LumiIconComponent />
-                        
                     </TemplateChat>
                 }
             />
+            
         </Routes>
     );
 };

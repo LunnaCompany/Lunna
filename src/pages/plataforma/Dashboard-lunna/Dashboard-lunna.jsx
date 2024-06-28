@@ -96,7 +96,7 @@ function Dashboardlunna() {
             icon: <LuClipboardList size={40} />,
             colorvertical: "color-laranja",
             delay: 0.2,
-            rota: "enquete",
+            rota: "/Lunna-landing-page/enquetes",
         },
 
         {
@@ -110,7 +110,7 @@ function Dashboardlunna() {
             icon: <AiFillClockCircle size={40} />,
             colorvertical: "color-blue",
             delay: 0.6,
-            rota: "enquete",
+            rota: "/Lunna-landing-page/rotina",
         },
 
         {

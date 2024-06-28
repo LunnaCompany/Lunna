@@ -20,14 +20,14 @@
     padding-top: 30px;
 }
 
+
+
 .container-menu-superior-tela-agenda {
     display: flex;
     width: 80%;
+    background-color: #B7E9FF;
     height: 50px;
-    background-color: #b7e9ff;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -37,8 +37,12 @@
 
 .section-data-menu-superior {
     display: flex;
-    gap: 130px;
-    padding-left: 5px;
+    justify-content: space-between;
+    width: 89%;
+    align-items: center;
+ padding-left: 10px;
+    
+    
 }
 
 .cointainer-section-horario-rotina-agenda {

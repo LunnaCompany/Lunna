@@ -51,7 +51,10 @@
 
 .perguntas {
     display: flex;
-    height: 75px;
+    height: 55px;
+    width: 80%;
+    
+    
 }
 
 .perguntas p {
@@ -63,12 +66,13 @@
 
 .input-perguntas-enquete {
     display: flex;
-    background-color: #ee87ff;
-    width: 80%;
+    background-color: #ef87ff65;
+    width: 400px;
+    height: 50px;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 15px;
-    height: 20%;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #000000;
 }
 
 .btn-perguntas {
@@ -82,12 +86,9 @@
 }
 
 .btn-perguntas label {
-    padding: 7px;
     display: flex;
     border-radius: 8px;
-    margin-bottom: 12px;
-    width: 95%;
-    text-align: center;
+    width: 70%;
     font-size: 13px;
 }
 
@@ -95,4 +96,17 @@
     width: 40px;
     height: 20px;
     align-items: center;
+}
+
+
+.color-input-roxo{
+    background-color: #9747ff4f;
+}
+
+.color-input-yellow{
+    background-color: #feb1186c;
+}
+
+.color-input-blue{
+    background-color: #CEF0FF;
 }

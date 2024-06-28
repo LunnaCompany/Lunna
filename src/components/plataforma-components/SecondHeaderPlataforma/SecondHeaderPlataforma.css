@@ -1,7 +1,7 @@
 .second-header-plataforma {
     width: 100%;
     height: 20vh;
-
+    cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;

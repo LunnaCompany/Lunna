@@ -18,22 +18,22 @@ function EnqueteCard(props) {
             </div>
 
             <div className="btn-perguntas">
-                <div className="input-perguntas-enquete">
+            <div className={`input-perguntas-enquete ${props.colorinput}`}>
                     <label for="pergunta01">{props.opcao01}</label>
                     <input type="checkbox" />
                 </div>
 
-                <div className="input-perguntas-enquete">
+                <div className={`input-perguntas-enquete ${props.colorinput}`}>
                     <label for="pergunta01">{props.opcao02}</label>
                     <input type="checkbox" />
                 </div>
 
-                <div className="input-perguntas-enquete">
+                <div className={`input-perguntas-enquete ${props.colorinput}`}>
                     <label for="pergunta01">{props.opcao03}</label>
                     <input type="checkbox" />
                 </div>
 
-                <div className="input-perguntas-enquete">
+                <div className={`input-perguntas-enquete ${props.colorinput}`}>
                     <label for="pergunta01">{props.opcao04}</label>
                     <input type="checkbox" />
                 </div>
@@ -43,3 +43,5 @@ function EnqueteCard(props) {
 }
 
 export default EnqueteCard;
+
+
