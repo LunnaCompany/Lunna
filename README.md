@@ -1,6 +1,6 @@
 # Front-End Lunna
 
-![Lunna](https://github.com/LunnaCompany/Lunna/assets/147529312/ee470725-0cbe-4cdf-a9d3-fd70d6bd2af1)
+![lunnagitcpapa](https://github.com/LunnaCompany/.github/assets/147529312/e4bfbd0e-f45f-4a94-82b8-e6a8f64811ac)
 
 <br/>
 
