@@ -275,6 +275,7 @@ export const RoutesLunna = () => {
                         <LumiIconComponent />
                     </TemplateChat>
                 }
+                
             />
             
         </Routes>
