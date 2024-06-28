@@ -55,7 +55,7 @@ npm run dev
   <tr>
     <td align="center">
       <a href="https://github.com/LucasVilarindo" title="Lucas Vilarindo">
-         ![LucasVilarindo](https://github.com/LunnaCompany/Lunna/assets/147529312/f1ff2fba-8eb7-444e-9a8f-e00ac246ccc5)
+      
         <sub>
           <b>Lucas Vilarindo</b>
         </sub>
