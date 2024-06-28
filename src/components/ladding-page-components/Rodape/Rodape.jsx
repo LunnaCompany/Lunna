@@ -51,27 +51,24 @@ export function Rodape({ translateText }) {
                         </li>
                     </ul>
                 </div>
-                
+
                 <div className="device" />
 
                 <div className="footer-contacts">
                     <div className="footer-social-media">
                         <div className="paragrafo">
                             <p>
-                            Direitos Autorais © [Ano] Lunna Company. Todos os direitos reservados. 
+                                Direitos Autorais © 2024 Lunna Company. Todos os
+                                direitos reservados.
                             </p>
                         </div>
 
                         <div className="footer-img-social">
-                            <a href="#">
+                            <a href="https://www.instagram.com/lunnacompany/">
                                 <img src={insta} alt="" />
                             </a>
 
-                            <a href="#">
-                                <img src={face} alt="" />
-                            </a>
-
-                            <a href="#">
+                            <a href="https://www.linkedin.com/company/lunnacompany/">
                                 <img src={linkedin} alt="" />
                             </a>
                         </div>

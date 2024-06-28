@@ -70,7 +70,7 @@ const ContactSection = ({ translateText }) => {
                                 required
                             />
                             <div className="btn-enviar-contact-section">
-                            <FaRegPaperPlane  size={25}/>
+                                <FaRegPaperPlane size={25} />
                             </div>
                         </div>
                     </div>

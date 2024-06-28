@@ -53,6 +53,11 @@
    height: 15%;
    cursor: pointer;
 }
+.icone-afroglow-conteudo button a{
+   color: #fff;
+   text-decoration: none;
+}
+
 .icone-afroglow-conteudo p span {
    color: #FEB018;
 }

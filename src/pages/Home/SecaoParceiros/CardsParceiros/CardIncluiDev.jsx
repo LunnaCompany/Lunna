@@ -23,7 +23,11 @@ function CardIncluiDev() {
                     necessidades especiais a se adaptarem no mundo da
                     programação!
                 </p>
-                <button>Saiba mais</button>
+                <button>
+                    <a href="https://incluidev.vercel.app/home" target="_blank">
+                        Saiba mais
+                    </a>
+                </button>
             </div>
             <div className="vetores-incluidev-inferior">
                 <img src={Imagem04} />

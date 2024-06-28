@@ -19,7 +19,11 @@ function CardAfroGlow() {
                     Aprender a <span>amar</span> e cuidar dos seus{" "}
                     <span>cabelos</span> nunca foi tão divertido!
                 </p>
-                <button>Saiba mais</button>
+                <button>
+                    <a href="https://www.afroglow.com.br" target="_blank">
+                        Saiba mais
+                    </a>
+                </button>
             </div>
 
             <img src={Imagem01} alt="" id="icone-afroglow-background-ajusta" />
