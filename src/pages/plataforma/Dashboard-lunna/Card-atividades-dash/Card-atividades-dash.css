@@ -1,0 +1,73 @@
+.container-card-atividades-geral {
+    width: 260px;
+    height: 120px;
+    background-color: #9747ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container-card-atividades-geral:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.bolihha-a-card-container {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #4ce276;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bolihha-b-card-container {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #31c1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bolihha-c-card-container {
+    width: 30px;
+    height: 30px;
+    color: red;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections-bolinhas-a-b-c-card {
+    display: flex;
+    align-items: center;
+}
+
+.section-title-atividades-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.card-rosa {
+    background-image: url(../../../../assets/back-card-dashboard01.png);
+}
+
+.card-roxo {
+    background-image: url(../../../../assets/back-card-dashboard02.png);
+}
+
+.card-roxo-escuro {
+    background-image: url(../../../../assets/Card-roxo-escuro.png);
+}

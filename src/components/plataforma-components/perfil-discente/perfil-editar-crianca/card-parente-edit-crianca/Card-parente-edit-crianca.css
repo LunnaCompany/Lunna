@@ -1,0 +1,51 @@
+.container-parentes-edit-crianca{
+    width: 401px;
+    height: 440px;
+    border-radius: 20px;
+    background-color: #FFE7AB;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.img-parente-edit-crianca img{
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+}
+
+
+.info-parente-edit-crianca{
+    
+    padding-left: 15px;
+    padding-top: 25px;
+
+}
+
+.info-parente-edit-crianca ul li{
+    list-style-type: none;
+    padding-bottom: 15px;
+}
+
+.section-btn-retirar-edit-parente{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.text-retirar-edit-crianca{
+    color: #00000067;
+    font-size: 22px;
+}
+
+.btn-retirar-edit-parente{
+    background-color: #EE87FF;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer; 
+}
+

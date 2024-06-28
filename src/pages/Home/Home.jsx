@@ -9,6 +9,8 @@ import ResourceSection from "./resourceSection/ResourceSection";
 import Rodape from "../../components/ladding-page-components/Rodape/Rodape";
 import ContactSection from "./contactSection/ContactSection";
 import { PlansSection } from "./plansSection/PlansSection";
+import { SecaoParceiros } from "./SecaoParceiros/SecaoParceiros";
+import { AcceptCookies } from "../../components/ladding-page-components/AcceptCookies/AcceptCookies";
 
 const Home = ({ translateText, handleTranslate }) => {
     return (
@@ -25,7 +27,9 @@ const Home = ({ translateText, handleTranslate }) => {
             <ContactSection translateText={translateText} />
             <TestimonySection translateText={translateText} />
             <QuestionsSection translateText={translateText} />
+            <SecaoParceiros />
             <Rodape translateText={translateText} />
+            <AcceptCookies />
         </>
     );
 };

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-total-agenda-lunna {
+    width: 100%;
+    height: 120vh;
+    background-color: #faf3fb;
+}
+
+.section-tela-agenda-lunna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.container-menu-superior-tela-agenda {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    background-color: #b7e9ff;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.section-data-menu-superior p {
+    font-size: 14px;
+}
+
+.section-data-menu-superior {
+    display: flex;
+    gap: 130px;
+    padding-left: 5px;
+}
+
+.cointainer-section-horario-rotina-agenda {
+    background-color: #fff;
+    width: 80%;
+    height: 560px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.section-horario-atv-tela-agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 60px;
+    padding-top: 30px;
+    width: 8.5%;
+    height: 90%;
+    padding-left: 5px;
+}
+
+.container-section-card-tela-rotina {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.section-horario-atv-tela-agenda p {
+    font-size: 16px;
+}

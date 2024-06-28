@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import minus from "../../../assets/minus.png";
-import plus from "../../../assets/plus.png";
+import { LuPlus } from "react-icons/lu";
 import "./style.css";
 
-const Question = ({translateText}) => {
+const Question = ({ respostapergunta, titlepergunto }) => {
     const [showQuestion, setShowQuestion] = useState(false);
 
     const handleShowQuestion = () => {
@@ -13,14 +12,16 @@ const Question = ({translateText}) => {
     return (
         <div className="box-questions">
             <div className="question">
-                <h3>{translateText.titlepergunto}</h3>
-                <img className={!showQuestion && "img-plus-question"} onClick={handleShowQuestion} src={showQuestion? minus : plus} alt="" />
+                <h3>{titlepergunto}</h3>
+                <LuPlus
+                    style={{ strokeWidth: 2.5, cursor: "pointer" }}
+                    color={"#9747FF"}
+                    className="LuPlus-Icon"
+                    onClick={handleShowQuestion}
+                    size={20}
+                />
             </div>
-            {showQuestion && (
-                <p>
-                  {translateText.repostapergunta}
-                </p>
-            )}
+            {showQuestion && <p>{respostapergunta}</p>}
         </div>
     );
 };

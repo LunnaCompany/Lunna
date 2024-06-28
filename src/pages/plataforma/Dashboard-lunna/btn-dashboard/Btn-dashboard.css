@@ -1,0 +1,37 @@
+.btn-avisos-tela-dasboard {
+    width: 290px;
+    height: 60px;
+    background-color: #fb47ff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.btn-avisos-tela-dasboard:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.text-btn-chevron-tela-dasboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.color-white {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.text-btn-chevron-tela-dasboard p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.color-title-black p {
+    color: #000;
+}

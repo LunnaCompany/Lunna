@@ -9,6 +9,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 function Login() {
     const [token, setToken] = useState("");
     const [email, setEmail] = useState("");
@@ -38,11 +40,11 @@ function Login() {
         setToken(token);
     };
 
-    const handleUserEmail = (email) =>{
+    const handleUserEmail = (email) => {
         localStorage.setItem("email", email);
-        sessionStorage.setItem("email", email)
+        sessionStorage.setItem("email", email);
         setEmail(token);
-    }
+    };
 
     const handleLogin = async (data) => {
         try {
@@ -67,6 +69,7 @@ function Login() {
     const onSubmit = async (data) => {
         console.log(data);
         handleLogin(data);
+        navigate("/Lunna-landing-page/pefil-bebe");
     };
 
     console.log(errorResponse);
@@ -118,7 +121,7 @@ function Login() {
                             <div className="input input-senha-login">
                                 <div className="input-email-login">
                                     <input
-                                        type="email"
+                                        type="password"
                                         placeholder={"senha"}
                                         {...register("senhalLogin", {
                                             required: true,
@@ -143,7 +146,10 @@ function Login() {
                                 </div>
                             </div>
                             <p className="span-esqueceu-senha">
-                                Esqueceu a senha? /<span>Recupere aqui</span>
+                                Esqueceu a senha? /
+                                <Link to="/Lunna-landing-page/redefinirsenha">
+                                    <span>Recupere aqui</span>
+                                </Link>
                             </p>
                         </div>
                         <div className="login">

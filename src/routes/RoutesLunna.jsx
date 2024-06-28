@@ -20,6 +20,17 @@ import Avisos from "../pages/plataforma/avisos/Avisos";
 import TemplateSecundaryPlataforma from "../pages/plataforma/TemplateSecundaryPlataforma/TemplateSecundaryPlataforma";
 import { ChatRoom } from "../pages/plataforma/chatRoom/ChatRoom";
 import TemplateChat from "../pages/plataforma/TemplateChat/TemplateChat";
+import Lumi from "../pages/plataforma/Lumi/Lumi";
+import { Configuracao } from "../pages/plataforma/configuracao/configuracao";
+import Dashboardlunna from "../pages/plataforma/Dashboard-lunna/Dashboard-lunna";
+import CardapioSemanal from "../pages/plataforma/CardapioSemanal/Cardapiosemanal";
+import Segundoredefinir from "../pages/plataforma/Segundo-redefinir/Segundo-redefinir";
+import Senharedefinida from "../pages/plataforma/SenhaRedefinida/Senha-redefinida";
+import Primeiroredefinir from "../pages/plataforma/Primeiro-redefinir/Primeiro-redefinir";
+import Agendalunna from "../pages/plataforma/Agenda-lunna/Agenda-lunna";
+import Criancas from "../pages/plataforma/Crianças/criancas";
+import EnquetePage from "../pages/plataforma/EnquetePage/EnquetePage";
+import LumiIconComponent from "../components/plataforma-components/LumiIcon/LumiIcon";
 
 export const RoutesLunna = () => {
     const [translateText, setTranslateText] = useState(TextsLandingPage);
@@ -143,6 +154,7 @@ export const RoutesLunna = () => {
                 element={
                     <TemplateMainPlataforma>
                         <PerfilDiscente />
+                        <LumiIconComponent />
                     </TemplateMainPlataforma>
                 }
             />
@@ -152,6 +164,7 @@ export const RoutesLunna = () => {
                 element={
                     <TemplateMainPlataforma>
                         <PerfilMemoria />
+                        <LumiIconComponent />
                     </TemplateMainPlataforma>
                 }
             />
@@ -161,6 +174,7 @@ export const RoutesLunna = () => {
                 element={
                     <TemplateMainPlataforma>
                         <Atividades />
+                        <LumiIconComponent />
                     </TemplateMainPlataforma>
                 }
             />
@@ -170,6 +184,7 @@ export const RoutesLunna = () => {
                 element={
                     <TemplateSecundaryPlataforma>
                         <Avisos />
+                        <LumiIconComponent />
                     </TemplateSecundaryPlataforma>
                 }
             />
@@ -179,6 +194,85 @@ export const RoutesLunna = () => {
                 element={
                     <TemplateChat>
                         <ChatRoom />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/lumi"
+                element={
+                    <TemplateChat>
+                        <Lumi />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/configuracao"
+                element={
+                    <TemplateChat>
+                        <Configuracao />
+                        <LumiIconComponent />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/dashboard"
+                element={
+                    <TemplateChat>
+                        <Dashboardlunna />
+                        <LumiIconComponent />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/cardapio"
+                element={
+                    <TemplateChat>
+                        <CardapioSemanal />
+                        <LumiIconComponent />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/redefinirsenha"
+                element={<Primeiroredefinir />}
+            />
+
+            <Route
+                path="/Lunna-landing-page/alterarsenha"
+                element={<Segundoredefinir />}
+            />
+
+            <Route
+                path="/Lunna-landing-page/senharedefinida"
+                element={<Senharedefinida />}
+            />
+
+            <Route
+                path="/Lunna-landing-page/rotina"
+                element={
+                    <TemplateChat>
+                        <Agendalunna />
+                        <LumiIconComponent />
+                    </TemplateChat>
+                }
+            />
+
+            <Route
+                path="/Lunna-landing-page/pefil-bebe"
+                element={<Criancas />}
+            />
+
+            <Route
+                path="/Lunna-landing-page/enquetes"
+                element={
+                    <TemplateChat>
+                        <EnquetePage />
+                        <LumiIconComponent />
                     </TemplateChat>
                 }
             />

@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.agenda-geral-tela-dashboard img {
+    width: 60px;
+    height: 60px;
+    margin-top: 1rem;
+}
+
+.container-tela-dashboard-lunna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-tela-dashboard-lunna {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 650px;
+}
+
+.agenda-geral-tela-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agenda-geral-tela-dashboard {
+    font-size: 18px;
+    color: #9747ff;
+    gap: 30px;
+}
+
+.sino-tela-dashboard {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-container-atividades-geral {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 90%;
+}
+
+.container-card-vertical-dashboard {
+    padding-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.container-card-vertical-dashboard div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.picture-mae-id-tela-dashboard img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.sidebar-right-tela-dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-right-tela-dashboard p {
+    font-size: 14px;
+}
+
+.picture-mae-id-tela-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.picture-mae-id-tela-dashboard span {
+    color: #9747ff;
+    font-weight: bold;
+}
+
+.title-recentes-tela-dashboard p {
+    font-weight: bold;
+    color: #9747ff;
+}
+
+.section-avisos-tela-dashboard span {
+    font-weight: bold;
+    color: #9747ff;
+}
+
+.sidebar-right-tela-dashboard {
+    align-items: center;
+    justify-content: center;
+}
+
+.img-family-tela-dashboard img {
+    width: 290px;
+    border-radius: 10px;
+}
+
+.section-title-fotos-chevron-tela-dasboard {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-recentes-tela-dashboard {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.section-avisos-tela-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.chevron-tela-dashboard {
+    cursor: pointer;
+}
+
+.section-atividades-total-tela-dashboard {
+    max-width: 60%;
+}
+
+.ia-lummi-tela-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ia-lummi-tela-dashboard p {
+    font-size: 14px;
+}
+
+.ia-lummi-tela-dashboard img {
+    cursor: pointer;
+}
+
+.container-section-title-lummi {
+    width: 200px;
+    height: 70px;
+    border: #000 1px solid;
+    border-radius: 10px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px #000;
+    cursor: pointer;
+}
+
+.container-section-title-lummi p {
+    color: #000000a2;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

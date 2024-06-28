@@ -1,0 +1,28 @@
+
+.section-btn-one-ativado-desativado-tela-config{
+    display: flex;
+}
+
+.btn-one-ativado-desativado-tela-config{
+    width: 124px;
+    height: 28px;
+    background-color: #9747FF;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-tela-configuration button{
+    width: 120px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #D9D9D9;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}

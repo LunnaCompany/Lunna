@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
+.section-secao-parceiros h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #ac34f5;
+    font-size: 40px;
+    text-shadow: 2px -1px 0px #cecece;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}

@@ -1,0 +1,43 @@
+.section-sessao-alter-tela-config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-sessao-alternativa-tela-config {
+    width: 362px;
+    height: 100px;
+    background-color: #5300BE;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.user-tela-config {
+    padding-top: 20px;
+}
+
+.info-user-alternativa-tela-config p {
+    padding-top: 15px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.btn-sair-sessao-tela-config {
+    padding-bottom: 30px;
+}
+
+.btn-sair-sessao-tela-config button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 58px;
+    height: 25px;
+    border: #fff 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #5300BE;
+    color: #fff;
+    font-size: 0.8rem;
+}

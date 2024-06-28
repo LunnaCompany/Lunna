@@ -1,0 +1,40 @@
+.section-card-vertical-dashboard {
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-section-tela-dashboard {
+    padding-top: 40px;
+    size: 40px;
+    color: #fff;
+}
+
+.color-laranja {
+    background-image: url(../../../../assets/vertical-laranja.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.color-red {
+    background-image: url(../../../../assets/vertical-red.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.color-blue {
+    background-image: url(../../../../assets/card-blue.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+}
+
+.color-green {
+    background-image: url(../../../../assets/Card-green.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+}

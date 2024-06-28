@@ -11,7 +11,7 @@ import pro2 from "../../../assets/pro2.png"
 import pro3 from "../../../assets/pro3.png"
 import pro4 from "../../../assets/pro4.png"
 import pro5 from "../../../assets/pro5.png"
-
+import Checkbox from '@mui/material/Checkbox';
 
 function Memorias() {
     const dataCardfoto = [
@@ -69,7 +69,10 @@ function Memorias() {
                 <div className="container-filtro">
                     <div className="fitro-section">
                         <h2>Filtrar</h2>
+                        <div className="data-filtrar-chevron-memorias">
                         <p>Data</p>
+                        <Checkbox defaultChecked />
+                        </div>
                     </div>
                     <div className="btn-section">
                         <button className='btn-favoritos' >Favoritos<BiSolidHeartCircle size="25px" color="#fff" /> </button>

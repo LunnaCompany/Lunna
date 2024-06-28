@@ -8,9 +8,11 @@ import parente4 from "../../../assets/Parente4.png";
 import { Cardresponsavel } from "./card-responsalvel/Card-responsavel";
 import axios from "axios";
 import { ContatoEmergencia } from "./info-contato-emergencia/contato-emergencia";
+import Editarcrianca from "./perfil-editar-crianca/Editar-crianca";
 function PerfilDiscente() {
     const [imagePerfilDisc, setImagePerfilDisc] = useState("");
     const [dataDiscente, setDataDiscente] = useState([]);
+
     const email = localStorage.getItem("email");
 
     useEffect(() => {
@@ -41,11 +43,31 @@ function PerfilDiscente() {
         return URL.createObjectURL(new Blob([img]));
     };
 
+    const [edit, setEdit] = useState(false);
+    function handleEdit() {
+        setEdit(!edit);
+    }
+
     function CalcIdade() {
         const dataNascimento = new Date(dataDiscente.dataNasDisc);
         const dataAtual = new Date();
         const idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
         return idade;
+    }
+
+    function converterData() {
+        // Dividir a data no formato MM/DD/YYYY
+        let partes = dataDiscente.dataNasDisc.split("-");
+
+        // Extrair mês, dia e ano
+        let mes = partes[1];
+        let dia = partes[2];
+        let ano = partes[0];
+
+        // Reorganizar para o formato DD/MM/YYYY
+        let dataBrasileira = `${dia}/${mes}/${ano}`;
+
+        return dataBrasileira;
     }
 
     console.log(dataDiscente);
@@ -118,7 +140,7 @@ function PerfilDiscente() {
                             <li>
                                 {" "}
                                 <strong>Data de nascimento: </strong>{" "}
-                                {dataDiscente.dataNasDisc}
+                                {dataDiscente.dataNasDisc && converterData()}
                             </li>
                         </ul>
                     </div>
@@ -142,7 +164,7 @@ function PerfilDiscente() {
 
                     <div className="btn-edit">
                         <button className="btn-edit">
-                            <FaPen size={20} />
+                            <FaPen size={20} onClick={handleEdit} />
                         </button>
                     </div>
                 </div>
@@ -254,6 +276,7 @@ function PerfilDiscente() {
                     </div>
                 </div>
             </div>
+            {edit && <Editarcrianca edit={edit} setEdit={setEdit} />}
         </div>
     );
 }

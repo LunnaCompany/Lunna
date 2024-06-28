@@ -1,0 +1,98 @@
+.page-enquetes {
+    display: flex;
+    height: 90vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.box-pedagoga-marta {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    height: 55vh;
+    width: 35vw;
+    background-color: white;
+    box-shadow: 2px 2px 10px #000000;
+    font-weight: bold;
+    color: #333333;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.enquete-pedagogos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.enquete-pedagoga-marta {
+    align-items: center;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+}
+
+.enquete-pedagogos p {
+    width: 50px;
+    font-size: 13px;
+    color: #606060;
+}
+
+.enquete-pedagoga-marta p {
+    font-size: 20px;
+    width: 300px;
+    align-items: center;
+}
+
+.enquete-pedagoga-marta img {
+    width: 50px;
+    height: 50px;
+}
+
+.perguntas {
+    display: flex;
+    height: 75px;
+}
+
+.perguntas p {
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+}
+
+.input-perguntas-enquete {
+    display: flex;
+    background-color: #ee87ff;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    height: 20%;
+}
+
+.btn-perguntas {
+    font-size: 16px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 60%;
+    padding: 0.5rem;
+}
+
+.btn-perguntas label {
+    padding: 7px;
+    display: flex;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    width: 95%;
+    text-align: center;
+    font-size: 13px;
+}
+
+.btn-perguntas input {
+    width: 40px;
+    height: 20px;
+    align-items: center;
+}

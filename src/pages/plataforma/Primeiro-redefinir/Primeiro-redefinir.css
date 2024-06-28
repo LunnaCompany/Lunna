@@ -1,0 +1,129 @@
+
+.container-tela-recuperacao-codigo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+
+
+.section-page-recuperacao-senha{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 52px;
+  height: 90vh;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 10px 12px #0000004d;
+  overflow: hidden;
+}
+
+.header-recuperacao-senha{
+  width: 90%;
+  height: 10%;
+  justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-voltar-tela-recuperacao-senha-redefinir{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #9747FF;
+  border-radius: 50%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-recuperacao-senha img{
+  width: 60%;
+}
+
+.content-recuperaca-senha {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+  gap: 150px;
+}
+
+.cadeados img{
+  width: 250px;
+}
+
+.conteudos-recuperacao-senha{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+.container-input-recuperacao-senha{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.redefinir-Senha {
+  color: #606060;
+}
+
+.digite-Codigo {
+  color: #606060;
+  width: 50%;
+  text-align: center;
+}
+
+.container-input-recuperacao-senha input{
+  width: 18%;
+  border: none;
+  outline: none;
+  padding: 1rem 0.4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+}
+
+.button-recuperacao-senha button{
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  font-size: 18px;
+  height: 40px;
+  background-color: #31C1FF;
+  color: white;
+  cursor: pointer;  
+}
+
+.button-recuperacao-senha:hover button{
+  background-color: #00b3ff;
+}
+
+.faca-Login p{
+  color: #00000060;
+}
+
+.faca-Login span{
+  color: #9747FF;
+}
+
+.faca-Login:hover span{
+  color: #6e00fd;
+  cursor: pointer;
+}
+
+.onda img{
+  width: 70%;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+}

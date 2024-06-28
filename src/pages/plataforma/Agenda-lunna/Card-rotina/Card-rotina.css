@@ -1,0 +1,92 @@
+.horario-rotina-imh-prof-tela-agenda img{
+width: 20px;
+}
+.container-card-rotina-agenda{
+    width: 165px;
+    height: 100px;
+   
+    display: flex;
+}
+
+.section-text-atv-tela-agenda p {
+    font-size: 14px;
+}
+
+.line-card-rotina{
+    width: 12px;
+    height: 100px;
+}
+
+.rotina-text-tela-agenda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    gap: 15px;
+}
+
+.horario-rotina-imh-prof-tela-agenda{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 35px;
+}
+
+.section-text-atv-tela-agenda{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.color-rotina-blue{
+    background-color: #D4F2FF;
+}
+
+.color-line-rotina-blue{
+    background-color: #31C1FF;
+}
+
+.color-rotina-roxo{
+    background-color: #DBC5F8;
+}
+
+.color-line-rotina-roxo{
+    background-color: #BB87FF;
+}
+
+.color-rotina-rosa{
+    background-color: #FFB7DA;
+}
+
+.color-line-rotina-rosa{
+    background-color: #FF459F;
+}
+
+.color-rotina-roxo-esc{
+    background-color: #BB87FF;
+}
+
+.color-line-rotina-roxo-esc{
+    background-color: #9747FF;
+}
+
+.color-rotina-yellow-esc{
+    background-color: #FFF27E;
+}
+
+.color-line-rotina-yellow-esc{
+    background-color: #FFD073;
+}
+
+.color-rotina-yellow{
+    background-color: #FFDE9F;
+}
+
+.color-line-rotina-yellow{
+    background-color: #FFD073;
+}
+
+.color-rotina-none{
+    border: #000 1px solid;
+}
+

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.acceptCookies {
+    position: fixed;
+    bottom: 0;
+    z-index: 800;
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ff64c1;
+
+    font-family: "Roboto", sans-serif;
+}
+.acceptCookies-conteudo {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+.acceptCookies-button {
+    display: flex;
+    gap: 20px;
+    
+}
+.acceptCookies-button > button {
+    border: solid 1.5px #e7299b82;
+    background-color: white;
+    height: 40px;
+    width: 165px;
+    border-radius: 5px;
+    color: #4c4c4c;
+    cursor: pointer;
+    font-size: 13px;
+}
+.acceptCookies-button > button:hover {
+    background-color: rgb(227, 227, 227);
+}
+.acceptCookies-conteudo > *:nth-child(3) {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #7017e3;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: underline;
+    transition: transform 0.1s ease;
+}
+.acceptCookies-conteudo > *:nth-child(1) {
+    font-weight: 700;
+    font-size: 25px;
+}
+.acceptCookies-conteudo > *:nth-child(2) {
+    font-size: 18px;
+}
+.acceptCookies-conteudo > *:nth-child(3):hover {
+    transform: scale(1.01);
+}
+
+.politica-privacidade-text{
+   display: flex;
+   justify-content: flex-start;
+ 
+}
+
+
+@media (max-width: 1270px) {
+    .acceptCookies-conteudo > *:nth-child(1) {
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .acceptCookies-conteudo > *:nth-child(2) {
+        font-size: 14px;
+    }
+    .acceptCookies-conteudo > *:nth-child(3) {
+        font-size: 17px;
+    }
+    .acceptCookies-button > button {
+        width: 130px;
+    }
+}
+@media (max-width: 960px) {
+    .acceptCookies-button > button {
+        width: 90px;
+    }
+}
+@media (max-width: 720px) {
+    .acceptCookies-conteudo > *:nth-child(2) {
+        font-size: 11px;
+        width: 300px;
+    }
+}
+@media (max-width: 430px) {
+    .acceptCookies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .acceptCookies-conteudo > *:nth-child(1) {
+        text-align: center;
+    }
+    .acceptCookies-conteudo > *:nth-child(2) {
+        text-align: center;
+    }
+    .acceptCookies-conteudo > *:nth-child(3) {
+        text-align: center;
+    }
+}

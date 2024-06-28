@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Background-editar-crianca {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 430vh;
+    background-color: #00000047;
+}
+.img-perfil-edit-crianca {
+    position: relative;
+}
+.img-perfil-edit-crianca img {
+    width: 150px;
+    height: 150px;
+}
+
+.container-perfil-edit {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.edit-crianca {
+    border: black 1px solid;
+    width: 1100px;
+    height: 2813px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+.perfil-crianca-edit {
+    padding-top: 10px;
+}
+
+.section-edit-perfil-crianca {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-voltar-tela-edit-crianca {
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    border-radius: 10px;
+    border: none;
+    padding-left: 50px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.picture-perfil-edit-crianca {
+    position: absolute;
+    bottom: 0;
+    right: -14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-perfil-edit {
+    padding-bottom: 150px;
+}
+
+.btn-edit-perfil-crianca-edit {
+    width: 45px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #feb018;
+    border-radius: 10px;
+    border: none;
+}
+
+.info-perfil-edit-nome h2 {
+    color: #feb018;
+    width: 180px;
+}
+
+.info-perfil-edit-nasc {
+    padding-top: 60px;
+}
+
+.info-perfil-edit-nome ul li {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+.info-perfil-edit-nasc ul li {
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.btn-add-doc-info-edit-crianca {
+    padding-top: 20px;
+}
+
+.section-edit-info-med {
+    padding-top: 32px;
+}
+
+.title-edit-info-med {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #feb018;
+}
+
+.info-edit-med-crianca {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.cont-info-contacts-sos {
+    padding-top: 20px;
+}
+
+.edit-info-crianca-med-sus {
+    list-style-type: none;
+    width: 300px;
+}
+
+.edit-info-crianca-med-sus ul li {
+    list-style-type: none;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.btn-add-doc-perfil-edit {
+    padding-top: 35px;
+}
+
+.edit-info-crianca-med-plano {
+    list-style-type: none;
+    display: flex;
+}
+
+.edit-info-crianca-med-plano ul li {
+    list-style-type: none;
+    padding-top: 35px;
+    gap: 10px;
+    display: flex;
+}
+
+.title-info-contacts-sos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #feb018;
+}
+
+.section-info-contacts-sos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+}
+
+.info-contacts-sos-nome ul li {
+    list-style-type: none;
+    padding-top: 35px;
+}
+
+.info-contacts-sos-result ul li {
+    list-style-type: none;
+    padding-top: 35px;
+}
+
+.perfil-edit-crianca-dependente {
+    padding-top: 80px;
+}
+.title-perfil-edit-dependente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #feb018;
+}
+
+.parentes-section-edit-crianca {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.parentes-section-edit-crianca {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.add-parente-edit-crianca {
+    width: 401px;
+    height: 440px;
+    border: 2px dashed #000;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #d9d9d970;
+}
+
+.section-add-parente-edit-crianca {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container-add-parente-edit-crianca {
+    padding-top: 35px;
+}
+
+.section-add-parente-edit-crianca p {
+    font-size: 36px;
+    color: #00000067;
+}
+
+.btn-add-parente-edit-crianca {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fa93fc;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-add-doc {
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #54fb83;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: #fff;
+}
+
+.btn-add-doc p {
+    font-size: 13px;
+    padding-left: 10px;
+    color: #fff;
+}
+.btn-add-doc:hover {
+    background-color: #27fc63;
+}

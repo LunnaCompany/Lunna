@@ -1,0 +1,133 @@
+.container-tela-redefinir-senha-redefinicao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+
+.section-page-recuperacao-senha-tela-redefinir-senha-redefinicao {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 52px;
+  height: 90vh;
+  position: relative;
+  width: 65vw;
+  box-shadow: 0 10px 12px #0000004d;
+  overflow: hidden;
+}
+
+.header-recuperacao-senha-tela-redefinir-senha-redefinicao {
+  width: 90%;
+  height: 10%;
+  justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+}
+
+.btn-tela-redefinir-criar-senha-tela-redefinir-senha-redefinicao {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #9747FF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-recuperacao-senha-tela-redefinir-senha-redefinicao img {
+  width: 60%;
+}
+
+.content-recuperaca-senha-tela-redefinir-senha-redefinicao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+}
+
+.cadeados-tela-redefinir-senha-redefinicao img {
+  width: 70%;
+}
+
+.conteudos-recuperacao-senha-tela-redefinir-senha-redefinicao {
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-input-recuperacao-senha-tela-redefinir-senha-redefinicao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.redefinir-Senha-tela-redefinir-senha-redefinicao {
+  color: #606060;
+  font-size: 18px;
+}
+
+.digite-Codigo-tela-redefinir-senha-redefinicao {
+  color: #606060;
+  font-size: 14px;
+}
+
+.container-input-recuperacao-senha-tela-redefinir-senha-redefinicao input {
+  flex-direction: column;
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+}
+
+.container-input-recuperacao-senha-tela-redefinir-senha-redefinicao p {
+  color: #606060;
+}
+
+.button-recuperacao-senha-tela-redefinir-senha-redefinicao button {
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  font-size: 18px;
+  height: 40px;
+  margin-top: 1rem;
+  background-color: #31C1FF;
+  color: white;
+  cursor: pointer;
+}
+
+.button-recuperacao-senha-tela-redefinir-senha-redefinicao:hover button {
+  background-color: #00b3ff;
+}
+
+.faca-Login-tela-redefinir-senha-redefinicao p {
+  color: #000000;
+  cursor: pointer;
+}
+
+.faca-Login-tela-redefinir-senha-redefinicao span {
+  color: #9747FF;
+}
+
+.faca-Login-tela-redefinir-senha-redefinicao:hover span {
+  color: #6e00fd;
+}
+
+.onda-tela-redefinir-senha-redefinicao img {
+  width: 70%;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+}

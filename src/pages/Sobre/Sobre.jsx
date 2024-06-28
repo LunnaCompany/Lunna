@@ -25,7 +25,6 @@ export function Sobre({ translateText, handleTranslate }) {
                 <NossasCoresTitulo />
                 <MaosSignificadosCores />
             </>
-
             <LogoSobreNos />
             <Equipe translateText={translateText} />
             <Rodape translateText={translateText} />

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
-import celular from "../../../assets/celular.png";
+import celular1 from "../../../assets/celular.png";
+import celular2 from "../../../assets/imgMobileLunnaNew.png";
 import enviar from "../../../assets/enviar.png";
 import { FaRegPaperPlane } from "react-icons/fa";
 const ContactSection = ({ translateText }) => {
@@ -74,7 +75,7 @@ const ContactSection = ({ translateText }) => {
                         </div>
                     </div>
                 </div>
-                <img className="phone-contact-section" src={celular} alt="" />
+                <img className="phone-contact-section" src={celular2} alt="" />
             </div>
         </section>
     );

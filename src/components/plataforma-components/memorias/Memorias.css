@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  
-}
-
 
 .tudo-memoria{
 
     overflow-y: scroll;
-    height: 410px;
+    height: 500px;
     position: relative;
     padding-bottom: 20px;
 }
@@ -26,11 +19,13 @@
 }
 
 
-
-.fitro-section p{
- padding-top: 25px;
- font-style: normal;
+.data-filtrar-chevron-memorias{
+    display: flex;
 }
+
+
+
+
 
 .btn-section button{
     display: flex;

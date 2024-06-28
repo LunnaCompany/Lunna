@@ -16,7 +16,8 @@ export function Promptmemorias({ dados, handleOpen }) {
                     <div className="box-info">
                         <div className="info-pro">
                             <img src={dados.fotoprofessor} alt="" />
-                            <h2>{dados.nomepro}</h2> <button onClick={handleOpen}>voltar</button>
+                            <h2>{dados.nomepro}</h2> 
+                            <div className='btn-prompt-tela-memoria' onClick={handleOpen}><strong>X</strong></div>
                         </div>
                         <div className="info-memoria">
                             <p> <strong>{dados.descricaomemoria}</strong> </p>
@@ -30,8 +31,8 @@ export function Promptmemorias({ dados, handleOpen }) {
                             <div className="line-memoria"></div>
                             <div className="container-btn-fav-e">
                                 <div className="btn-e">
-                                    <button> <CiSaveDown2 size="20px" /></button>
-                                    <button> <CiHeart size="20px" /> </button>
+                                    <button> <CiSaveDown2 size="20px" color='#000' /></button>
+                                    <button> <CiHeart size="20px" color='#000' /> </button>
                                 </div>
                             </div>
                             <div className="name-discente">

@@ -21,7 +21,6 @@ export default function Button({ nomeBtn, handleSubmit, onSubmit }) {
             <button
                 onClick={() => {
                     handleSubmit(onSubmit)();
-                    scrollToPage("/Lunna-landing-page/perfil", "cadastro");
                 }}
             >
                 {nomeBtn}

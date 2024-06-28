@@ -253,7 +253,7 @@ export const ChatRoom = () => {
                                     {chat.senderName !== userData.username && (
                                         <div className="avatar-box">
                                             <div className="avatar">
-                                                {userData.username}
+                                                {chat.senderName}
                                             </div>
                                             <div className="date-time">
                                                 {chat.date}
@@ -274,7 +274,7 @@ export const ChatRoom = () => {
                                     {chat.senderName === userData.username && (
                                         <div className="avatar-box">
                                             <div className="avatar self">
-                                                {userData.username}
+                                                {chat.senderName}
                                             </div>
                                             <div className="date-time">
                                                 {chat.date}

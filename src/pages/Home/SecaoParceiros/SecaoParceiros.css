@@ -1,0 +1,18 @@
+.section-secao-parceiros {
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.icones-secao-parceiros {
+    height: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.icone-afroglow,
+.icone-incluidev {
+    height: 90%;
+    width: 35%;
+    max-height: 450px;
+}

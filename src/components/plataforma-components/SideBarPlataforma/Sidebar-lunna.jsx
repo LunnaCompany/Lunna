@@ -13,6 +13,8 @@ import { CiViewList } from "react-icons/ci";
 import { PiForkKnife } from "react-icons/pi";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+
 function Sidebar() {
     const [sidebar, setSidebar] = useState(false);
     const navigate = useNavigate();
@@ -50,13 +52,29 @@ function Sidebar() {
 
                 <div className="sidebar_content">
                     <ul className="side_items">
-                        <li className="side-item">
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/dashboard",
+                                    "dashboard"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <GoHome size="25" color="white" />
                                 <span className="item-description">Home</span>
                             </a>
                         </li>
-                        <li className="side-item" onClick={() => scrollToPage("/Lunna-landing-page/perfil", "perfil")}>
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/perfil",
+                                    "perfil"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <LuUser size="25" color="white" />
                                 <span className="item-description">Perfil</span>
@@ -64,24 +82,57 @@ function Sidebar() {
                         </li>
                         <li className="side-item">
                             <a href="#">
-                                <BiMessageSquareDots color="white" size="25" onClick={() => scrollToPage("/Lunna-landing-page/chat", "chat")}/>
+                                <BiMessageSquareDots
+                                    color="white"
+                                    size="25"
+                                    onClick={() =>
+                                        scrollToPage(
+                                            "/Lunna-landing-page/chat",
+                                            "chat"
+                                        )
+                                    }
+                                />
                                 <span className="item-description">Chat</span>
                             </a>
                         </li>
-                        <li className="side-item" onClick={() => scrollToPage("/Lunna-landing-page/avisos", "perfil")}>
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/avisos",
+                                    "perfil"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <TbAlertSquareRounded size="25" color="white" />
                                 <span className="item-description">Avisos</span>
                             </a>
                         </li>
-                        <li className="side-item">
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/rotina",
+                                    "perfil"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <FaRegClock size="25" color="white" />
 
                                 <span className="item-description">Rotina</span>
                             </a>
                         </li>
-                        <li className="side-item">
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/enquetes",
+                                    "perfil"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <CiViewList
                                     color="white"
@@ -93,7 +144,15 @@ function Sidebar() {
                                 </span>
                             </a>
                         </li>
-                        <li className="side-item">
+                        <li
+                            className="side-item"
+                            onClick={() =>
+                                scrollToPage(
+                                    "/Lunna-landing-page/cardapio",
+                                    "cardapio"
+                                )
+                            }
+                        >
                             <a href="#">
                                 <PiForkKnife color="white" size="25" />
                                 <span className="item-description">
@@ -104,11 +163,24 @@ function Sidebar() {
                     </ul>
                 </div>
                 <div className="logout">
-                    <button className="logout_btn">
+                    <button
+                        className="logout_btn"
+                        onClick={() =>
+                            scrollToPage(
+                                "/Lunna-landing-page/configuracao",
+                                "perfil"
+                            )
+                        }
+                    >
                         <GoGear size="25" color="white" />
                         <span className="item-description">Configurações</span>
                     </button>
-                    <button className="logout_btn" onClick={() => scrollToPage("/Lunna-landing-page", "home")}>
+                    <button
+                        className="logout_btn"
+                        onClick={() =>
+                            scrollToPage("/Lunna-landing-page", "home")
+                        }
+                    >
                         <LuArrowRightToLine size="25" color="white" />
                         <span className="item-description">Sair</span>
                     </button>

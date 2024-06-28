@@ -33,8 +33,8 @@ export function Equipe({translateText}) {
             picture_adult: davimachado,
             picture_kid: davicri,
             hand: handroxo,
-            linkedin: "https://github.com/Lulunna",
-            github: "https://www.linkedin.com/in/raquellu/",
+            linkedin: "https://www.linkedin.com/in/davibmachado/",
+            github: "https://github.com/DaviBMachado",
         },
 
         {
@@ -50,13 +50,13 @@ export function Equipe({translateText}) {
         {
             nome: "Abraão Santos",
             cargo_principal: "Financeiro",
-            cargo_secundario: "Full-stack",
+            cargo_secundario: "Back-end",
             picture_adult: abraaoft,
             picture_kid: abraaocri,
             hand: handyellow,
-            github: "https://github.com/Henrique-Ferreira",
+            github: "https://github.com/TechAbraao",
             linkedin:
-                "https://www.linkedin.com/in/henrique-ferreira-199000190/",
+                "https://www.linkedin.com/in/abraaosvs/",
         },
 
         {
@@ -114,6 +114,7 @@ export function Equipe({translateText}) {
             linkedin: "https://www.linkedin.com/in/eduardo-santos-361a672ba/",
         },
     ];
+    
     return (
         <section className="section-equipe">
             <h2 className="title">{translateText.rostosportras}</h2>

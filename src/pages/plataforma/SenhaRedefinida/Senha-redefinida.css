@@ -1,0 +1,134 @@
+
+.section-tela-recuperacao-senha-redefinida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.btn-tela-redefinir-senha-redefinida{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #9747FF;
+  border-radius: 50%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.digite-Codigo-tela-recuperacao-senha-redefinida p{
+    font-size: 16px;
+}
+.container-page-recuperacao-senha-redefinida{
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 52px;
+  height: 90vh;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 10px 12px #0000004d;
+  overflow: hidden;
+}
+
+.header-recuperacao-senha-tela-recuperacao-senha-redefinida{
+  width: 90%;
+  height: 10%;
+  justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-voltar-recuperacao-senha-tela-recuperacao-senha-redefinida img{
+  width: 60%;
+  cursor: pointer;
+}
+
+.logo-recuperacao-senha-tela-recuperacao-senha-redefinida img{
+  width: 60%;
+}
+
+.content-recuperaca-senha-tela-recuperacao-senha-redefinida {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+  gap: 250px;
+}
+
+.cadeados-tela-recuperacao-senha-redefinida img{
+  width: 250px;
+}
+
+.conteudos-recuperacao-senha-tela-recuperacao-senha-redefinida{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+.container-input-recuperacao-senha-tela-recuperacao-senha-redefinida{
+  display: flex;
+  width: 55%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.redefinir-Senha-tela-recuperacao-senha-redefinida {
+  color: #606060;
+}
+
+.digite-Codigo-tela-recuperacao-senha-redefinida {
+  color: #606060;
+  width: 85%;
+}
+
+.container-input-recuperacao-senha-tela-recuperacao-senha-redefinida input{
+  width: 11%;
+  border: none;
+  outline: none;
+  padding: 1rem 0.4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+}
+
+.button-recuperacao-senha-tela-recuperacao-senha-redefinida button{
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  font-size: 18px;
+  height: 40px;
+  background-color: #31C1FF;
+  color: white;
+  cursor: pointer;  
+}
+
+.button-recuperacao-senha-tela-recuperacao-senha-redefinida:hover button{
+  background-color: #00b3ff;
+}
+
+.faca-Login-tela-recuperacao-senha-redefinida p{
+  color: #00000060;
+}
+
+.faca-Login-tela-recuperacao-senha-redefinida span{
+  color: #9747FF;
+  cursor: pointer;
+}
+
+.faca-Login-tela-recuperacao-senha-redefinida:hover span{
+  color: #6e00fd;
+}
+
+.onda-tela-recuperacao-senha-redefinida img{
+  width: 70%;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+}

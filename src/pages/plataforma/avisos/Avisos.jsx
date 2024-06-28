@@ -16,6 +16,7 @@ const Avisos = () => {
     const [temaAviso, setTemaAviso] = useState("laranja-aviso");
     const [listDiscentes, setListDiscentes] = useState([]);
     const [avisos, setAvisos] = useState([]);
+    
 
     useEffect(() => {
         const fechDataAviso = async () => {

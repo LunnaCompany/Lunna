@@ -1,0 +1,108 @@
+.logoPalminha-tela-bb {
+    padding-left: 20px;
+}
+
+.container-bebes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #faf3fb;
+    width: 100%;
+    height: 100vh;
+}
+
+.title-descri-tela-bb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-direction: column;
+}
+
+.title-descri-tela-bb p {
+    width: 35%;
+    font-style: justify;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.section-fotos-bebe-tela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.name-menina-tela-bb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.name-menina-tela-bb:hover {
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.4s;
+}
+
+.name-menino-tela-bb:hover {
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.4s;
+}
+
+.name-menina-tela-bb img {
+    width: 333px;
+    height: 334px;
+}
+
+.name-menino-tela-bb img {
+    width: 333px;
+    height: 334px;
+}
+
+.name-menina-tela-bb p {
+    padding-left: 30px;
+    color: #9747ff;
+    font-size: 20px;
+}
+
+.name-menino-tela-bb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.name-menino-tela-bb p {
+    color: #31c1ff;
+    font-size: 20px;
+}
+
+.btn-tela-bb {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #9747ff;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sectionbtn-tela-bb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+.seta-tela-bb {
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.seta2-tela-bb {
+    cursor: pointer;
+}

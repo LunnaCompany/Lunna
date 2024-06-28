@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.tela-config p {
+    font-size: 16px;
+}
+
+.scroll-tela-config {
+    overflow: auto;
+    height: 71.4vh;
+}
+
+.container-configuracao-tela {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9747ff;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+}
+
+.container-configuracao-tela h2 {
+    padding-left: 150px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.section-img-container-configuracao-icone {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.container-img-icone-configuracao {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #262626;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+}
+
+.info-tela-de-configurcao {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 40px;
+}
+
+.info-tela-de-configurcao ul li {
+    list-style-type: none;
+    font-size: 18px;
+    padding-bottom: 15px;
+    padding-top: 35px;
+}
+
+.btn-alterar-email-tela-config {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5d57a5;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn-verificar-email-tela-config {
+    width: 160px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5d57a5;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn-editar-id-tela-config {
+    width: 190px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5d57a5;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn-verificar-dispo-config {
+    width: 190px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5d57a5;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.section-btn-id-verificar-config {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-aterar-senha-tela-config {
+    width: 120px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5d57a5;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.section-line-one-tela-config {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.line-one-tela-config {
+    display: flex;
+    width: 85%;
+    height: 7px;
+    background-color: #9747ff;
+}
+
+.section-preferencia-configurar-tela-config {
+    padding-left: 180px;
+    padding-top: 55px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notificacao-btn-ativado-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.config-som-btn-ativado-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-info-segurancca-tela-config {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-sessao-alternativa-tela-config h3 {
+    padding-bottom: 20px;
+}
+
+.section-sessao-alternativa-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.info-user-alternativa-tela-config {
+    font-size: 12px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-user-alternativa-tela-config h4 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 12px;
+    padding-top: 15px;
+    color: #fff;
+}
+
+.section-autenticacao-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-bottom: 100px;
+}
+
+.sms-autentic-tela-config {
+    display: flex;
+    gap: 50px;
+}
+
+.title-btn-tela-config {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.title-btn-tela-config p {
+    font-size: 16px;
+}
+
+.title-banner-btn-tela-config {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.title-autentic-btn-tela-config {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.acessibilidade-info-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container-acessibilidade-tela-config {
+    display: flex;
+    padding-left: 200px;
+}
+
+.tamanho-font-tela-config {
+    display: flex;
+    gap: 30px;
+}
+
+.tamanho-font-tela-config p {
+    font-size: 14px;
+    color: #262626a4;
+}
+
+.section-suporte-ajuda-tela-config {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-btn-relatar-problema-tela-config button {
+    width: 180px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #5300be;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.suporte-ajuda-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-btn-topico-destaque-tela-configuracao {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.container-conta-deletar-tela-config {
+    display: flex;
+    padding-left: 200px;
+    padding-bottom: 100px;
+}
+
+.section-conta-info-tela-config {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-delatar-conta-tela-config {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-deletar-conta {
+    width: 100px;
+    height: 25px;
+    background-color: #c4063f;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.section-deletar-conta-tela-config {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-sair-conta {
+    width: 100px;
+    height: 25px;
+    background-color: #4ce276;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+.form {
+    --timing: 0.3s;
+    --width-of-input: 300px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #8885855b;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+
+.input-configuration-page {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+.input-configuration-page:focus {
+    outline: none;
+}
+
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+@media (max-width: 1200px) {
+    .burger {
+        display: block;
+    }
+}
+
+.containet-btn-idioma-tela-config {
+    width: 170px;
+    height: 45px;
+    background-color: #31c1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.section-btn-idioma-tela-config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.section-btn-idioma-tela-config p {
+    color: #fff;
+}
+
+.section-btn-idioma-tela-config img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.idioma-btn-acessibi-tela-config {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

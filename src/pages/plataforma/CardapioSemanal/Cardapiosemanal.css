@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-cardapio-semanal {
+    background-color: #faf3fb;
+    width: 100%;
+}
+
+.agenda-cardapio-semanal {
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+    padding-top: 50px;
+}
+
+.sino-cardapio-semanal-section {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border-radius: none;
+    border: none;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.foto-mae-cardapio-semanal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-mae-cardapio-semanal img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.sino-container-cardapio-semanal {
+    display: flex;
+    gap: 50px;
+}
+
+.date-agenda {
+    font-size: 14px;
+    padding-left: 10%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 270px;
+}
+
+.date-agenda span {
+    color: #f53491;
+}
+
+.section-semana h2 {
+    padding-top: 50px;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.btn-tudo {
+    display: flex;
+}
+
+.btn-tudo div {
+    display: flex;
+    height: 35px;
+    width: 40px;
+    background-color: #fff;
+    border: solid 1px #9747ff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-esqu {
+    border-radius: 10px 0 0 10px;
+}
+
+.btn-esqu:hover {
+    background-color: #9747ff;
+}
+
+.btn-dir {
+    border-radius: 0 10px 10px 0;
+}
+
+.btn-dir:hover {
+    background-color: #9747ff;
+}

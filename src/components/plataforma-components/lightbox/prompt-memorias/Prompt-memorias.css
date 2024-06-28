@@ -28,7 +28,7 @@
 
 .info-pro {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     font-size: 10px;
     padding: 10px;
@@ -95,3 +95,12 @@
     border: none;
     box-shadow: 2px 2px 2px 2px #00000072;
 }
+
+.btn-prompt-tela-memoria{
+    color: #000;
+    font-size: 14px;
+    padding-bottom: 40px;
+    cursor: pointer;
+    
+}
+

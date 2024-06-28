@@ -18,15 +18,15 @@ export default function Overlay(props) {
                   </div>
                   <div className="conteiner-img">
                      <img src={props.data.img} />
-                     <p>{props.data.titulo}</p>
+                     <p></p>
                   </div>
                </div>
                <div className="conteiner-bottom">
                   <div className="conteiner-text">
-                     <h1>{props.titulo}</h1>
+                     <h1>{props.data.titulo}</h1>
                   </div>
                   <div className="conteiner-description">
-                     <p>{props.descricao}</p>
+                     <p>{props.data.descricao}</p>
                   </div>
                </div>
             </div>

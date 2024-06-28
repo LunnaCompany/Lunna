@@ -1,11 +1,12 @@
 .container-parentes{
-    width: 401px;
-    height: 440px;
+    width: 310px;
+    height: 410px;
     border-radius: 20px;
     background-color: #FFE7AB;
     display: flex;
     flex-direction: column;
-   
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .img-parente img{
@@ -24,4 +25,7 @@
 .info-parente ul li{
     list-style-type: none;
     padding-bottom: 15px;
+}
+.container-parentes:hover {
+    transform: scale(1.1);
 }
