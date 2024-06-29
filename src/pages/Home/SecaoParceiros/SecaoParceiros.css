@@ -16,3 +16,16 @@
     width: 35%;
     max-height: 450px;
 }
+
+.icones-secao-parceiros .swiper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icones-secao-parceiros .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

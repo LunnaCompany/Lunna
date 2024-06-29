@@ -24,7 +24,7 @@ function CardIncluiDev() {
                     programação!
                 </p>
                 <button>
-                    <a href="https://incluidev.vercel.app/home" target="_blank">
+                    <a href="https://linktr.ee/incluidev" target="_blank">
                         Saiba mais
                     </a>
                 </button>

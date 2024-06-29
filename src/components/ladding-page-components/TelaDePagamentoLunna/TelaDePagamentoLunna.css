@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: "Inter", sans-serif;
+}
+.TelaDePagamento {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./img/background-pay-lunna.png");
+    gap: 15px;
+}
+.botoes-paypal-padrao {
+    width: 35%;
+    border: solid #F53491;
+    padding: 40px;
+    border-radius: 25px;
+    background-color: #ffffff6f;
+}
+.Tela-precos-lunna {
+    background-color: #F53491;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 21.5%;
+}
+.Tela-precos-lunna-1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 50%;
+    height: 12vh;
+    justify-content: start;
+    gap: 10px;
+}
+.Tela-precos-lunna h1 span {
+    color: #FEB018;
+}
+.tela-precos-icon {
+    margin-left: 20px
+}
+.tela-precos-icon .FaChevronLeft {
+    cursor: pointer;
+}

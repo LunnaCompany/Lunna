@@ -35,6 +35,11 @@
     border-radius: 15px;
 }
 
+.nome-plano {
+    color: #ffcc4d;
+    font-size: 24px;
+}
+
 .card-plan-content .head-card-plan {
     display: flex;
     flex-direction: column;
@@ -49,8 +54,9 @@
 
 .card-plan-content .head-card-plan h3 {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     width: 70%;
+    margin-bottom: 20px;
 }
 
 .card-plan-content .body-card-plan {
@@ -95,7 +101,7 @@
     font-weight: bold;
 }
 
-.lateral-card-plan img{
+.lateral-card-plan img {
     width: 28px;
 }
 
@@ -114,6 +120,11 @@
     cursor: pointer;
 }
 
+.card-plan-btn a {
+    color: #fff;
+    list-style: none;
+}
+
 .azul-plans {
     background-color: #31c1ff;
 }
@@ -126,25 +137,24 @@
     background-color: #9747ff;
 }
 
-.head-card-plan p{
-   text-decoration: line-through;
-   font-size: 14px;
-   color:#9747ff;
-   padding-bottom: 5px;
-   font-weight: bold;
+.head-card-plan p {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #9747ff;
+    padding-bottom: 5px;
+    font-weight: bold;
 }
 
-#preco-desconto-altera{
+#preco-desconto-altera {
     text-decoration: none;
 }
 
-
-@media (max-width: 600px){
-    .card-plan-content .head-card-plan h2{
+@media (max-width: 600px) {
+    .card-plan-content .head-card-plan h2 {
         font-size: 20px;
     }
 
-    .card-plan-content .head-card-plan h3{
+    .card-plan-content .head-card-plan h3 {
         font-size: 18px;
     }
 }

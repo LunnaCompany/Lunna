@@ -5,9 +5,10 @@ import Icon2 from "../../../assets/icon2.png";
 import Img from "../../../assets/img.png";
 import Estrela from "../../../assets/estrela.png";
 import CardPlans from "../../../components/ladding-page-components/cardPlans/CardPlans";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import { Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const PlansSection = ({translateText}) => {
     const [slidePerView, setSlidePerView] = useState(3);
@@ -48,6 +49,7 @@ export const PlansSection = ({translateText}) => {
             contentLateral: [],
             color: "rosa-plans",
             animationY: 35,
+            nomePlan: "Sementinha"
         },
         {
             precodesconto: "De R$1800 por",
@@ -64,6 +66,7 @@ export const PlansSection = ({translateText}) => {
             contentLateral: [],
             color: "roxo-plans",
             animationY: -35,
+            nomePlan: "Brincadeira"
         },
         {
             preecodesconto01: "R$ 1.00 por discente",
@@ -79,6 +82,7 @@ export const PlansSection = ({translateText}) => {
             contentLateral: [],
             color: "azul-plans",
             animationY: -35,
+            nomePlan: "Crescer"
         },
         
     ];

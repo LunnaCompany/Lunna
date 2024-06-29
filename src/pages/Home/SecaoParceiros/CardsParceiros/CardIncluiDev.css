@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: 478px;
+    height: 400px;
 }
 
 .icone-incluidev-logo img {

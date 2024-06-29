@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-card-conectavel {
+    width: 478px;
+    height: 400px;
+    background-image: url(./img/background-conectavel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #175ec6;
+  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+}
+
+.img-logo-conectavel img {
+    width: 100px;
+    height: 100px;
+}
+
+.img-logo-conectavel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-card-conectavel {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.text-card-conectavel span {
+    color: #fb8c00;
+}
+
+.text-card-conectavel .card-renova {
+    color: #77dd77;
+}
+
+.section-container-descri-card-conectavel {
+    background-color: #2cb87b;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.section-container-descri-card-conectavel p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    width: 70%;
+}
+
+.section-container-btn-card-conectavel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 160px;
+    background-color: #fb8c00;
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+}

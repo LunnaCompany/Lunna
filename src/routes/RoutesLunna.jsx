@@ -31,6 +31,7 @@ import Agendalunna from "../pages/plataforma/Agenda-lunna/Agenda-lunna";
 import Criancas from "../pages/plataforma/Crianças/criancas";
 import EnquetePage from "../pages/plataforma/EnquetePage/EnquetePage";
 import LumiIconComponent from "../components/plataforma-components/LumiIcon/LumiIcon";
+import TelaPagamento from "../components/ladding-page-components/TelaDePagamentoLunna/TelaDePagamentoLunna";
 
 export const RoutesLunna = () => {
     const [translateText, setTranslateText] = useState(TextsLandingPage);
@@ -276,7 +277,11 @@ export const RoutesLunna = () => {
                     </TemplateChat>
                 }
             />
-            
+
+            <Route
+                path="/Lunna-landing-page/pagamento"
+                element={<TelaPagamento />}
+            />
         </Routes>
     );
 };

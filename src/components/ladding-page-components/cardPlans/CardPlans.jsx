@@ -2,8 +2,15 @@ import React from "react";
 import "./style.css";
 import Estrela from "../../../assets/estrela.png";
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 const CardPlans = ({ data }) => {
+    const navigate = useNavigate();
+
+    const setPlanSave = (plan, preco) => {
+        localStorage.setItem("plan", plan);
+        localStorage.setItem("preco", preco);
+    };
     return (
         <motion.div
             initial={{ opacity: 0, y: data.animationY }}
@@ -13,10 +20,13 @@ const CardPlans = ({ data }) => {
         >
             <div className="card-plan-box">
                 <div className="container-card-plan-content">
+                    <h2 className="nome-plano">{data.nomePlan}</h2>
                     <div className="card-plan-content">
                         <div className="head-card-plan">
-                            <p id="preco-desconto-altera">{data.preecodesconto01}</p>
-                            <p>{data.precodesconto}</p> 
+                            <p id="preco-desconto-altera">
+                                {data.preecodesconto01}
+                            </p>
+                            <p>{data.precodesconto}</p>
                             <h2>{data.valor}</h2>
                             <h3>{data.subtitulo}</h3>
                         </div>
@@ -42,7 +52,9 @@ const CardPlans = ({ data }) => {
 
                             <div>
                                 <img src={data.icone1} alt="" />
-                                <p style={{ fontWeight: 'bold' }} >{data.beneficio5}</p>
+                                <p style={{ fontWeight: "bold" }}>
+                                    {data.beneficio5}
+                                </p>
                             </div>
                         </div>
 
@@ -59,7 +71,12 @@ const CardPlans = ({ data }) => {
                         </div>
                     </div>
 
-                    <div className="card-plan-btn">Assinar</div>
+                    <div
+                        className="card-plan-btn"
+                        onClick={() => setPlanSave(data.nomePlan, data.valor)}
+                    >
+                        <Link to="/Lunna-landing-page/pagamento">Assinar</Link>
+                    </div>
                 </div>
             </div>
         </motion.div>
